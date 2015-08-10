@@ -58,7 +58,7 @@ module.exports = function (grunt) {
         files: [
           'app/**/*.html',
           'app/**/*.js',
-          'app/styles/**/*.scss',
+          'app/styles/*.scss',
           'app/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
         ]
       }
@@ -402,7 +402,7 @@ module.exports = function (grunt) {
     }
 
     grunt.task.run([
-      'clean:server',
+      //'clean:server',
       'wiredep',
       'concurrent:server',
       'autoprefixer',
