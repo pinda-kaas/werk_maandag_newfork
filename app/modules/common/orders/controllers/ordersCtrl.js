@@ -1,5 +1,5 @@
-//app.controller('OrdersCtrl', function ($scope, ngTableParams, $filter, $location) {
-app.controller('OrdersCtrl', function ($scope, $filter, $location) {
+app.controller('OrdersCtrl', function ($scope, ngTableParams, $filter, $location) {
+//app.controller('OrdersCtrl', function ($scope, $filter, $location) {
 
   console.log('ordersctrl started');
 
