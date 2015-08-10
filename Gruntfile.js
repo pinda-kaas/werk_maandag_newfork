@@ -120,7 +120,7 @@ module.exports = function (grunt) {
       all: {
         src: [
           'Gruntfile.js',
-          'app/scripts/{,*/}*.js'
+          'app/scripts_old/{,*/}*.js'
         ]
       },
       test: {
@@ -180,7 +180,7 @@ module.exports = function (grunt) {
         cssDir: '.tmp/styles',
         generatedImagesDir: '.tmp/images/generated',
         imagesDir: 'app/images',
-        javascriptsDir: 'app/scripts',
+        javascriptsDir: 'app/scripts_old',
         fontsDir: 'app/styles/fonts',
         importPath: './bower_components',
         httpImagesPath: '/images',
@@ -206,7 +206,7 @@ module.exports = function (grunt) {
     filerev: {
       dist: {
         src: [
-          '<%= yeoman.dist %>/scripts/{,*/}*.js',
+          '<%= yeoman.dist %>/scripts_old/{,*/}*.js',
           '<%= yeoman.dist %>/styles/{,*/}*.css',
           '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
           '<%= yeoman.dist %>/styles/fonts/*'
@@ -258,8 +258,8 @@ module.exports = function (grunt) {
     // uglify: {
     //   dist: {
     //     files: {
-    //       '<%= yeoman.dist %>/scripts/scripts.js': [
-    //         '<%= yeoman.dist %>/scripts/scripts.js'
+    //       '<%= yeoman.dist %>/scripts_old/scripts_old.js': [
+    //         '<%= yeoman.dist %>/scripts_old/scripts_old.js'
     //       ]
     //     }
     //   }
@@ -314,9 +314,9 @@ module.exports = function (grunt) {
       dist: {
         files: [{
           expand: true,
-          cwd: '.tmp/concat/scripts',
+          cwd: '.tmp/concat/scripts_old',
           src: ['*.js', '!oldieshim.js'],
-          dest: '.tmp/concat/scripts'
+          dest: '.tmp/concat/scripts_old'
         }]
       }
     },
