@@ -1,4 +1,6 @@
-var app =angular.module('WIP', ['ui.router','ngTable','ui.bootstrap','ngTableExport']);
+//var app =angular.module('WIP', ['ui.router','ngTable','ui.bootstrap','ngTableExport']);
+//var app =angular.module('WIP', ['ui.router','ui.bootstrap']);
+var app =angular.module('WIP', ['ui.router']);
 
 console.log('this is the controller');
 app.config(function($stateProvider) {

@@ -2,7 +2,7 @@
 <html class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>HI</title>
+    <title>HIfd4</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -13,7 +13,10 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/orders.scss"/>
-    <link rel="stylesheet" href="/bower_components/angular-bootstrap/ui-bootstrap-csp.css"/>
+
+
+    <!--<link rel="stylesheet" href="app/vendortmp/ng-table.min.css"/>-->
+    <!--<link rel="stylesheet" href="/bower_components/angular-bootstrap/ui-bootstrap-csp.css"/>-->
     <!-- endbuild -->
   </head>
   <body ng-app="WIP">
@@ -28,7 +31,7 @@
         <h3 class="text-muted">WIP work in progress</h3>
       </div>
 
-      <div ng-view=""></div>
+      <div ui-view=""></div>
 
       <div class="footer">
 
@@ -43,27 +46,25 @@
     <![endif]-->
     <!-- endbuild -->
 
+
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
-    <script src="bower_components/ng-table/dist/ng-table.js"></script>
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
-    <script src="bower_components/angular-animate/angular-animate.js"></script>
-    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
-    <script src="bower_components/angular-route/angular-route.js"></script>
-    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-    <script src="bower_components/angular-touch/angular-touch.js"></script>
-    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
-    <script src="bower_components/ng-table/dist/ng-table.min.js"></script>
-    <script src="bower_components/ng-table-export/ng-table-export.src.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
+    <!--temp-->
+    <!--<script src="temp_ngtable_components/ng-table-export.src.js"></script>-->
+    <!--<script src="temp_ngtable_components/ng-table.js"></script>-->
+
+
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="modules/app.js"></script>
+    <script src="modules/common/orders/controllers/ordersCtrl.js"></script>
 
     <!-- endbuild -->
 </body>
