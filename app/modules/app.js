@@ -1,6 +1,4 @@
-var app =angular.module('WIP', ['ui.router','ui.bootstrap','ngTable']);
-//var app =angular.module('WIP', ['ui.router','ui.bootstrap']);
-//var app =angular.module('WIP', ['ui.router']);
+var app =angular.module('WIP', ['ui.router','ui.bootstrap','ngTable','ngTableExport']);
 
 console.log('this is the app starting up');
 app.config(function($stateProvider) {

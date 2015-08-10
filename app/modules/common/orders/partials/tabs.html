@@ -13,6 +13,8 @@
     &nbsp<a href="#">Refresh</a> <i class="fa fa-file-excel-o"></i>
 
     <!--<a class="btn btn-danger" ng-mousedown="csv.generate()" ng-href="{{ csv.link() }}" download="data.csv">Export</a>-->
+    <!--<button ng-mousedown="csv.generate()" ng-href="{{ csv.link() }}" download="test.csv">Export to CSV</button>-->
+
     <a ng-mousedown="csv.generate()" ng-href="{{ csv.link() }}" download="test.csv">Export to CSV</a>
 
     <i class="fa fa-print"></i> </i><a href="#">Print</a>
@@ -29,15 +31,13 @@
                 <div class="mainTable">
                   <!--<span id="noOrders" ng-hide="noOrders">There are no orders which match your criteria. Please try again.</span>-->
                   <span id="nrResults">{{filtered.length}} results match your search selection.</span>
-
-
                   <div>
                     this is orderstab
                     {{accounts}}
                     {{accounts.length}} results match your search selection.
                     <div>
 
-                      <table ng-table="tableParams" template-pagination="custom/pager" class="table">
+                      <table ng-table="tableParams" template-pagination="custom/pager" class="table" export-csv="$parent.csv" >
                         <tr ng-repeat="account in $data | filter:accountName | filter:key">
                           <td data-title="'Account'" sortable="'key'">
                             {{account.account.accountId.key}}
