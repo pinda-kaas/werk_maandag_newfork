@@ -32,9 +32,6 @@
                   <!--<span id="noOrders" ng-hide="noOrders">There are no orders which match your criteria. Please try again.</span>-->
                   <span id="nrResults">{{filtered.length}} results match your search selection.</span>
                   <div>
-                    this is orderstab
-                    {{accounts}}
-                    {{accounts.length}} results match your search selection.
                     <div>
 
                       <table ng-table="tableParams" template-pagination="custom/pager" class="table" export-csv="$parent.csv" >
@@ -61,15 +58,33 @@
                     </div>
                   </div>
 
-                  <!--<order-table></order-table>-->
-
                 </div>
               </div>
             </tab>
 
             <tab heading="Awaiting settlement">
 
-           <table-filter></table-filter>
+                <table-filter></table-filter>
+
+                <table ng-table="tableParamsSettlements" template-pagination="custom/pager" class="table" export-csv="$parent.csv" >
+                    <tr ng-repeat="account in $data | filter:security | filter:key">
+                        <td data-title="'Account'" sortable="'key'">
+                            {{account.account.accountId.key}}
+                        </td>
+                        <td>
+                            {{account.account.accountName}}
+                        </td>
+                        <td data-title="'Adviser'">
+                            {{account.account.adviser.key}}
+                        </td>
+                        <td data-title="'Product'">
+                            {{account.account.productName}}
+                        </td>
+                        <td data-title="'Status'">
+                            {{account.minOpenOrderState}}
+                        </td>
+                    </tr>
+                </table>
 
             </tab>
 

@@ -411,42 +411,42 @@ app.controller('OrdersCtrl', function ($scope, ngTableParams, $filter, $location
   })
 
 
-  //$scope.tableParamsSettlements= new ngTableParams({
-  //    page: 1,            // show first page
-  //    count: 10,           // count per page
-  //    sorting: {
-  //        minOpenOrderState: 'asc'     // initial sorting
-  //    }
-  //}, {
-  //    total: $scope.data.length, // length of data
-  //    getData: function ($defer, params) {
-  //        debugger;
-  //        $scope.orderedData = params.sorting() ?
-  //            $filter('orderBy')($scope.data, params.orderBy()) :
-  //            $scope.data;
-  //        console.log($scope.orderedData.length);
-  //        var cnt = params.count();
-  //        $defer.resolve($scope.orderedData.slice((params.page() - 1) * params.count(), params.page() * params.count()));
-  //    }
-  //})
-  //
-  //$scope.tableParamsCompletedOrders= new ngTableParams({
-  //    page: 1,            // show first page
-  //    count: 10,           // count per page
-  //    sorting: {
-  //        minOpenOrderState: 'asc'     // initial sorting
-  //    }
-  //}, {
-  //    total: $scope.data.length, // length of data
-  //    getData: function ($defer, params) {
-  //        debugger;
-  //        $scope.orderedData = params.sorting() ?
-  //            $filter('orderBy')($scope.data, params.orderBy()) :
-  //            $scope.data;
-  //        console.log($scope.orderedData.length);
-  //        var cnt = params.count();
-  //        $defer.resolve($scope.orderedData.slice((params.page() - 1) * params.count(), params.page() * params.count()));
-  //    }
-  //})
+ $scope.tableParamsSettlements= new ngTableParams({
+      page: 1,            // show first page
+      count: 10,           // count per page
+      sorting: {
+          minOpenOrderState: 'asc'     // initial sorting
+      }
+  }, {
+      total: $scope.data.length, // length of data
+      getData: function ($defer, params) {
+          debugger;
+          $scope.orderedData = params.sorting() ?
+              $filter('orderBy')($scope.data, params.orderBy()) :
+              $scope.data;
+          console.log($scope.orderedData.length);
+          var cnt = params.count();
+          $defer.resolve($scope.orderedData.slice((params.page() - 1) * params.count(), params.page() * params.count()));
+      }
+  })
+
+  $scope.tableParamsCompletedOrders= new ngTableParams({
+      page: 1,            // show first page
+      count: 10,           // count per page
+      sorting: {
+          minOpenOrderState: 'asc'     // initial sorting
+      }
+  }, {
+      total: $scope.data.length, // length of data
+      getData: function ($defer, params) {
+          debugger;
+          $scope.orderedData = params.sorting() ?
+              $filter('orderBy')($scope.data, params.orderBy()) :
+              $scope.data;
+          console.log($scope.orderedData.length);
+          var cnt = params.count();
+          $defer.resolve($scope.orderedData.slice((params.page() - 1) * params.count(), params.page() * params.count()));
+      }
+  })
 
 });
