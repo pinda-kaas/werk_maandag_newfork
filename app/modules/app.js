@@ -1,4 +1,4 @@
-var app =angular.module('WIP', ['ui.router','ngTable','ui.bootstrap']);
+var app =angular.module('WIP', ['ui.router','ui.bootstrap','ngTable']);
 //var app =angular.module('WIP', ['ui.router','ui.bootstrap']);
 //var app =angular.module('WIP', ['ui.router']);
 

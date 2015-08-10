@@ -399,11 +399,12 @@ app.controller('OrdersCtrl', function ($scope, ngTableParams, $filter, $location
   }, {
     total: $scope.data.length, // length of data
     getData: function ($defer, params) {
-      debugger;
+
       $scope.orderedData = params.sorting() ?
         $filter('orderBy')($scope.data, params.orderBy()) :
         $scope.data;
       console.log($scope.orderedData.length);
+      console.log('getdata');
       var cnt = params.count();
       $defer.resolve($scope.orderedData.slice((params.page() - 1) * params.count(), params.page() * params.count()));
     }
