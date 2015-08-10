@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-sm-4">
+    <div class="col-sm-3">
         <label for="">Asset type</label>
         <select class="form-control">
             <option></option>
@@ -7,16 +7,48 @@
         </select>
     </div>
 
-    <div class="col-sm-4">
+    <div class="col-sm-3">
         <label for="">Security</label>
         <input class="form-control" type="text"/>
     </div>
 
-    <div class="col-sm-4">
+
+    <div class="col-sm-3">
         <label for="">Trade type</label>
         <select class="form-control">
             <option>SELL</option>
             <option>BUY</option>
         </select>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-md-6">
+        <label for="">Date from</label>
+        <p class="input-group">
+
+            <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="status.opened"
+                   min-date="minDate" max-date="'2020-06-22'" datepicker-options="dateOptions"
+                   date-disabled="disabled(date, mode)" ng-required="true" close-text="Close"/>
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="open($event)"><i
+                        class="glyphicon glyphicon-calendar"></i></button>
+              </span>
+        </p>
+    </div>
+
+    <div class="col-md-6">
+        <label for="">Date to</label>
+        <p class="input-group">
+
+            <input type="date" class="form-control" datepicker-popup ng-model="dt" is-open="status.opened"
+                   min-date="minDate" max-date="'2020-06-22'" datepicker-options="dateOptions"
+                   date-disabled="disabled(date, mode)" ng-required="true" close-text="Close"/>
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="open($event)"><i
+                        class="glyphicon glyphicon-calendar"></i></button>
+              </span>
+        </p>
     </div>
 </div>
