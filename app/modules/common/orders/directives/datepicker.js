@@ -1,7 +1,6 @@
 app.directive('datePicker', function() {
   return {
     templateUrl: '/modules/common/orders/partials/datepicker.html',
-    scope:{dt:'='},
     controller: function($scope){
       $scope.today = function() {
         $scope.dt = new Date();
@@ -41,6 +40,8 @@ app.directive('datePicker', function() {
 
       $scope.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'shortDate'];
       $scope.format = $scope.formats[0];
+
+      console.log('end of controller');
     }
   };
 });
