@@ -91,7 +91,29 @@
 
 
             <tab heading="Complete">
-              <complete-orders-table></complete-orders-table>
+              <table-filter></table-filter>
+
+              <table ng-table="tableParamsCompletedOrders" template-pagination="custom/pager" class="table" export-csv="$parent.csv" >
+                <tr ng-repeat="account in $data | filter:security | filter:key">
+                  <td data-title="'Account'" sortable="'key'">
+                    {{account.account.accountId.key}}
+                  </td>
+                  <td>
+                    {{account.account.accountName}}
+                  </td>
+                  <td data-title="'Adviser'">
+                    {{account.account.adviser.key}}
+                  </td>
+                  <td data-title="'Product'">
+                    {{account.account.productName}}
+                  </td>
+                  <td data-title="'Status'">
+                    {{account.minOpenOrderState}}
+                  </td>
+                </tr>
+              </table>
+
+
             </tab>
           </tabset>
         </div>
