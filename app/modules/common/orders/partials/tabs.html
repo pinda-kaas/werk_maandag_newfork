@@ -36,16 +36,16 @@
 
                       <table ng-table="tableParams" template-pagination="custom/pager" class="table" export-csv="$parent.csv" >
                         <tr ng-repeat="account in $data | filter:accountName | filter:key">
-                          <td data-title="'Account'" sortable="'accountName'">
+                          <td data-title="'Account'" sortable="'account.accountId.key'">
                             {{account.account.accountId.key}}
                           </td>
                           <td sortable="'account.accountName'">
                             {{account.account.accountName}}
                           </td>
-                          <td data-title="'Adviser'" sortable="'key'">
+                          <td data-title="'Adviser'" sortable="'account.adviser.key'">
                             {{account.account.adviser.key}}
                           </td>
-                          <td data-title="'Product'" sortable="'productName'">
+                          <td data-title="'Product'" sortable="'account.productName'">
                             {{account.account.productName}}
                           </td>
                           <td data-title="'Status'" sortable="'minOpenOrderState'">
