@@ -1,6 +1,8 @@
 app.directive('datePicker', function() {
   return {
     templateUrl: '/modules/common/orders/partials/datepicker.html',
+    restrict:'E',
+    scope:{},
     controller: function($scope){
       $scope.today = function() {
         $scope.dt = new Date();
