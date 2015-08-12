@@ -39,7 +39,7 @@
                           <td data-title="'Account'" sortable="'account.accountId.key'">
                             {{account.account.accountId.key}}
                           </td>
-                          <td sortable="'account.accountName'">
+                          <td data-title="'Name'" sortable="'account.accountName'">
                             {{account.account.accountName}}
                           </td>
                           <td data-title="'Adviser'" sortable="'account.adviser.key'">
@@ -67,23 +67,23 @@
                 <table-filter></table-filter>
 
                 <table ng-table="tableParamsSettlements" template-pagination="custom/pager" class="table" export-csv="$parent.csv" >
-                    <tr ng-repeat="account in $data | filter:security | filter:key">
-                        <td data-title="'Account'" sortable="'key'">
-                            {{account.account.accountId.key}}
-                        </td>
-                        <td>
-                            {{account.account.accountName}}
-                        </td>
-                        <td data-title="'Adviser'">
-                            {{account.account.adviser.key}}
-                        </td>
-                        <td data-title="'Product'">
-                            {{account.account.productName}}
-                        </td>
-                        <td data-title="'Status'">
-                            {{account.minOpenOrderState}}
-                        </td>
-                    </tr>
+                  <tr ng-repeat="account in $data | filter:accountName | filter:key">
+                    <td data-title="'Account'" sortable="'account.accountId.key'">
+                      {{account.account.accountId.key}}
+                    </td>
+                    <td data-title="'Name'" sortable="'account.accountName'">
+                      {{account.account.accountName}}
+                    </td>
+                    <td data-title="'Adviser'" sortable="'account.adviser.key'">
+                      {{account.account.adviser.key}}
+                    </td>
+                    <td data-title="'Product'" sortable="'account.productName'">
+                      {{account.account.productName}}
+                    </td>
+                    <td data-title="'Status'" sortable="'minOpenOrderState'">
+                      {{account.minOpenOrderState}}
+                    </td>
+                  </tr>
                 </table>
 
             </tab>
@@ -94,20 +94,20 @@
               <table-filter></table-filter>
 
               <table ng-table="tableParamsCompletedOrders" template-pagination="custom/pager" class="table" export-csv="$parent.csv" >
-                <tr ng-repeat="account in $data | filter:security | filter:key">
-                  <td data-title="'Account'" sortable="'key'">
+                <tr ng-repeat="account in $data | filter:accountName | filter:key">
+                  <td data-title="'Account'" sortable="'account.accountId.key'">
                     {{account.account.accountId.key}}
                   </td>
-                  <td>
+                  <td data-title="'Name'" sortable="'account.accountName'">
                     {{account.account.accountName}}
                   </td>
-                  <td data-title="'Adviser'">
+                  <td data-title="'Adviser'" sortable="'account.adviser.key'">
                     {{account.account.adviser.key}}
                   </td>
-                  <td data-title="'Product'">
+                  <td data-title="'Product'" sortable="'account.productName'">
                     {{account.account.productName}}
                   </td>
-                  <td data-title="'Status'">
+                  <td data-title="'Status'" sortable="'minOpenOrderState'">
                     {{account.minOpenOrderState}}
                   </td>
                 </tr>
