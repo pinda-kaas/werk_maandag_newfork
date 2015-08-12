@@ -26,14 +26,13 @@
         <div>
           <tabset>
 
-            <tab heading="Orders" active="tab.active">
+            <tab heading="Orders" >
               <div>
                 <div class="mainTable">
                   <!--<span id="noOrders" ng-hide="noOrders">There are no orders which match your criteria. Please try again.</span>-->
                   <span id="nrResults">{{filtered.length}} results match your search selection.</span>
                   <div>
                     <div>
-
                       <table ng-table="tableParams" template-pagination="custom/pager" class="table" export-csv="$parent.csv" >
                         <tr ng-repeat="account in $data | filter:accountName | filter:key">
                           <td data-title="'Account'" sortable="'account.accountId.key'">
@@ -62,38 +61,10 @@
               </div>
             </tab>
 
-            <tab heading="Awaiting settlement">
+            <tab heading="Awaiting settlement" active="true">
+                <table-filter dt="data"></table-filter>
 
-                <table-filter></table-filter>
-
-                <table ng-table="tableParamsSettlements" template-pagination="custom/pager" class="table" export-csv="$parent.csv" >
-                  <tr ng-repeat="account in $data | filter:accountName | filter:key">
-                    <td data-title="'Account'" sortable="'account.accountId.key'">
-                      {{account.account.accountId.key}}
-                    </td>
-                    <td data-title="'Name'" sortable="'account.accountName'">
-                      {{account.account.accountName}}
-                    </td>
-                    <td data-title="'Adviser'" sortable="'account.adviser.key'">
-                      {{account.account.adviser.key}}
-                    </td>
-                    <td data-title="'Product'" sortable="'account.productName'">
-                      {{account.account.productName}}
-                    </td>
-                    <td data-title="'Status'" sortable="'minOpenOrderState'">
-                      {{account.minOpenOrderState}}
-                    </td>
-                  </tr>
-                </table>
-
-            </tab>
-
-
-
-            <tab heading="Complete">
-              <table-filter></table-filter>
-
-              <table ng-table="tableParamsCompletedOrders" template-pagination="custom/pager" class="table" export-csv="$parent.csv" >
+              <table ng-table="tableParamsSettlements" template-pagination="custom/pager" class="table" export-csv="$parent.csv" >
                 <tr ng-repeat="account in $data | filter:accountName | filter:key">
                   <td data-title="'Account'" sortable="'account.accountId.key'">
                     {{account.account.accountId.key}}
@@ -101,21 +72,26 @@
                   <td data-title="'Name'" sortable="'account.accountName'">
                     {{account.account.accountName}}
                   </td>
-                  <td data-title="'Adviser'" sortable="'account.adviser.key'">
-                    {{account.account.adviser.key}}
+                  <td data-title="'Trade date'" sortable="'tradeDate'">
+                    {{account.tradeDate}}
                   </td>
-                  <td data-title="'Product'" sortable="'account.productName'">
-                    {{account.account.productName}}
+                  <td data-title="'Type'" sortable="'tradeType'">
+                    {{account.tradeType}}
                   </td>
-                  <td data-title="'Status'" sortable="'minOpenOrderState'">
-                    {{account.minOpenOrderState}}
-                  </td>
+
                 </tr>
               </table>
 
+            </tab>
 
+
+
+
+            <tab heading="Complete">
+              <table-filter></table-filter>
             </tab>
           </tabset>
+
         </div>
 
         <script type="text/ng-template" id="custom/pager">

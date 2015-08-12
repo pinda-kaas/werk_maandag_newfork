@@ -1,16 +1,8 @@
 <div class="row">
+
   <div class="col-sm-3">
     <label for="">Asset type</label>
-    <select class="form-control">
-      <option></option>
-      <option>All</option>
-      <option>Aus. Equities</option>
-      <option>Intl. Equities</option>
-      <option>Managed investments</option>
-      <option>SMA</option>
-      <option>Super</option>
-      <option>Pension</option>
-      <option>Security search</option>
+    <select class="form-control" name="" id="" ng-model="assetType" ng-options="item.id as item.title for item in assetTypes">
     </select>
   </div>
 
@@ -19,12 +11,17 @@
     <input class="form-control" ng-model="security" type="text"/>
   </div>
 
+  <!--<div class="col-sm-3">-->
+    <!--<label for="">Trade type</label>-->
+    <!--<select class="form-control">-->
+      <!--<option>SELL</option>-->
+      <!--<option>BUY</option>-->
+    <!--</select>-->
+  <!--</div>-->
 
   <div class="col-sm-3">
-    <label for="">Trade type</label>
-    <select class="form-control">
-      <option>SELL</option>
-      <option>BUY</option>
+    <label for="">Asset type</label>
+    <select class="form-control" name="" id="" ng-model="assetType" ng-options="item.id as item.title for item in assetTypes">
     </select>
   </div>
 
@@ -42,7 +39,6 @@
 
 
 <div class="row">
-
   <div class="col-md-6">
     <label for="">Date from</label>
     <date-picker></date-picker>
@@ -51,6 +47,4 @@
     <label for="">Date to</label>
     <date-picker></date-picker>
   </div>
-
-
 </div>
