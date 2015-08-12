@@ -9,7 +9,6 @@ app.controller('OrdersCtrl', function ($scope, ngTableParams, $filter, $location
     contentUrl: '../partials/ordersTab.html'
   }];
 
-
   $scope.settlementsMockData=[
     {
       "account": {
@@ -25,8 +24,23 @@ app.controller('OrdersCtrl', function ($scope, ngTableParams, $filter, $location
       },
       "tradeDate": "02/03/2015",
       "tradeType": "SELL"
-
+    },
+    {
+      "account": {
+        "accountId": {
+          "key": "S43566"
+        },
+        "accountName": "JEFFERY CHRISTOPHER R",
+        "productName": "Macquarie Super Manager",
+        "adviser": {
+          "key": "BBB"
+        },
+        "accountServiceType": "SUPERANNUATION"
+      },
+      "tradeDate": "02/03/2015",
+      "tradeType": "BUY"
     }
+
   ];
 
   $scope.ordersMockData = [

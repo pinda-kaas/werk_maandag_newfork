@@ -2,7 +2,7 @@
 
   <div class="col-sm-3">
     <label for="">Asset type</label>
-    <select class="form-control" name="" id="" ng-model="assetType" ng-options="item.id as item.title for item in assetTypes">
+    <select class="form-control" name="" ng-model="assetType" ng-options="item.id as item.title for item in assetTypes">
     </select>
   </div>
 
@@ -20,10 +20,16 @@
   <!--</div>-->
 
   <div class="col-sm-3">
-    <label for="">Asset type</label>
-    <select class="form-control" name="" id="" ng-model="assetType" ng-options="item.id as item.title for item in assetTypes">
-    </select>
-  </div>
+    <label for="">Trade type</label>
+    <select class="form-control" ng-model="tradeType">
+      <option>SELL</option>
+      <option>BUY</option>
+
+    </select></div>
+
+    <!--<select class="form-control" name="" ng-model="tradeType" ng-options="item.id as item.title for item in tradeTypes">-->
+    <!--</select>-->
+
 
 
   <div class="col-sm-3">
