@@ -23,7 +23,14 @@ app.controller('OrdersCtrl', function ($scope, ngTableParams, $filter, $location
         "accountServiceType": "SUPERANNUATION"
       },
       "tradeDate": "02/03/2015",
-      "tradeType": "SELL"
+      "tradeType": "SELL",
+      "investment":"CBA",
+      "units":1000,
+      "price":"$30.00",
+      "fee":"$140.50",
+      "settlementValue":"$29863.50",
+      "adviser":"MARKW",
+      "settlementDate":"05/03/2015"
     },
     {
       "account": {
@@ -38,7 +45,14 @@ app.controller('OrdersCtrl', function ($scope, ngTableParams, $filter, $location
         "accountServiceType": "SUPERANNUATION"
       },
       "tradeDate": "02/03/2015",
-      "tradeType": "BUY"
+      "tradeType": "BUY",
+      "investment":"CBA",
+      "units":1000,
+      "price":"$30.00",
+      "fee":"$140.50",
+      "settlementValue":"$29863.50",
+      "adviser":"MARKW",
+      "settlementDate":"05/03/2015"
     }
 
   ];

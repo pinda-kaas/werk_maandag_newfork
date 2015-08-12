@@ -15,21 +15,6 @@ app.directive('tableFilter', function ($filter) {
         {id: 2, name: 'BUY'},
         {id: 0, name: 'All'}];
 
-      //$scope.$watch('tradeType', function (newVal, oldVal) {
-      //
-      //  console.log('scope.dt:',$scope.dt);
-      //  console.log(newVal);
-      //  console.log(oldVal);
-      //
-      //  if (newVal == 0) {
-      //    $scope.filtered=$scope.dt;
-      //  }
-      //  else {
-      //    $scope.filtered = $filter('filter')($scope.dt, {id: $scope.tradeType});
-      //  }
-      //});
-
-
     }
   };
 });

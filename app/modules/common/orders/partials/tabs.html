@@ -67,7 +67,7 @@
               <table ng-table="tableParamsSettlements" template-pagination="custom/pager" class="table" export-csv="$parent.csv" >
                 <tr ng-repeat="account in $data | filter:accountName | filter:key | filter: tradeType ">
                   <td data-title="'Account'" sortable="'account.accountId.key'">
-                    {{account.account.accountId.key}}--testing {{tradeType.name}}
+                    {{account.account.accountId.key}}
                   </td>
                   <td data-title="'Name'" sortable="'account.accountName'">
                     {{account.account.accountName}}
@@ -78,6 +78,35 @@
                   <td data-title="'Type'" sortable="'tradeType'">
                     {{account.tradeType}}
                   </td>
+
+                  <td data-title="'Investment'" sortable="'Investment'">
+                    {{account.investment}}
+                  </td>
+
+                  <td data-title="'Units'" sortable="'units'">
+                    {{account.units}}
+                  </td>
+
+                  <td data-title="'Price'" sortable="'price'">
+                    {{account.price}}
+                  </td>
+
+                  <td data-title="'Fee'" sortable="'fee'">
+                    {{account.fee}}
+                  </td>
+
+                  <td data-title="'Settlement Value'" sortable="'settlementValue'">
+                    {{account.settlementValue}}
+                  </td>
+
+                  <td data-title="'Adviser'" sortable="'adviser'">
+                    {{account.adviser}}
+                  </td>
+
+                  <td data-title="'Settlement Date'" sortable="'settlementDate'">
+                    {{account.settlementDate}}
+                  </td>
+
 
                 </tr>
               </table>
