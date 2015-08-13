@@ -30,7 +30,7 @@ app.controller('OrdersCtrl', function ($scope, ngTableParams, $filter, $location
       "fee":"$140.50",
       "settlementValue":"$29863.50",
       "adviser":"MARKW",
-      "settlementDate":"05/03/2015"
+      "date":"05/03/2015"
     },
     {
       "account": {
@@ -52,7 +52,315 @@ app.controller('OrdersCtrl', function ($scope, ngTableParams, $filter, $location
       "fee":"$140.50",
       "settlementValue":"$29863.50",
       "adviser":"MARKW",
-      "settlementDate":"05/03/2015"
+      "date":"05/03/2015"
+    },
+    {
+      "account": {
+        "accountId": {
+          "key": "S43566"
+        },
+        "accountName": "JEFFERY CHRISTOPHER R",
+        "productName": "Macquarie Super Manager",
+        "adviser": {
+          "key": "BBB"
+        },
+        "accountServiceType": "SUPERANNUATION"
+      },
+      "tradeDate": "02/03/2015",
+      "tradeType": "SELL",
+      "investment":"CBA",
+      "units":1000,
+      "price":"$30.00",
+      "fee":"$140.50",
+      "settlementValue":"$29863.50",
+      "adviser":"MARKW",
+      "date":"05/03/2015"
+    },
+    {
+      "account": {
+        "accountId": {
+          "key": "S43566"
+        },
+        "accountName": "JEFFERY CHRISTOPHER R",
+        "productName": "Macquarie Super Manager",
+        "adviser": {
+          "key": "BBB"
+        },
+        "accountServiceType": "SUPERANNUATION"
+      },
+      "tradeDate": "02/03/2015",
+      "tradeType": "BUY",
+      "investment":"CBA",
+      "units":1000,
+      "price":"$30.00",
+      "fee":"$140.50",
+      "settlementValue":"$29863.50",
+      "adviser":"MARKW",
+      "date":"05/03/2015"
+    },
+    {
+      "account": {
+        "accountId": {
+          "key": "S43566"
+        },
+        "accountName": "JEFFERY CHRISTOPHER R",
+        "productName": "Macquarie Super Manager",
+        "adviser": {
+          "key": "BBB"
+        },
+        "accountServiceType": "SUPERANNUATION"
+      },
+      "tradeDate": "02/03/2015",
+      "tradeType": "SELL",
+      "investment":"CBA",
+      "units":1000,
+      "price":"$30.00",
+      "fee":"$140.50",
+      "settlementValue":"$29863.50",
+      "adviser":"MARKW",
+      "date":"05/03/2015"
+    },
+    {
+      "account": {
+        "accountId": {
+          "key": "S43566"
+        },
+        "accountName": "JEFFERY CHRISTOPHER R",
+        "productName": "Macquarie Super Manager",
+        "adviser": {
+          "key": "BBB"
+        },
+        "accountServiceType": "SUPERANNUATION"
+      },
+      "tradeDate": "02/03/2015",
+      "tradeType": "BUY",
+      "investment":"CBA",
+      "units":1000,
+      "price":"$30.00",
+      "fee":"$140.50",
+      "settlementValue":"$29863.50",
+      "adviser":"MARKW",
+      "date":"05/03/2015"
+    },
+    {
+      "account": {
+        "accountId": {
+          "key": "S43566"
+        },
+        "accountName": "JEFFERY CHRISTOPHER R",
+        "productName": "Macquarie Super Manager",
+        "adviser": {
+          "key": "BBB"
+        },
+        "accountServiceType": "SUPERANNUATION"
+      },
+      "tradeDate": "02/03/2015",
+      "tradeType": "SELL",
+      "investment":"CBA",
+      "units":1000,
+      "price":"$30.00",
+      "fee":"$140.50",
+      "settlementValue":"$29863.50",
+      "adviser":"MARKW",
+      "date":"05/03/2015"
+    },
+    {
+      "account": {
+        "accountId": {
+          "key": "S43566"
+        },
+        "accountName": "JEFFERY CHRISTOPHER R",
+        "productName": "Macquarie Super Manager",
+        "adviser": {
+          "key": "BBB"
+        },
+        "accountServiceType": "SUPERANNUATION"
+      },
+      "tradeDate": "02/03/2015",
+      "tradeType": "BUY",
+      "investment":"CBA",
+      "units":1000,
+      "price":"$30.00",
+      "fee":"$140.50",
+      "settlementValue":"$29863.50",
+      "adviser":"MARKW",
+      "date":"05/03/2015"
+    },
+    {
+      "account": {
+        "accountId": {
+          "key": "S43566"
+        },
+        "accountName": "JEFFERY CHRISTOPHER R",
+        "productName": "Macquarie Super Manager",
+        "adviser": {
+          "key": "BBB"
+        },
+        "accountServiceType": "SUPERANNUATION"
+      },
+      "tradeDate": "02/03/2015",
+      "tradeType": "SELL",
+      "investment":"CBA",
+      "units":1000,
+      "price":"$30.00",
+      "fee":"$140.50",
+      "settlementValue":"$29863.50",
+      "adviser":"MARKW",
+      "date":"05/03/2015"
+    },
+    {
+      "account": {
+        "accountId": {
+          "key": "S43566"
+        },
+        "accountName": "JEFFERY CHRISTOPHER R",
+        "productName": "Macquarie Super Manager",
+        "adviser": {
+          "key": "BBB"
+        },
+        "accountServiceType": "SUPERANNUATION"
+      },
+      "tradeDate": "02/03/2015",
+      "tradeType": "BUY",
+      "investment":"CBA",
+      "units":1000,
+      "price":"$30.00",
+      "fee":"$140.50",
+      "settlementValue":"$29863.50",
+      "adviser":"MARKW",
+      "date":"05/03/2015"
+    },
+    {
+      "account": {
+        "accountId": {
+          "key": "S43566"
+        },
+        "accountName": "JEFFERY CHRISTOPHER R",
+        "productName": "Macquarie Super Manager",
+        "adviser": {
+          "key": "BBB"
+        },
+        "accountServiceType": "SUPERANNUATION"
+      },
+      "tradeDate": "02/03/2015",
+      "tradeType": "SELL",
+      "investment":"CBA",
+      "units":1000,
+      "price":"$30.00",
+      "fee":"$140.50",
+      "settlementValue":"$29863.50",
+      "adviser":"MARKW",
+      "date":"05/03/2015"
+    },
+    {
+      "account": {
+        "accountId": {
+          "key": "S43566"
+        },
+        "accountName": "JEFFERY CHRISTOPHER R",
+        "productName": "Macquarie Super Manager",
+        "adviser": {
+          "key": "BBB"
+        },
+        "accountServiceType": "SUPERANNUATION"
+      },
+      "tradeDate": "02/03/2015",
+      "tradeType": "BUY",
+      "investment":"CBA",
+      "units":1000,
+      "price":"$30.00",
+      "fee":"$140.50",
+      "settlementValue":"$29863.50",
+      "adviser":"MARKW",
+      "date":"05/03/2015"
+    },
+    {
+      "account": {
+        "accountId": {
+          "key": "S43566"
+        },
+        "accountName": "JEFFERY CHRISTOPHER R",
+        "productName": "Macquarie Super Manager",
+        "adviser": {
+          "key": "BBB"
+        },
+        "accountServiceType": "SUPERANNUATION"
+      },
+      "tradeDate": "02/03/2015",
+      "tradeType": "SELL",
+      "investment":"CBA",
+      "units":1000,
+      "price":"$30.00",
+      "fee":"$140.50",
+      "settlementValue":"$29863.50",
+      "adviser":"MARKW",
+      "date":"05/03/2015"
+    },
+    {
+      "account": {
+        "accountId": {
+          "key": "S43566"
+        },
+        "accountName": "JEFFERY CHRISTOPHER R",
+        "productName": "Macquarie Super Manager",
+        "adviser": {
+          "key": "BBB"
+        },
+        "accountServiceType": "SUPERANNUATION"
+      },
+      "tradeDate": "02/03/2015",
+      "tradeType": "BUY",
+      "investment":"CBA",
+      "units":1000,
+      "price":"$30.00",
+      "fee":"$140.50",
+      "settlementValue":"$29863.50",
+      "adviser":"MARKW",
+      "date":"05/03/2015"
+    },
+    {
+      "account": {
+        "accountId": {
+          "key": "S43566"
+        },
+        "accountName": "JEFFERY CHRISTOPHER R",
+        "productName": "Macquarie Super Manager",
+        "adviser": {
+          "key": "BBB"
+        },
+        "accountServiceType": "SUPERANNUATION"
+      },
+      "tradeDate": "02/03/2015",
+      "tradeType": "SELL",
+      "investment":"CBA",
+      "units":1000,
+      "price":"$30.00",
+      "fee":"$140.50",
+      "settlementValue":"$29863.50",
+      "adviser":"MARKW",
+      "date":"05/03/2015"
+    },
+    {
+      "account": {
+        "accountId": {
+          "key": "S43566"
+        },
+        "accountName": "JEFFERY CHRISTOPHER R",
+        "productName": "Macquarie Super Manager",
+        "adviser": {
+          "key": "BBB"
+        },
+        "accountServiceType": "SUPERANNUATION"
+      },
+      "tradeDate": "02/03/2015",
+      "tradeType": "BUY",
+      "investment":"CBA",
+      "units":1000,
+      "price":"$30.00",
+      "fee":"$140.50",
+      "settlementValue":"$29863.50",
+      "adviser":"MARKW",
+      "date":"05/03/2015"
     }
 
   ];
@@ -467,7 +775,6 @@ app.controller('OrdersCtrl', function ($scope, ngTableParams, $filter, $location
   }, {
       total: $scope.settlementsMockData.length, // length of data
       getData: function ($defer, params) {
-          debugger;
           $scope.orderedData = params.sorting() ?
               $filter('orderBy')($scope.settlementsMockData, params.orderBy()) :
               $scope.settlementsMockData;

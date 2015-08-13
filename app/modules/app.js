@@ -1,4 +1,9 @@
-var app =angular.module('WIP', ['ui.router','ui.bootstrap','ngTable','ngTableExport']);
+var underscore = angular.module('underscore', []);
+underscore.factory('_', ['$window', function() {
+  return $window._;
+}]);
+
+var app =angular.module('WIP', ['ui.router','ui.bootstrap','ngTable','ngTableExport','underscore']);
 
 console.log('this is the app starting up');
 app.config(function($stateProvider) {

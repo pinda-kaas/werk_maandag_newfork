@@ -1,17 +1,17 @@
 <div class="row">
 
-  <div class="col-sm-3">
+  <div class="col-sm-2">
     <label for="">Asset type</label>
     <select class="form-control" name="" ng-model="assetType" ng-options="item.id as item.title for item in assetTypes">
     </select>
   </div>
 
-  <div class="col-sm-3">
+  <div class="col-sm-2">
     <label for="">Security</label>
     <input class="form-control" ng-model="security" type="text"/>
   </div>
 
-  <div class="col-sm-3">
+  <div class="col-sm-2">
     <label for="">Trade type</label>
     <select class="form-control" ng-model="tradeType">
       <option>SELL</option>
@@ -20,7 +20,7 @@
 
     </select></div>
 
-  <div class="col-sm-3">
+  <div class="col-sm-2">
     <label for="">Period</label>
     <select class="form-control">
       <option>Today</option>
@@ -29,16 +29,15 @@
       <option>User defined</option>
     </select>
   </div>
-</div>
 
-
-<div class="row">
-  <div class="col-md-6">
+  <div class="col-md-2">
     <label for="">Date from</label>
-    <date-picker></date-picker>
+    <date-picker ng-model="dateFrom"></date-picker>
   </div>
-  <div class="col-md-6">
+  <div class="col-md-2">
     <label for="">Date to</label>
-    <date-picker></date-picker>
+    <date-picker ng-model="dateTo"></date-picker>
   </div>
+
+
 </div>

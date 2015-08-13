@@ -26,14 +26,16 @@
         <div>
           <tabset>
 
-            <tab heading="Orders" >
+            <tab heading="Orders">
               <div>
                 <div class="mainTable">
                   <!--<span id="noOrders" ng-hide="noOrders">There are no orders which match your criteria. Please try again.</span>-->
                   <span id="nrResults">{{filtered.length}} results match your search selection.</span>
+
                   <div>
                     <div>
-                      <table ng-table="tableParams" template-pagination="custom/pager" class="table" export-csv="$parent.csv" >
+                      <table ng-table="tableParams" template-pagination="custom/pager" class="table"
+                             export-csv="$parent.csv">
                         <tr ng-repeat="account in $data | filter:accountName | filter:key">
                           <td data-title="'Account'" sortable="'account.accountId.key'">
                             {{account.account.accountId.key}}
@@ -52,8 +54,6 @@
                           </td>
                         </tr>
                       </table>
-
-
                     </div>
                   </div>
 
@@ -62,10 +62,13 @@
             </tab>
 
             <tab heading="Awaiting settlement" active="true">
-                <table-filter ></table-filter>
 
-              <table ng-table="tableParamsSettlements" template-pagination="custom/pager" class="table" export-csv="$parent.csv" >
-                <tr ng-repeat="account in $data | filter:accountName | filter:key | filter: tradeType ">
+              {{settlementsMockData}}
+              <table-filter></table-filter>
+
+              <table ng-table="tableParamsSettlements" template-pagination="custom/pager" class="table"
+                     export-csv="$parent.csv">
+                <tr ng-repeat="account in $data | filter:accountName | filter:key | filter: tradeType | dateRangefilter ">
                   <td data-title="'Account'" sortable="'account.accountId.key'">
                     {{account.account.accountId.key}}
                   </td>
@@ -112,8 +115,6 @@
               </table>
 
             </tab>
-
-
 
 
             <tab heading="Complete">
