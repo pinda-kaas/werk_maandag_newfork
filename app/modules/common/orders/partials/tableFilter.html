@@ -16,7 +16,7 @@
     <select class="form-control" ng-model="tradeType">
       <option>SELL</option>
       <option>BUY</option>
-      <option> </option>
+      <option></option>
 
     </select></div>
 
@@ -30,14 +30,64 @@
     </select>
   </div>
 
+
+  <!--<div class="col-md-2">-->
+  <!--<label for="">Date from:</label>-->
+  <!--<p class="input-group">-->
+  <!--<input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="container.een" is-open="opened"-->
+  <!--datepicker-options="dateOptions" ng-required="true" close-text="Close"/>-->
+  <!--<span class="input-group-btn">-->
+  <!--<button type="button" class="btn btn-default" ng-click="open($event)"><i-->
+  <!--class="glyphicon glyphicon-calendar"></i></button>-->
+  <!--</span>-->
+  <!--</p>-->
+  <!--</div>-->
+
+
   <div class="col-md-2">
-    <label for="">Date from</label>
-    <date-picker ng-model="dateFrom"></date-picker>
+    <label for="">Date to:</label>
+
+    <p class="input-group">
+      <input
+        type="date"
+        id="test"
+        name="birthdate"
+        ng-model="birthDate"
+        popup="d MMM yyyy"
+        options="dateOptions"
+        opened="opened"
+        custom-datepicker/>
+    </p>
+
   </div>
+
+
   <div class="col-md-2">
-    <label for="">Date to</label>
-    <date-picker ng-model="dateTo"></date-picker>
+    <label for="">Date to:</label>
+
+    <p class="input-group">
+      <input
+        type="date"
+        id="test2"
+        name="birthdate2"
+        ng-model="birthDate2"
+        popup="d MMM yyyy"
+        options="dateOptions"
+        opened="opened"
+        custom-datepicker/>
+    </p>
+
   </div>
+
+
+  <!--<div class="col-md-2">-->
+  <!--<label for="">Date from</label>-->
+  <!--<date-picker ng-model="dateFrom"></date-picker>-->
+  <!--</div>-->
+  <!--<div class="col-md-2">-->
+  <!--<label for="">Date to</label>-->
+  <!--<date-picker ng-model="dateTo"></date-picker>-->
+  <!--</div>-->
 
 
 </div>

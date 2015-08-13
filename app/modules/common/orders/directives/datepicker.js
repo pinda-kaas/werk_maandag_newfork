@@ -1,49 +1,21 @@
-app.directive('datePicker', function() {
+app.directive('datePicker',function($compile,$timeout){
   return {
-    templateUrl: '/modules/common/orders/partials/datepicker.html',
-    restrict:'E',
-    scope:{},
-    controller: function($scope){
-      $scope.today = function() {
-        $scope.dt = new Date();
-      };
-      $scope.today();
+    replace:true,
+    templateUrl:'datepicker.html',
+    scope: {
+      ngModel: '=',
+      dateOptions: '@',
+      dateDisabled: '@',
+      opened: '=',
+      min: '@',
+      max: '@',
+      popup: '@',
+      options: '@',
+      name: '@',
+      id: '@'
+    },
+    link: function($scope, $element, $attrs, $controller){
 
-      $scope.showWeeks = true;
-      $scope.toggleWeeks = function () {
-        $scope.showWeeks = ! $scope.showWeeks;
-      };
-
-      $scope.clear = function () {
-        $scope.dt = null;
-      };
-
-      // Disable weekend selection
-      $scope.disabled = function(date, mode) {
-        return ( mode === 'day' && ( date.getDay() === 0 || date.getDay() === 6 ) );
-      };
-
-      $scope.toggleMin = function() {
-        $scope.minDate = ( $scope.minDate ) ? null : new Date();
-      };
-      $scope.toggleMin();
-
-      $scope.open = function($event) {
-        $event.preventDefault();
-        $event.stopPropagation();
-
-        $scope.opened = true;
-      };
-
-      $scope.dateOptions = {
-        'year-format': "'yy'",
-        'starting-day': 1
-      };
-
-      $scope.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'shortDate'];
-      $scope.format = $scope.formats[0];
-
-      console.log('end of controller');
     }
   };
-});
+})

@@ -63,12 +63,11 @@
 
             <tab heading="Awaiting settlement" active="true">
 
-              {{settlementsMockData}}
               <table-filter></table-filter>
 
               <table ng-table="tableParamsSettlements" template-pagination="custom/pager" class="table"
                      export-csv="$parent.csv">
-                <tr ng-repeat="account in $data | filter:accountName | filter:key | filter: tradeType | dateRangefilter ">
+                <tr ng-repeat="account in $data | filter:accountName | filter:key | filter: tradeType ">
                   <td data-title="'Account'" sortable="'account.accountId.key'">
                     {{account.account.accountId.key}}
                   </td>
