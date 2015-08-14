@@ -67,8 +67,8 @@
               <table ng-table="tableParamsSettlements" template-pagination="custom/pager" class="table"
                      export-csv="$parent.csv">
 
-                <!--<tr ng-repeat="account in $data | filter:accountName | filter:key | filter: tradeType | dateRange:dateFrom:dateTo ">-->
-                <tr ng-repeat="account in $data | filter:accountName | filter:key | filter: tradeType  ">
+
+                <tr ng-repeat="account in $data | filter:accountName | filter:key | filter: tradeType | dateRange:dateFrom:dateTo ">
 
                   <td data-title="'Account'" sortable="'account.accountId.key'">
                     {{account.account.accountId.key}}

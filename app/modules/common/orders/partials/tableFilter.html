@@ -1,20 +1,6 @@
+
+
 <div class="row">
-
-  <div class="col-sm-2">
-    <label for="">Date to:</label>
-
-    <p class="input-group">
-      <date-picker ng-model="fr"></date-picker>
-    </p>
-  </div>
-
-  <div class="col-sm-2">
-    <label for="">Date to:</label>
-
-    <p class="input-group">
-      <date-picker ng-model="to"></date-picker>
-    </p>
-  </div>
 
   <div class="col-sm-2">
     <label for="">Asset type</label>
@@ -47,6 +33,63 @@
   </div>
 
 
+  <!--<div class="col-md-2">-->
+  <!--<label for="">Date from:</label>-->
+  <!--<p class="input-group">-->
+  <!--<input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="container.een" is-open="opened"-->
+  <!--datepicker-options="dateOptions" ng-required="true" close-text="Close"/>-->
+  <!--<span class="input-group-btn">-->
+  <!--<button type="button" class="btn btn-default" ng-click="open($event)"><i-->
+  <!--class="glyphicon glyphicon-calendar"></i></button>-->
+  <!--</span>-->
+  <!--</p>-->
+  <!--</div>-->
 
+
+  <!--<div class="col-md-2">-->
+  <!--<label for="">Date from:</label>-->
+
+  <!--<p class="input-group">-->
+  <!--<input-->
+  <!--type="text"-->
+  <!--name="dateFrom"-->
+  <!--ng-model="dateFrom"-->
+  <!--popup="d MMM yyyy"-->
+  <!--options="dateOptions"-->
+  <!--opened="opened"-->
+  <!--custom-datepicker/>-->
+  <!--</p>-->
+
+  <!--</div>-->
+
+
+  <!--<div class="col-md-2">-->
+  <!--<label for="">Date to:</label>-->
+
+  <!--<p class="input-group">-->
+  <!--<input-->
+  <!--type="text"-->
+  <!--name="dateTo"-->
+  <!--ng-model="dateTo"-->
+  <!--popup="d MMM yyyy"-->
+  <!--options="dateOptions"-->
+  <!--opened="opened"-->
+  <!--custom-datepicker/>-->
+  <!--</p>-->
+
+  <!--</div>-->
+  <div id="date1" class="input-append" date-picker="" ng-model="dateFrom">
+    <input data-format="MM-dd-yyyy" type="text" id="input1" name="input1"></input>
+          <span class="add-on">
+            <i data-time-icon="icon-time" data-date-icon="icon-calendar"></i>
+          </span>
+  </div>
+
+  <div id="date" class="input-append" date-picker="" ng-model="dateTo">
+    <input data-format="MM-dd-yyyy" type="text" id="input2" name="input1"></input>
+          <span class="add-on">
+            <i data-time-icon="icon-time" data-date-icon="icon-calendar"></i>
+          </span>
+  </div>
 
 </div>

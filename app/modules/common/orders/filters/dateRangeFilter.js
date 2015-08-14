@@ -1,5 +1,6 @@
 app.filter('dateRange', function() {
   return function(input,dateFrom,dateTo) {
+    console.log('daterange filter kicksin');
     console.log(dateFrom);
     console.log(dateTo);
     return _.filter(input, function(d) {
