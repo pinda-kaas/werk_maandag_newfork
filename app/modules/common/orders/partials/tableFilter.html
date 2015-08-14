@@ -45,14 +45,14 @@
 
 
   <div class="col-md-2">
-    <label for="">Date to:</label>
+    <label for="">Date from:</label>
 
+    {{dateFrom}}
     <p class="input-group">
       <input
         type="date"
-        id="test"
-        name="birthdate"
-        ng-model="birthDate"
+        name="dateFrom"
+        ng-model="dateFrom"
         popup="d MMM yyyy"
         options="dateOptions"
         opened="opened"
@@ -65,12 +65,12 @@
   <div class="col-md-2">
     <label for="">Date to:</label>
 
+    {{dateTo}}
     <p class="input-group">
       <input
         type="date"
-        id="test2"
-        name="birthdate2"
-        ng-model="birthDate2"
+        name="dateTo"
+        ng-model="dateTo"
         popup="d MMM yyyy"
         options="dateOptions"
         opened="opened"

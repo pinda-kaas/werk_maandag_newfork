@@ -30,7 +30,7 @@ app.controller('OrdersCtrl', function ($scope, ngTableParams, $filter, $location
       "fee":"$140.50",
       "settlementValue":"$29863.50",
       "adviser":"MARKW",
-      "date":"05/03/2015"
+      "date":"10/08/2015"
     },
     {
       "account": {

@@ -16,6 +16,27 @@ app.directive('datePicker',function($compile,$timeout){
     },
     link: function($scope, $element, $attrs, $controller){
 
+    },
+    controller:function($scope){
+      $scope.container = {
+        one: null,
+        two: null
+      };
+
+      $scope.open = function($event) {
+        $event.preventDefault();
+        $event.stopPropagation();
+
+        $scope.opened = true;
+      };
+
+      $scope.dateOptions = {
+        formatYear: 'yy',
+        startingDay: 1
+      };
+
+      $scope.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate'];
+      $scope.format = $scope.formats[0];
     }
   };
 })
