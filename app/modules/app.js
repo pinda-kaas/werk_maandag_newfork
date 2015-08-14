@@ -3,7 +3,7 @@ underscore.factory('_', ['$window', function() {
   return $window._;
 }]);
 
-var app =angular.module('WIP', ['ui.router','ui.bootstrap','ngTable','ngTableExport','underscore']);
+var app =angular.module('WIP', ['ui.router','ngTable','ngTableExport','underscore']);
 
 console.log('this is the app starting up');
 app.config(function($stateProvider) {
