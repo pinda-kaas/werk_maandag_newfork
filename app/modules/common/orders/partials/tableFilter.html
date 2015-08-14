@@ -44,50 +44,53 @@
   <!--</div>-->
 
 
-  <div class="col-md-2">
-    <label for="">Date from:</label>
+  <!--<div class="col-md-2">-->
+  <!--<label for="">Date from:</label>-->
 
-    {{dateFrom}}
-    <p class="input-group">
-      <input
-        type="text"
-        name="dateFrom"
-        ng-model="dateFrom"
-        popup="d MMM yyyy"
-        options="dateOptions"
-        opened="opened"
-        custom-datepicker/>
-    </p>
+  <!--<p class="input-group">-->
+  <!--<input-->
+  <!--type="text"-->
+  <!--name="dateFrom"-->
+  <!--ng-model="dateFrom"-->
+  <!--popup="d MMM yyyy"-->
+  <!--options="dateOptions"-->
+  <!--opened="opened"-->
+  <!--custom-datepicker/>-->
+  <!--</p>-->
 
-  </div>
+  <!--</div>-->
 
 
-  <div class="col-md-2">
+  <!--<div class="col-md-2">-->
+  <!--<label for="">Date to:</label>-->
+
+  <!--<p class="input-group">-->
+  <!--<input-->
+  <!--type="text"-->
+  <!--name="dateTo"-->
+  <!--ng-model="dateTo"-->
+  <!--popup="d MMM yyyy"-->
+  <!--options="dateOptions"-->
+  <!--opened="opened"-->
+  <!--custom-datepicker/>-->
+  <!--</p>-->
+
+  <!--</div>-->
+
+
     <label for="">Date to:</label>
 
-    {{dateTo}}
     <p class="input-group">
-      <input
-        type="text"
-        name="dateTo"
-        ng-model="dateTo"
-        popup="d MMM yyyy"
-        options="dateOptions"
-        opened="opened"
-        custom-datepicker/>
+      <date-picker ng-model="fr"></date-picker>
     </p>
 
-  </div>
 
 
-  <!--<div class="col-md-2">-->
-  <!--<label for="">Date from</label>-->
-  <!--<date-picker ng-model="dateFrom"></date-picker>-->
-  <!--</div>-->
-  <!--<div class="col-md-2">-->
-  <!--<label for="">Date to</label>-->
-  <!--<date-picker ng-model="dateTo"></date-picker>-->
-  <!--</div>-->
+
+    <p class="input-group">
+      <date-picker ng-model="to"></date-picker>
+    </p>
+  
 
 
 </div>
