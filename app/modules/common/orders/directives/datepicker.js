@@ -18,6 +18,8 @@ app.directive('datePicker',function($compile,$timeout){
 
     },
     controller:function($scope){
+
+      console.log('inside controller code');
       $scope.container = {
         one: null,
         two: null
