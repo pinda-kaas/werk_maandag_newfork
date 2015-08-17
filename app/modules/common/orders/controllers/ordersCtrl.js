@@ -5,9 +5,12 @@ app.controller('OrdersCtrl', function ($scope, $filter, $location,configService,
   var testing = configService.config('development');
 
   var testing2 = orderService.getData(testing.url).then(function(result){
-    debugger;
+    //debugger;
    console.log('mock data json',result);
+    $scope.rowCollection =result;
  });
+
+
 
 
 });
