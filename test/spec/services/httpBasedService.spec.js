@@ -4,7 +4,7 @@ describe('httpBasedService', function () {
 
   beforeEach(function (){
     // load the module.
-    module('app');
+    module('WIP');
 
     // get your service, also get $httpBackend
     // $httpBackend will be a mock, thanks to angular-mocks.js

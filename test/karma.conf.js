@@ -3,14 +3,14 @@
 // Generated on 2015-06-01 using
 // generator-karma 0.8.3
 
-module.exports = function(config) {
+module.exports = function (config) {
   'use strict';
 
   config.set({
     // enable / disable watching file and executing tests whenever any file changes
     autoWatch: true,
 
-    preprocessors : {
+    preprocessors: {
       'app/**/*.js': ['coverage']
     },
 
@@ -24,13 +24,17 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
+
       'bower_components/angular/angular.js',
       'bower_components/angular-mocks/angular-mocks.js',
-        'bower_components/angular-route/angular-route.js',
+      'bower_components/angular-ui-router/release/angular-ui-router.js',
       'bower_components/angular-bootstrap/ui-bootstrap.js',
-      '../app/scripts_old/**/*.js',
-    //  'test/mock/**/*.js',
-      'test/spec/**/*.spec.js'
+
+      'app/modules/**/*.js',
+      'app/modules/app.js',
+      //'../app/scripts_old/**/*.js',
+      //  'test/mock/**/*.js',
+      'test/spec/**/httpBasedService.spec.js'
     ],
 
     // list of files / patterns to exclude
