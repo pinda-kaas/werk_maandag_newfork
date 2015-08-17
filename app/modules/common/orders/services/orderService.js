@@ -1,5 +1,5 @@
 angular.module('WIP').factory('orderService', function($http) {
-  return {
+  return  {
     getData: function(url) {
       return $http.get(url)
         .then(function(result) {

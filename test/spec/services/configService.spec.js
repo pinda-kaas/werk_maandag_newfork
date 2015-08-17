@@ -3,7 +3,6 @@ describe('configService', function () {
 
   beforeEach(function () {
     module('WIP');
-
     inject(function (_configService_) {
       configService = _configService_;
     });

@@ -23,7 +23,7 @@ describe('orderService', function () {
 
   it('should call getdata.', function (){
 
-    var returnData = { test:'hello'};
+    var returnData = { test:'helloss'};
 
     httpBackend.expectGET('/api/data').respond(returnData);
 
