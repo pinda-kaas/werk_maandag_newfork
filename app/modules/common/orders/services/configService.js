@@ -4,7 +4,7 @@ angular.module('WIP').factory('configService', function($http) {
       switch (environment) {
         case 'development':
           return {
-            url: '../mock/ordersMockData.json'
+            url: 'modules/common/orders/mock/ordersTabMockData.json'
           }
       }
     }
