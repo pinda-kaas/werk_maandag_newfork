@@ -1,13 +1,6 @@
-app.controller('OrdersCtrl', function ($scope, ngTableParams, $filter, $location) {
-//app.controller('OrdersCtrl', function ($scope, $filter, $location) {
+app.controller('OrdersCtrl', function ($scope, $filter, $location) {
 
   console.log('ordersctrl started');
-
-  $scope.tabs = [{
-    slug: 'orders',
-    title: "Orders",
-    contentUrl: '../partials/ordersTab.html'
-  }];
 
   $scope.settlementsMockData=[
     {
@@ -745,62 +738,5 @@ app.controller('OrdersCtrl', function ($scope, ngTableParams, $filter, $location
       "minOpenOrderState": "PENDING"
     }
   ];
-
-  $scope.tableParams = new ngTableParams({
-    page: 1,            // show first page
-    count: 10,           // count per page
-    sorting: {
-      minOpenOrderState: 'asc'     // initial sorting
-    }
-  }, {
-    total: $scope.ordersMockData.length, // length of data
-    getData: function ($defer, params) {
-      $scope.orderedData = params.sorting() ?
-        $filter('orderBy')($scope.ordersMockData, params.orderBy()) :
-        $scope.ordersMockData;
-      console.log($scope.orderedData.length);
-      console.log('getdata');
-      var cnt = params.count();
-      $defer.resolve($scope.orderedData.slice((params.page() - 1) * params.count(), params.page() * params.count()));
-    }
-  })
-
- //
- $scope.tableParamsSettlements= new ngTableParams({
-      page: 1,            // show first page
-      count: 10,           // count per page
-      sorting: {
-          minOpenOrderState: 'asc'     // initial sorting
-      }
-  }, {
-      total: $scope.settlementsMockData.length, // length of data
-      getData: function ($defer, params) {
-          $scope.orderedData = params.sorting() ?
-              $filter('orderBy')($scope.settlementsMockData, params.orderBy()) :
-              $scope.settlementsMockData;
-          console.log($scope.orderedData.length);
-          var cnt = params.count();
-          $defer.resolve($scope.orderedData.slice((params.page() - 1) * params.count(), params.page() * params.count()));
-      }
-  })
- //
- // $scope.tableParamsCompletedOrders= new ngTableParams({
- //     page: 1,            // show first page
- //     count: 10,           // count per page
- //     sorting: {
- //         minOpenOrderState: 'asc'     // initial sorting
- //     }
- // }, {
- //     total: $scope.completedOrdersMockData.length, // length of data
- //     getData: function ($defer, params) {
- //         debugger;
- //         $scope.orderedData = params.sorting() ?
- //             $filter('orderBy')($scope.completedOrdersMockData, params.orderBy()) :
- //             $scope.completedOrdersMockData;
- //         console.log($scope.orderedData.length);
- //         var cnt = params.count();
- //         $defer.resolve($scope.orderedData.slice((params.page() - 1) * params.count(), params.page() * params.count()));
- //     }
- // })
 
 });

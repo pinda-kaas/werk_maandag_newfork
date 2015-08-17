@@ -1,5 +1,5 @@
-app.directive('completeOrdersTable', function() {
+app.directive('completeOrdersTab', function() {
   return {
-    templateUrl: 'modules/common/orders/partials/completeOrdersTable.html'
+    templateUrl: 'modules/common/orders/partials/completeOrdersTab.html'
   };
 });

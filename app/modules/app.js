@@ -3,9 +3,10 @@ underscore.factory('_', ['$window', function() {
   return $window._;
 }]);
 
-var app =angular.module('WIP', ['ui.router','underscore']);
+var app =angular.module('WIP', ['ui.router','underscore','ui.bootstrap']);
 
 console.log('this is the app starting up');
+
 app.config(function($stateProvider) {
   // Now set up the states
 
