@@ -10,9 +10,9 @@ module.exports = function (config) {
     // enable / disable watching file and executing tests whenever any file changes
     autoWatch: true,
 
-    preprocessors: {
-      'app/**/*.js': ['coverage']
-    },
+    //preprocessors: {
+    //  'app/**/*.js': ['coverage']
+    //},
 
     reporters: ['progress', 'coverage'],
 
@@ -29,12 +29,14 @@ module.exports = function (config) {
       'bower_components/angular-mocks/angular-mocks.js',
       'bower_components/angular-ui-router/release/angular-ui-router.js',
       'bower_components/angular-bootstrap/ui-bootstrap.js',
+      'bower_components/angular-smart-table/dist/smart-table.min.js',
+
 
       'app/modules/**/*.js',
       'app/modules/app.js',
       //'../app/scripts_old/**/*.js',
       //  'test/mock/**/*.js',
-      'test/spec/**/*.spec.js'
+      'test/spec/**/httpBasedService.spec.js'
     ],
 
     // list of files / patterns to exclude

@@ -1,5 +1,5 @@
-describe('httpBasedService', function () {
-  var httpBasedService,
+describe('orderService', function () {
+  var orderService,
       httpBackend;
 
   beforeEach(function (){
@@ -8,8 +8,8 @@ describe('httpBasedService', function () {
 
     // get your service, also get $httpBackend
     // $httpBackend will be a mock, thanks to angular-mocks.js
-    inject(function($httpBackend, _httpBasedService_) {
-      httpBasedService = _httpBasedService_;
+    inject(function($httpBackend, _orderService_) {
+      orderService = _orderService_;
       httpBackend = $httpBackend;
     });
   });
@@ -21,29 +21,21 @@ describe('httpBasedService', function () {
     httpBackend.verifyNoOutstandingRequest();
   });
 
-  it('should send the msg and return the response.', function (){
-    // set up some data for the http call to return and test later.
-    var returnData = { excited: true };
+  it('should call getdata.', function (){
 
-    // expectGET to make sure this is called once.
-    httpBackend.expectGET('somthing.json?msg=wee').respond(returnData);
+    var returnData = { test:'hello'};
 
-    // make the call.
-    var returnedPromise = httpBasedService.sendMessage('wee');
+    httpBackend.expectGET('/api/data').respond(returnData);
 
-    // set up a handler for the response, that will put the result
-    // into a variable in this scope for you to test.
+    var returnedPromise = orderService.getData('/api/data');
+
     var result;
     returnedPromise.then(function(response) {
       result = response;
     });
 
-    // flush the backend to "execute" the request to do the expectedGET assertion.
     httpBackend.flush();
 
-    // check the result.
-    // (after Angular 1.2.5: be sure to use `toEqual` and not `toBe`
-    // as the object will be a copy and not the same instance.)
     expect(result).toEqual(returnData);
   });
 });
