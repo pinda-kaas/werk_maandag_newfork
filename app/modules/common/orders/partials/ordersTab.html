@@ -8,10 +8,10 @@
     <table st-table="accounts" class="table table-striped">
       <thead>
       <tr>
-        <th>Account</th>
-        <th>Advisor</th>
-        <th>Product</th>
-        <th>Status</th>
+        <th st-sort="account.accountId.key">Account</th>
+        <th st-sort="account.accountName">Advisor</th>
+        <th st-sort="account.productName">Product</th>
+        <th st-sort="account.minOpenOrderState">Status</th>
 
       </tr>
       </thead>
