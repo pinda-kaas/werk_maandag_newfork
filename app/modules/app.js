@@ -15,13 +15,21 @@ app.config(function($stateProvider) {
       templateUrl: 'modules/common/orders/partials/tabs.html',
       controller: 'OrdersCtrl',
       resolve: {
-        myData:function(orderService,configService){
+        orderData:function(orderService,configService){
           console.log('resolve orderdata');
-          return orderService.getData(configService.config('development').url);
+          return orderService.getData(configService.config('mock_orders').url);
         }
-
       }
-
+    })
+    .state('settlements', {
+      templateUrl: 'modules/common/orders/partials/tabs.html',
+      controller: 'AwaitingSettlementsCtrl',
+      resolve: {
+        settlementData:function(orderService,configService){
+          console.log('resolve settlementData');
+          return orderService.getData(configService.config('mock_settlements').url);
+        }
+      }
     });
 });
 

@@ -1,10 +1,11 @@
-app.controller('OrdersCtrl', function ($scope, $filter, $location,configService, myData) {
+app.controller('OrdersCtrl', function ($scope, $filter, $location,configService, orderData) {
 
   console.log('ordersctrl started');
 
-  debugger;
+  $scope.accounts=  orderData;
 
-  $scope.accounts=  myData;
+});
+
 
 //$scope.accounts=  [
 //    {
@@ -399,4 +400,3 @@ app.controller('OrdersCtrl', function ($scope, $filter, $location,configService,
  //   console.log('scope.accounts:',$scope.accounts);
  //});
 
-});
