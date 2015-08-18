@@ -13,7 +13,15 @@ app.config(function($stateProvider) {
   $stateProvider
     .state('orders', {
       templateUrl: 'modules/common/orders/partials/tabs.html',
-      controller: 'OrdersCtrl'
+      controller: 'OrdersCtrl',
+      resolve: {
+        myData:function(orderService,configService){
+          console.log('resolve orderdata');
+          return orderService.getData(configService.config('development').url);
+        }
+
+      }
+
     });
 });
 
