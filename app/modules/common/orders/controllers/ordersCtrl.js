@@ -4,15 +4,15 @@ app.controller('OrdersCtrl', function ($scope, $filter, $location,configService,
 
   debugger;
 
-  $scope.accounts=[];
+  //$scope.accounts=[];
 
   var testing = configService.config('development');
 
   var testing2 = orderService.getData(testing.url).then(function(result){
-    //debugger;
+    debugger;
 
     $scope.accounts =result;
-    console.log('mock data json',$scope.accounts);
+    console.log('scope.accounts:',$scope.accounts);
  });
 
 });

@@ -13,6 +13,7 @@ module.exports = function (config) {
     //preprocessors: {
     //  'app/**/*.js': ['coverage']
     //},
+    //
     reporters: ['progress', 'coverage'],
 
     // base path, that will be used to resolve files and exclude
