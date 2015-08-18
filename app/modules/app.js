@@ -15,9 +15,9 @@ app.config(function($stateProvider) {
       templateUrl: 'modules/common/orders/partials/tabs.html',
       controller: 'OrdersCtrl',
       resolve: {
-        orderData:function(orderService,configService){
+        orderData:function(wipService,configService){
           console.log('resolve orderdata');
-          return orderService.getData(configService.config('mock_orders').url);
+          return wipService.getData(configService.config('mock_orders').url);
         }
       }
     })
@@ -25,9 +25,9 @@ app.config(function($stateProvider) {
       templateUrl: 'modules/common/orders/partials/tabs.html',
       controller: 'AwaitingSettlementsCtrl',
       resolve: {
-        settlementData:function(orderService,configService){
+        settlementData:function(wipService,configService){
           console.log('resolve settlementData');
-          return orderService.getData(configService.config('mock_settlements').url);
+          return wipService.getData(configService.config('mock_settlements').url);
         }
       }
     });
