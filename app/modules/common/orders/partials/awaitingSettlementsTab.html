@@ -7,35 +7,34 @@
     <table st-table="settlements" class="table table-striped">
       <thead>
       <tr>
-        <th st-sort="account.accountId.key">Account</th>
-        <th st-sort="account.accountName"></th>
-        <th st-sort="account.tradeDate">Trade date</th>
-        <th st-sort="account.orderType">Type</th>
-        <th st-sort="account.asset.name">Investment</th>
-
-        <th st-sort="account.units">Units</th>
-        <th st-sort="account.price">Price</th>
-        <th st-sort="account.fee">Fee</th>
-        <th st-sort="account.settlementValue">Settlement value</th>
-        <th st-sort="account.account.adviser.key">Adviser</th>
-        <th st-sort="account.settlementDate">Settlement date</th>
+        <th st-ratio="30" st-sort="account.accountId.key">Account</th>
+        <th  st-ratio="20" st-sort="account.accountName"></th>
+        <th st-ratio="5"  st-sort="account.tradeDate">Trade date</th>
+        <th  st-ratio="5"  st-sort="account.orderType">Type</th>
+        <th  st-ratio="5"  st-sort="account.asset.name">Investment</th>
+        <th  st-ratio="5"  st-sort="account.units">Units</th>
+        <th  st-ratio="5"  st-sort="account.price">Price</th>
+        <th  st-ratio="5"  st-sort="account.fee">Fee</th>
+        <th  st-ratio="5"  st-sort="account.settlementValue">Settlement value</th>
+        <th  st-ratio="5"  st-sort="account.account.adviser.key">Adviser</th>
+        <th  st-ratio="10"  st-sort="account.settlementDate">Settlement date</th>
 
       </tr>
       </thead>
       <tbody>
       <tr ng-repeat="account in settlements | filter:accountName">
-        <td>{{account.account.accountId.key}}</td>
-        <td>{{account.account.accountName}}</td>
-        <td>{{account.tradeDate}}</td>
-        <td>{{account.orderType}}</td>
-        <td>{{account.asset.name}}</td>
+        <td  st-ratio="20" >{{account.account.accountId.key}}</td>
+        <td  st-ratio="20" >{{account.account.accountName}}</td>
+        <td  st-ratio="5" >{{account.tradeDate}}</td>
+        <td  st-ratio="5" >{{account.orderType}}</td>
+        <td  st-ratio="5" >{{account.asset.name}}</td>
 
-        <td>{{account.units}}</td>
-        <td>{{account.price.value}}</td>
-        <td>{{account.fee}}</td>
-        <td>{{account.settlementValue.value}}</td>
-        <td>{{account.account.adviser.key}}</td>
-        <td>{{account.settlementDate}}</td>
+        <td  st-ratio="5" >{{account.units}}</td>
+        <td  st-ratio="5" >{{account.price.value}}</td>
+        <td  st-ratio="5" >{{account.fee}}</td>
+        <td  st-ratio="5" >{{account.settlementValue.value}}</td>
+        <td  st-ratio="5" >{{account.account.adviser.key}}</td>
+        <td  st-ratio="20" >{{account.settlementDate}}</td>
 
 
 
