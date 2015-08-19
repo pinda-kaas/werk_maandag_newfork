@@ -32,9 +32,6 @@
   </nav>
 
 
-
-
-
   <div ui-view=""></div>
 
   <div class="footer">
@@ -44,35 +41,28 @@
 </div>
 
 
-<!-- build:js(.) scripts_old/oldieshim.js -->
-<!--[if lt IE 9]>
+<!-- build:js(.) scripts/vendor.js -->
+<!-- bower:js -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
 <script src="bower_components/es5-shim/es5-shim.js"></script>
-<script src="bower_components/json3/lib/json3.js"></script>
-<![endif]-->
-
-<!--vendor scripts-->
 <script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/json3/lib/json3.js"></script>
+<script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
 <script src="bower_components/angular-resource/angular-resource.js"></script>
 <script src="bower_components/angular-route/angular-route.js"></script>
-<script src="bower_components/underscore/underscore-min.js"></script>
-<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-<script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.13.3.js"></script>
-<script src="bower_components/angular-smart-table/dist/smart-table.min.js"></script>
-<!--end vendor scripts-->
+<!-- endbower -->
+<!-- endbuild -->
 
-<!--application scripts-->
+<!-- build:js({.tmp,app}) scripts/scripts.js -->
 <script src="modules/app.js"></script>
 <script src="modules/common/orders/controllers/ordersCtrl.js"></script>
 <script src="modules/common/orders/directives/ordersTab.js"></script>
 <script src="modules/common/orders/directives/awaitingSettlementsTab.js"></script>
 <script src="modules/common/orders/directives/completeOrdersTab.js"></script>
 <script src="modules/common/orders/services/configService.js"></script>
-
 <script src="modules/common/orders/services/wipService.js"></script>
 <script src="modules/common/orders/controllers/awaitingSettlementsCtrl.js"></script>
-
-
-<!--end application scripts-->
+<!-- endbuild -->
 
 </body>
 </html>
