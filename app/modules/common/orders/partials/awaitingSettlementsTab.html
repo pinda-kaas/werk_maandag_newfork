@@ -32,7 +32,7 @@
         <td  st-ratio="5" >{{account.units}}</td>
         <td  st-ratio="5" >{{account.price.value | showCurrency:account.price.currency}}</td>
         <td  st-ratio="5" >{{account.fee}}</td>
-        <td  st-ratio="5" >{{account.settlementValue.value}}</td>
+        <td  st-ratio="5" >{{account.settlementValue.value | showCurrency:account.price.currency}}</td>
         <td  st-ratio="5" >{{account.account.adviser.key}}</td>
         <td  st-ratio="20" >{{account.settlementDate}}</td>
 
