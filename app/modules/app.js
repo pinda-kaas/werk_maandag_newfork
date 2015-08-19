@@ -35,7 +35,7 @@ app.config(function ($stateProvider) {
             templateUrl: 'modules/common/orders/partials/tabs.html',
             controller: 'CompleteOrdersCtrl',
             resolve: {
-                orderData: function (wipService, configService) {
+                completeOrders: function (wipService, configService) {
                     return wipService.getData(configService.config('mock_complete_orders').url);
                 }
             }

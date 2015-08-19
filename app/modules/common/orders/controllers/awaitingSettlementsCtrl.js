@@ -6,4 +6,6 @@ app.controller('AwaitingSettlementsCtrl', function ($scope, $filter, $location,c
 
   $scope.settlements=  settlementData;
 
+  console.log('settlementdata in ctrl',settlementData);
+
 });

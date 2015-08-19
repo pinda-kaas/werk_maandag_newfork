@@ -2,6 +2,8 @@
 
   {{settlements.length}} results match your search selection.
 
+  {{settlements}}
+
   <div>
 
     <table st-table="settlements" class="table table-striped">
@@ -35,10 +37,6 @@
         <td  st-ratio="5" >{{account.settlementValue.value | showCurrency:account.price.currency}}</td>
         <td  st-ratio="5" >{{account.account.adviser.key}}</td>
         <td  st-ratio="20" >{{account.settlementDate}}</td>
-
-
-
-
       </tr>
       </tbody>
 

@@ -4,7 +4,7 @@
 
     <div>
 
-        <table st-table="settlements" class="table table-striped">
+        <table st-table="completeOrders" class="table table-striped">
             <thead>
             <tr>
                 <th st-ratio="5" st-sort="account.accountId.key">Account</th>
@@ -22,7 +22,7 @@
             </tr>
             </thead>
             <tbody>
-            <tr ng-repeat="account in settlements | filter:accountName">
+            <tr ng-repeat="account in completeOrders | filter:accountName">
                 <td  st-ratio="5" >{{account.account.accountId.key}}</td>
                 <td  st-ratio="20" >{{account.account.accountName}}</td>
                 <td  st-ratio="5" >{{account.tradeDate}}</td>
