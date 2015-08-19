@@ -18,6 +18,7 @@ app.config(function($stateProvider) {
         orderData:function(wipService,configService){
           console.log('resolve orderdata');
           return wipService.getData(configService.config('mock_orders').url);
+          //return {};
         }
       }
     })
@@ -28,6 +29,7 @@ app.config(function($stateProvider) {
         settlementData:function(wipService,configService){
           console.log('resolve settlementData');
           return wipService.getData(configService.config('mock_settlements').url);
+          //return {};
         }
       }
     });
