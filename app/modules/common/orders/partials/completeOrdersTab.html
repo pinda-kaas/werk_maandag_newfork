@@ -1,6 +1,6 @@
 <div>
 
-    {{settlements.length}} results match your search selection.
+    {{completeOrders.length}} results match your search selection.
 
     <div>
 
@@ -8,8 +8,9 @@
             <thead>
             <tr>
                 <th st-ratio="5" st-sort="account.accountId.key">Account</th>
-                <th  st-ratio="25" st-sort="account.accountName"></th>
-                <th st-ratio="10"  st-sort="account.tradeDate">Trade date</th>
+                <th  st-ratio="20" st-sort="account.accountName"></th>
+                <th  st-ratio="10"  st-sort="account.settlementDate">Settlement date</th>
+                <!--<th st-ratio="10"  st-sort="account.tradeDate">Trade date</th>-->
                 <th  st-ratio="5"  st-sort="account.orderType">Type</th>
                 <th  st-ratio="5"  st-sort="account.asset.name">Investment</th>
                 <th  st-ratio="5"  st-sort="account.units">Units</th>
@@ -17,7 +18,9 @@
                 <th  st-ratio="5"  st-sort="account.fee">Fee</th>
                 <th  st-ratio="5"  st-sort="account.settlementValue">Settlement value</th>
                 <th  st-ratio="5"  st-sort="account.account.adviser.key">Adviser</th>
-                <th  st-ratio="10"  st-sort="account.settlementDate">Settlement date</th>
+
+                <th  st-ratio="20"  st-sort="account.asset.name">Product</th>
+
 
             </tr>
             </thead>
@@ -25,17 +28,17 @@
             <tr ng-repeat="account in completeOrders | filter:accountName">
                 <td  st-ratio="5" >{{account.account.accountId.key}}</td>
                 <td  st-ratio="20" >{{account.account.accountName}}</td>
-                <td  st-ratio="5" >{{account.tradeDate}}</td>
+                <td  st-ratio="10" >{{account.settlementDate}}</td>
+                <!--<td  st-ratio="5" >{{account.tradeDate}}</td>-->
                 <td  st-ratio="5" >{{account.orderType}}</td>
-                <td  st-ratio="20" >{{account.asset.name}}</td>
+                <td  st-ratio="20" >ANZ</td>
 
                 <td  st-ratio="5" >{{account.units}}</td>
                 <td  st-ratio="5" >{{account.price.value | showCurrency:account.price.currency}}</td>
                 <td  st-ratio="5" >{{account.fee}}</td>
                 <td  st-ratio="5" >{{account.settlementValue.value | showCurrency:account.price.currency}}</td>
                 <td  st-ratio="5" >{{account.account.adviser.key}}</td>
-                <td  st-ratio="20" >{{account.settlementDate}}</td>
-
+                <td  st-ratio="20">TBA</td>
 
 
 

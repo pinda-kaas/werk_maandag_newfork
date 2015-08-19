@@ -3,7 +3,6 @@ app.directive('tableFilter', function ($filter) {
     restrict: 'E',
     templateUrl: 'modules/common/orders/partials/tableFilter.html',
     controller: function ($scope) {
-
     },
     link: function ($scope) {
       $scope.assetTypes = [
