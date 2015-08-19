@@ -1,19 +1,87 @@
-app.directive('datePicker', function() {
-  return {
-    restrict: 'A',
-    require: 'ngModel',
-    link: function(scope, element, attrs, ngModelCtrl) {
-      console.log('datepicker');
-      element.datetimepicker({
-        dateFormat: 'dd-MM-yyyy',
-        language: 'en',
-        pickTime: false,
-        startDate: '01-11-2013', // set a minimum date
-        endDate: '01-11-2030' // set a maximum date
-      }).on('changeDate', function(e) {
-        ngModelCtrl.$setViewValue(e.date);
-        scope.$apply();
-      });
-    }
-  };
+app.directive('datePicker',function($compile,$timeout) {
+    return {
+        replace: true,
+        templateUrl: 'modules/common/orders/partials/datepicker.html',
+        scope: {},
+
+        link: function ($scope, $element, $attrs, $controller) {
+
+        },
+        controller:
+            function ($scope) {
+
+            $scope.today = function () {
+                $scope.dt = new Date();
+            };
+            $scope.today();
+
+            $scope.clear = function () {
+                $scope.dt = null;
+            };
+
+            // Disable weekend selection
+            //$scope.disabled = function(date, mode) {
+            //  return ( mode === 'day' && ( date.getDay() === 0 || date.getDay() === 6 ) );
+            //};
+
+            $scope.toggleMin = function () {
+                $scope.minDate = $scope.minDate ? null : new Date();
+            };
+            $scope.toggleMin();
+
+            $scope.open = function ($event) {
+                $scope.status.opened = true;
+            };
+
+            $scope.dateOptions = {
+                formatYear: 'yy',
+                startingDay: 1
+            };
+
+            $scope.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate'];
+            $scope.format = $scope.formats[0];
+
+            $scope.status = {
+                opened: false
+            };
+                $scope.today = function() {
+                    $scope.dt = new Date();
+                };
+                $scope.today();
+
+                $scope.showWeeks = true;
+                $scope.toggleWeeks = function () {
+                    $scope.showWeeks = ! $scope.showWeeks;
+                };
+
+                $scope.clear = function () {
+                    $scope.dt = null;
+                };
+
+                // Disable weekend selection
+                $scope.disabled = function(date, mode) {
+                    return ( mode === 'day' && ( date.getDay() === 0 || date.getDay() === 6 ) );
+                };
+
+                $scope.toggleMin = function() {
+                    $scope.minDate = ( $scope.minDate ) ? null : new Date();
+                };
+                $scope.toggleMin();
+
+                $scope.open = function($event) {
+                    $event.preventDefault();
+                    $event.stopPropagation();
+
+                    $scope.opened = true;
+                };
+
+                $scope.dateOptions = {
+                    'year-format': "'yy'",
+                    'starting-day': 1
+                };
+
+                $scope.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'shortDate'];
+                $scope.format = $scope.formats[0];
+        }
+  }
 });

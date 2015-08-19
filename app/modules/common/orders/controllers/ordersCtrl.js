@@ -381,8 +381,7 @@ app.controller('OrdersCtrl', function ($scope, $filter, $location,configService,
       },
       "minOpenOrderState": "PENDING"
     }
-  ]
-  ;
+  ]  ;
 
 });
 
