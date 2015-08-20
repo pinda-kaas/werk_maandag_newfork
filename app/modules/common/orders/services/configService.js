@@ -14,6 +14,10 @@ angular.module('WIP').factory('configService', function($http) {
           return {
             url: 'modules/common/orders/mock/completeOrdersTabMockData.json'
           };
+        case 'mock_order_detail':
+          return {
+            url: 'modules/common/orders/mock/orderDetailMock.json'
+          };
       }
     }
   };

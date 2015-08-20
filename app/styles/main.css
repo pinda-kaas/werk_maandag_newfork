@@ -23,10 +23,10 @@
 |--------------------------------------------------------------------------
 | Portfolio Review Variables
 |--------------------------------------------------------------------------
-| 
+|
 | Portfolio Review variables to be defined below this point. The variables above were
 | used on the BFS site.
-| 
+|
 */
 @media print {
   * {
@@ -1160,10 +1160,10 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
 |--------------------------------------------------------------------------
 | Portfolio Review Variables
 |--------------------------------------------------------------------------
-| 
+|
 | Portfolio Review variables to be defined below this point. The variables above were
 | used on the BFS site.
-| 
+|
 */
 *, *:before, *:after {
   box-sizing: border-box; }
@@ -2889,7 +2889,7 @@ sup, sub {
   #reportApp .button-set button, #reportApp .button-set .button {
     margin-bottom: 10px;
     margin-right: 10px; }
-  #reportApp button:focus, #reportApp button:active:focus, #reportApp button.active:focus, #reportApp button.active, #reportApp .button:focus, 
+  #reportApp button:focus, #reportApp button:active:focus, #reportApp button.active:focus, #reportApp button.active, #reportApp .button:focus,
   #reportApp .button:active:focus, #reportApp .button.active:focus, #reportApp .button.active {
     outline: thin dotted;
     outline: 5px auto -webkit-focus-ring-color;
@@ -3178,11 +3178,11 @@ input[data-placeholder-active="true"], textarea[data-placeholder-active="true"] 
 |--------------------------------------------------------------------------
 | Input field prefix and suffix
 |--------------------------------------------------------------------------
-| 
+|
 | Styles that allow a prefix and a suffix to be placed in the field, such
 | as [$ ...] where the $ is the defined suffix indicating that the field
 | expects a dollar value.
-| 
+|
 */
 .input-group {
   position: relative; }
@@ -3436,9 +3436,9 @@ input[data-placeholder-active="true"], textarea[data-placeholder-active="true"] 
 |--------------------------------------------------------------------------
 | Twitter Bootstrap Table Overrides
 |--------------------------------------------------------------------------
-| 
+|
 | Below are overrides to some of the styles that are set by Twitter Bootstrap.
-| 
+|
 */
 .table > thead > tr > th, .table > thead > tr > td, .table > tbody > tr > th, .table > tbody > tr > td, .table > tfoot > tr > th, .table > tfoot > tr > td {
   border: 0;
@@ -4101,7 +4101,7 @@ http://nicolasgallagher.com/micro-clearfix-hack/
 .alert, .alert h4 {
   color: #c09853;
 }
-/**** 
+/****
     Tabs
 ****/
 #reportApp .tab-group {
@@ -4123,7 +4123,7 @@ http://nicolasgallagher.com/micro-clearfix-hack/
   opacity: 1;
 }
 
-/**** 
+/****
     Form controls
 ****/
 
@@ -4147,7 +4147,7 @@ input[type="checkbox"], input[type="radio"] {
 #reportApp label {
   line-height: normal;
 }
-/**** 
+/****
     Tooltip
 ****/
 
@@ -4264,7 +4264,7 @@ input[type="checkbox"], input[type="radio"] {
     border-bottom-color: #000
 }
 
-/**** 
+/****
     Seach
 ****/
 .heading-hr-with-underline-arrow {
@@ -4291,13 +4291,13 @@ input[type="checkbox"], input[type="radio"] {
 }
 #reportApp .search-typeahead-item-anchor {
     padding-right: 40px;
-    position: relative; 
+    position: relative;
     font-weight: bold;
 }
 #reportApp .search-typeahead-item-anchor span[class*='icon'] {
     position: absolute;
     right: 13px;
-    top: 12px;  
+    top: 12px;
 }
 #reportApp .search-loader {
     display: block;
@@ -4327,7 +4327,7 @@ input[type="checkbox"], input[type="radio"] {
   padding-right: 30px;
 }
 
-/**** 
+/****
     Preferences
 ****/
 
@@ -4378,7 +4378,7 @@ select:disabled:after {
 }
 
 
-/**** 
+/****
     Date
 ****/
 .report-date-wrapper .dropdown-menu {
@@ -4404,9 +4404,9 @@ select:disabled:after {
   padding: 5px 10px !important;
 }
 .report-date-wrapper .dropdown-menu table button .text-muted {
-  
+
 }
-/**** 
+/****
     Summary
 ****/
 .data-large {
@@ -4415,7 +4415,7 @@ select:disabled:after {
 #chart-summary {
   width: 100%;
   max-width: 950px;
-  margin: 0 auto;   
+  margin: 0 auto;
 }
 .chart-summary-collapse-control {
   background: #f7f7f7;
@@ -4433,7 +4433,7 @@ select:disabled:after {
 }
 
 
-#reportApp .summary-closing .currency-dollar, 
+#reportApp .summary-closing .currency-dollar,
 #reportApp .summary-opening .currency-dollar {
   vertical-align: super;
   font-size: 0.5em;
@@ -4455,19 +4455,19 @@ select:disabled:after {
   border-top: 1px solid #ebecec;
 }
 
-/**** 
+/****
     Asset allocation
 ****/
 
 .chart-allocation {
   width: 100%;
-  max-width: 465px; 
+  max-width: 465px;
   margin: 0 auto;
 }
 
 
 
-/**** 
+/****
     Income projection
 ****/
 
@@ -4478,7 +4478,7 @@ select:disabled:after {
 }
 
 
-/**** 
+/****
     Porfolio details/story
 ****/
 
@@ -4514,7 +4514,7 @@ select:disabled:after {
 .portfolio-not-classified-by-sector  .table-portfolio > tfoot > tr {
     border-top: 0;
 }
-.portfolio-detail-subrow-table tr td:first-child, 
+.portfolio-detail-subrow-table tr td:first-child,
 .portfolio-detail-subrow-table .table tr th:first-child {
   width: 100%;
 }
@@ -4559,10 +4559,10 @@ select:disabled:after {
   }
   .print-l-margin-t-0 {
     margin-top: 0;
-  }  
+  }
   .print-l-margin-b-2 {
     margin-bottom: 2em;
-  }   
+  }
   .print-l-padding-r-1 {
     padding-right: 1em;
   }
@@ -4647,10 +4647,10 @@ select:disabled:after {
   }
   .print-l-margin-t-3-portrait {
     margin-top: 3em;
-  }   
+  }
   .print-l-margin-b-3-portrait {
     margin-top: 3em;
-  }      
+  }
 }
 @media print and (orientation: landscape) {
   .only-print-portrait {
@@ -4660,14 +4660,19 @@ select:disabled:after {
     page-break-before: always !important; }
 
 
-  .portfolio-detail-tables-wrapper .table td, 
+  .portfolio-detail-tables-wrapper .table td,
   .portfolio-detail-tables-wrapper .table th {
     font-size: 11px;
     padding-left: 2px !important;
     padding-right: 2px !important;
   }
-  .portfolio-detail-tables-wrapper .table tr td:first-child, 
+  .portfolio-detail-tables-wrapper .table tr td:first-child,
   .portfolio-detail-tables-wrapper .table tr th:first-child {
     width: 100%;
   }
+}
+
+a
+{
+  cursor:pointer;
 }

@@ -24,7 +24,7 @@
             <tbody>
             <tr ng-repeat="account in settlements | filter:accountName | filter:tradeType | filter:security ">
                 <td st-ratio="5">{{account.account.accountId.key}}</td>
-                <td st-ratio="20">{{account.account.accountName}}</td>
+                <td st-ratio="20"><a ui-sref="orderDetail">{{account.account.accountName}}</a> </td>
                 <td st-ratio="5">{{account.tradeDate}}</td>
                 <td st-ratio="5">{{account.orderType}}</td>
                 <td st-ratio="20">{{account.asset.name}}</td>

@@ -39,7 +39,17 @@ app.config(function ($stateProvider) {
                     return wipService.getData(configService.config('mock_complete_orders').url);
                 }
             }
-        });
+        })
+      .state('orderDetail', {
+        templateUrl: 'modules/common/orders/partials/detail.html',
+        controller: 'OrderDetailCtrl',
+        resolve: {
+          orderDetail: function (wipService, configService) {
+            console.log('order detail resolving');
+            return wipService.getData(configService.config('mock_order_detail').url);
+          }
+        }
+      });
 });
 
 app.run(function ($state) {
