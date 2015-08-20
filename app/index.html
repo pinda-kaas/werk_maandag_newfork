@@ -3,8 +3,14 @@
 <head>
   <meta charset="utf-8">
   <title>WIP</title>
+
+  <!-- <base href=""> -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- meta data ends here -->
+
 
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
   <!-- build:css(.) styles/vendor.css -->
@@ -13,9 +19,24 @@
   <!-- endbuild -->
   <!-- build:css(.tmp) styles/main.css -->
 
-  <link rel="stylesheet" href="styles/main.css">
+  <!-- Wrap ng original styles -->
+  <link rel="stylesheet" type="text/css" href="styles/wrap-ng/reset.css">
+  <link rel="stylesheet" type="text/css" href="styles/wrap-ng/page.css">
+  <link rel="stylesheet" type="text/css" href="styles/wrap-ng/style.css">
+  <link rel="stylesheet" type="text/css" href="styles/wrap-ng/core.css">
+  <link rel="stylesheet" type="text/css" href="styles/wrap-ng/icons-pictos.css">
+  <link rel="stylesheet" type="text/css" href="styles/wrap-ng/project.css">
+  <!-- End Wrap ng original styles -->
+
+  <!-- build:css({.tmp,app}) styles/main.css -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="styles/main.css"/>
+  <!-- endbuild -->
 
   <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css"/>
+
+
+
 
   <!-- endbuild -->
 
@@ -52,6 +73,7 @@
 <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
 <script src="bower_components/angular-smart-table/dist/smart-table.js"></script>
+<script src="bower_components/moment/moment.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 

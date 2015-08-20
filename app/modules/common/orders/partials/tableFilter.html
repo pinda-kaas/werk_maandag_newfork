@@ -27,11 +27,27 @@
 
     <!--testing datefrom{{dateFrom}}-->
     <div id="date1" class="input-append" date-picker=""  ng-model="dateFrom">
-      <input data-format="MM-dd-yyyy" type="text" id="input1"  name="input1"></input>
+      <input
+        class="form-control form-control-from"
+        datepicker-popup="{{datepickerFormat}}"
+        ng-model="fromDateInput"
+        is-open="openedFrom"
+        max="pikadayMaxDate"
+        datepicker-options="dateFromOptions"
+        ng-required="true"
+        close-text="Close"
+        show-weeks="false"
+        show-button-bar="false" />
+
+
           <span class="add-on">
             <i data-time-icon="icon-time" data-date-icon="icon-calendar"></i>
           </span>
     </div>
+
+
+
+
   </div>
 
   <!--<label for="">Date to:</label>-->

@@ -4,6 +4,11 @@ app.directive('tableFilter', function ($filter) {
     templateUrl: 'modules/common/orders/partials/tableFilter.html',
     controller: function ($scope) {
 
+      //todo remove this begin date stuff
+
+
+      //end date stuff
+
       //todo remove hardcoded
       $scope.assetTypes = [
         {name: 'SMA'},
