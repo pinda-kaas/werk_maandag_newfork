@@ -1,33 +1,9 @@
 <div class="row">
 
 
-  <div class="col-sm-3">
-    <label for="">Date from:</label>
-
-    <div id="date1" class="input-append" date-picker="" ng-model="dateFrom">
-      <input data-format="MM-dd-yyyy" type="text" id="input1" name="input1"></input>
-          <span class="add-on">
-            <i data-time-icon="icon-time" data-date-icon="icon-calendar"></i>
-          </span>
-    </div>
-  </div>
-
-  <!--<label for="">Date to:</label>-->
-  <div class="col-sm-3">
-    <label for="">Date from:</label>
-
-    <div id="date" class="input-append" date-picker="" ng-model="dateTo">
-      <input data-format="MM-dd-yyyy" type="text" id="input2" name="input1"></input>
-          <span class="add-on">
-            <i data-time-icon="icon-time" data-date-icon="icon-calendar"></i>
-          </span>
-    </div>
-  </div>
-
-
   <div class="col-sm-2">
     <label for="">Asset type</label>
-    <select class="form-control" name="" ng-model="assetType" ng-options="item.id as item.title for item in assetTypes">
+    <select class="form-control" name="" ng-model="assetType" ng-options="item.name for item in assetTypes">
     </select>
   </div>
 
@@ -45,15 +21,42 @@
 
     </select></div>
 
-  <!--<div class="col-sm-2">-->
-    <!--<label for="">Period</label>-->
-    <!--<select class="form-control">-->
-      <!--<option>Today</option>-->
-      <!--<option>Last week</option>-->
-      <!--<option>Last month</option>-->
-      <!--<option>User defined</option>-->
-    <!--</select>-->
-  <!--</div>-->
 
+  <div class="col-sm-3">
+    <label for="">Date from:</label>
+
+    <!--testing datefrom{{dateFrom}}-->
+    <div id="date1" class="input-append" date-picker=""  ng-model="dateFrom">
+      <input data-format="MM-dd-yyyy" type="text" id="input1"  name="input1"></input>
+          <span class="add-on">
+            <i data-time-icon="icon-time" data-date-icon="icon-calendar"></i>
+          </span>
+    </div>
+  </div>
+
+  <!--<label for="">Date to:</label>-->
+  <div class="col-sm-3">
+    <label for="">Date to:</label>
+<!--testing dateto{{dateTo}}-->
+    <div id="date" class="input-append" date-picker="" >
+      <input data-format="MM-dd-yyyy" type="text" id="input2" ng-model="dateTo" name="input1"></input>
+          <span class="add-on">
+            <i data-time-icon="icon-time" data-date-icon="icon-calendar"></i>
+          </span>
+    </div>
+  </div>
+
+
+</div>
+<div class="row">
+  <div class="col-sm-2">
+    <label for="">Period</label>
+    <select class="form-control">
+      <option>Today</option>
+      <option>Last week</option>
+      <option>Last month</option>
+      <option>User defined</option>
+    </select>
+  </div>
 
 </div>
