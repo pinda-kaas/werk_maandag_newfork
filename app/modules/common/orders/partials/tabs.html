@@ -10,24 +10,23 @@
 
 <reset-filter></reset-filter>
 
-  testing
-  <button type="button" class="btn btn-default btn-sm" ng-click="tabs[1].active = true">Select second tab</button>
-  <div class="orders">
+
+  <div class="orders" ng-controller="mainCtrl">
     <div>
       <div>
         <div>
           <tabset>
 
-            <tab heading="Orders" select="gotoOrdersTab" >
+            <tab heading="Orders" select="gotoOrdersTab()" >
               <orders-tab></orders-tab>
             </tab>
 
-            <tab heading="Awaiting settlement" select="gotoSettlementsTab" >
+            <tab heading="Awaiting settlement" select="gotoSettlementsTab()" >
               <table-filter></table-filter>
               <awaiting-settlements-tab></awaiting-settlements-tab>
             </tab>
 
-            <tab heading="Complete" ui-sref="completeOrders">
+            <tab heading="Complete" select="gotoCompleteOrders()">
               <table-filter></table-filter>
               <complete-orders-tab></complete-orders-tab>
             </tab>

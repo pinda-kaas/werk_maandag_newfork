@@ -22,7 +22,7 @@ app.config(function ($stateProvider) {
             }
         })
         .state('settlements', {
-            templateUrl: 'modules/common/orders/partials/Test.html',
+            templateUrl: 'modules/common/orders/partials/tabs.html',
             controller: 'AwaitingSettlementsCtrl',
             resolve: {
                 settlementData: function (wipService, configService) {
