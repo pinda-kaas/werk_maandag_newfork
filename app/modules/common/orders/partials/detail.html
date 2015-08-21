@@ -1,48 +1,39 @@
-<a ui-sref="orders">go back to orders</a>
+<form class="form-horizontal">
+  <a ui-sref="orders">go back to orders</a>
 
-<div class="row">
-  <div class="col-sm-4">
-    <label for="">Account</label>
-    <p>{{orderDetail.account.id}}</p>
-  </div>
-  <div class="col-sm-4">
-    <label for="">Accounttype</label>
-    <p>{{orderDetail.account.type}}</p>
-  </div>
-</div>
+  <hr/>
+  <div class="row form-group">
+    <div class="col-sm-4">
+      <label for="">Account</label>
 
-<div class="row">
-  <div class="col-sm-6">
-    <label for="">Accountname</label>
-    <p>{{orderDetail.account.name}}</p>
+      <p>{{orderDetail.account.id}}</p>
+    </div>
+    <div class="col-sm-4">
+      <label for="">Accounttype</label>
+
+      <p>{{orderDetail.account.type}}</p>
     </div>
   </div>
+
+  <hr/>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <label for="">Accountname</label>
+
+      <p>{{orderDetail.account.name}}</p>
+    </div>
+  </div>
+</form>
+<hr/>
+
+<div class="row">
+  <order-source-filter></order-source-filter>
+
+  <reset-filter></reset-filter>
 </div>
-
-<div class="col-sm-6">
-  Order source
-  <select name="" id="">
-    <option value="">All</option>
-    <option value="">Transacting</option>
-    <option value="">Off platform</option>
-  </select>
-</div>
-
-<div class="col-sm-3">
-  Status
-  <select name="">
-    <option value="">Complete</option>
-    <option value="">In progress</option>
-    <option value="">Awaiting settlement</option>
-  </select>
-</div>
-
-<a href="#">Advanced search</a>
-
-REFRESH DIRECTIVE HERE!!!!! TODO
 
 <table-filter></table-filter>
-
 
 <div>
 
@@ -96,4 +87,4 @@ REFRESH DIRECTIVE HERE!!!!! TODO
   </table>
 
 </div>
-</div>
+</div></div>
