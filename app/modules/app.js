@@ -44,7 +44,7 @@ app.config(function ($stateProvider) {
         templateUrl: 'modules/common/orders/partials/detail.html',
         controller: 'OrderDetailCtrl',
         resolve: {
-          orderDetail: function (wipService, configService) {
+          orderDetails: function (wipService, configService) {
             console.log('order detail resolving');
             return wipService.getData(configService.config('mock_order_detail').url);
           }

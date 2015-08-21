@@ -41,33 +41,57 @@
     <thead>
     <tr>
       <th st-ratio="5" st-sort="account.accountId.key">Account</th>
-      <th st-ratio="20" st-sort="account.accountName"></th>
+      <th st-ratio="20" st-sort="account.accountName">Account</th>
       <th st-ratio="10" st-sort="account.settlementDate">Settlement date</th>
       <th st-ratio="5" st-sort="account.orderType">Type</th>
       <th st-ratio="5" st-sort="account.asset.name">Investment</th>
-      <th st-ratio="5" st-sort="account.units">Units</th>
+      <th st-ratio="20" st-sort="account.units">Units</th>
       <th st-ratio="5" st-sort="account.price">Price</th>
       <th st-ratio="5" st-sort="account.fee">Fee</th>
-      <th st-ratio="5" st-sort="account.settlementValue">Settlement value</th>
-      <th st-ratio="5" st-sort="account.account.adviser.key">Adviser</th>
-      <th st-ratio="20" st-sort="account.asset.name">Product</th>
+      <th st-ratio="5">Amount</th>
+      <th st-ratio="5">Order source</th>
+      <th st-ratio="5">Status</th>
     </tr>
     </thead>
     <tbody>
 
-    <tr ng-repeat="account in detailRows">
+
+    <tr ng-repeat="account in orderDetails">
+
+      <td st-ratio="10"><a href="#" ng-model=show ng-class='{open:show}'>{{account.assetId.key}}</a></td>
+      <td>account name</td>
       <td st-ratio="5">{{account.orderDate}}</td>
-      <td st-ratio="20"><a href="#" ng-model=show ng-class='{open:show}'>{{account.investment}}</a></td>
-      <td st-ratio="10">{{account.type}}</td>
-      <td st-ratio="5">{{account.units}}</td>
-      <td st-ratio="5">{{account.filledUnits}}</td>
-      <td st-ratio="5">{{account.units}}</td>
-      <td st-ratio="5">{{account.unitPrice}}</td>
-      <td st-ratio="5">{{account.valid}}</td>
-      <td st-ratio="5">{{account.amount | showCurrency:account.price.currency}}</td>
-      <td st-ratio="5">{{account.orderSource}}</td>
-      <td st-ratio="5">{{account.status}}</td>
+
+      <td st-ratio="10">{{account.orderType}}</td>
+      <td st-ratio="30">{{account.units}}</td>
+
+      <td>
+        <table>
+          <tr ng-repeat="transaction in account.transactions">
+            <td>
+              {{transaction.transactionDateTime}}
+              </td>
+            <td>
+              {{transaction.amount.currency}}
+            </td>
+            <td>
+              {{transaction.amount.value}}
+            </td>
+            <td>
+              {{transaction.state}}
+            </td>
+          </tr>
+        </table>
+      </td>
     </tr>
+    <!--<td st-ratio="5">{{account.filledUnits}}</td>-->
+    <!--<td st-ratio="5">{{account.units}}</td>-->
+    <!--<td st-ratio="5">{{account.unitPrice}}</td>-->
+    <!--<td st-ratio="5">{{account.valid}}</td>-->
+    <!--<td st-ratio="5">{{account.amount | showCurrency:account.price.currency}}</td>-->
+    <!--<td st-ratio="5">{{account.orderSource}}</td>-->
+    <!--<td st-ratio="5">{{account.status}}</td>-->
+
     testing show: {{show}}
     <tr ng-show=show>
       this is the detail bt
