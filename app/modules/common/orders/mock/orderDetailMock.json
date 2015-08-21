@@ -1,192 +1,81 @@
-{
-  "account": {
-    "id": "D12345",
-    "type":"Investment account",
-    "name":"Joanne Garcia Superannuation Family Trust"
+[{
+  "orderDate": "02-09-2014",
+  "referenceId": {
+    "key": "2299310"
   },
-  "rows": [
+  "adviser": null,
+  "assetId": {
+    "key": "MBL06MTHZ"
+  },
+  "orderType": "BUY",
+  "amount": {
+    "currency": "AUD",
+    "value": 50922.47
+  },
+  "source": null,
+  "state": "AWAITING_SETTLEMENT",
+  "transactions": [
     {
-      "orderDate": "12-06-2015",
-      "investment": "ANZ",
-      "type": "BUY",
-      "units": 100,
-      "filledUnits": 200,
-      "unitPrice": "$200",
-      "valid": "today only",
-      "fee": "$130.50",
-      "amount": "$1000",
-      "orderSource": "Transacting",
-      "status": "In progress"
+      "transactionDateTime": "02-09-2014 12:36 PM",
+      "amount": {
+        "currency": "AUD",
+        "value": 50922.47
+      },
+      "state": "ON_MARKET"
     },
     {
-      "orderDate": "12-06-2015",
-      "investment": "ANZ",
-      "type": "BUY",
-      "units": 100,
-      "filledUnits": 200,
-      "unitPrice": "$200",
-      "valid": "today only",
-      "fee": "$130.50",
-      "amount": "$1000",
-      "orderSource": "Transacting",
-      "status": "In progress"
+      "transactionDateTime": "02-09-2014 12:43 PM",
+      "amount": {
+        "currency": "AUD",
+        "value": 50922.47
+      },
+      "state": "ON_MARKET"
     },
     {
-      "orderDate": "12-06-2015",
-      "investment": "ANZ",
-      "type": "BUY",
-      "units": 100,
-      "filledUnits": 200,
-      "unitPrice": "$200",
-      "valid": "today only",
-      "fee": "$130.50",
-      "amount": "$1000",
-      "orderSource": "Transacting",
-      "status": "In progress"
+      "transactionDateTime": "02-09-2014 11:00 AM",
+      "amount": {
+        "currency": "AUD",
+        "value": 50922.47
+      },
+      "state": "ON_MARKET"
     },
     {
-      "orderDate": "12-06-2015",
-      "investment": "ANZ",
-      "type": "BUY",
-      "units": 100,
-      "filledUnits": 200,
-      "unitPrice": "$200",
-      "valid": "today only",
-      "fee": "$130.50",
-      "amount": "$1000",
-      "orderSource": "Transacting",
-      "status": "In progress"
+      "transactionDateTime": "02-09-2014 11:00 AM",
+      "amount": {
+        "currency": "AUD",
+        "value": 50922.47
+      },
+      "state": "ON_MARKET"
     },
     {
-      "orderDate": "12-06-2015",
-      "investment": "ANZ",
-      "type": "BUY",
-      "units": 100,
-      "filledUnits": 200,
-      "unitPrice": "$200",
-      "valid": "today only",
-      "fee": "$130.50",
-      "amount": "$1000",
-      "orderSource": "Transacting",
-      "status": "In progress"
+      "transactionDateTime": "02-09-2014 12:37 PM",
+      "amount": {
+        "currency": "AUD",
+        "value": 50922.47
+      },
+      "state": "ON_MARKET"
     },
     {
-      "orderDate": "12-06-2015",
-      "investment": "ANZ",
-      "type": "BUY",
-      "units": 100,
-      "filledUnits": 200,
-      "unitPrice": "$200",
-      "valid": "today only",
-      "fee": "$130.50",
-      "amount": "$1000",
-      "orderSource": "Transacting",
-      "status": "In progress"
-    },
-    {
-      "orderDate": "12-06-2015",
-      "investment": "ANZ",
-      "type": "BUY",
-      "units": 100,
-      "filledUnits": 200,
-      "unitPrice": "$200",
-      "valid": "today only",
-      "fee": "$130.50",
-      "amount": "$1000",
-      "orderSource": "Transacting",
-      "status": "In progress"
-    },
-    {
-      "orderDate": "12-06-2015",
-      "investment": "ANZ",
-      "type": "BUY",
-      "units": 100,
-      "filledUnits": 200,
-      "unitPrice": "$200",
-      "valid": "today only",
-      "fee": "$130.50",
-      "amount": "$1000",
-      "orderSource": "Transacting",
-      "status": "In progress"
-    },
-    {
-      "orderDate": "12-06-2015",
-      "investment": "ANZ",
-      "type": "BUY",
-      "units": 100,
-      "filledUnits": 200,
-      "unitPrice": "$200",
-      "valid": "today only",
-      "fee": "$130.50",
-      "amount": "$1000",
-      "orderSource": "Transacting",
-      "status": "In progress"
-    },
-    {
-      "orderDate": "12-06-2015",
-      "investment": "ANZ",
-      "type": "BUY",
-      "units": 100,
-      "filledUnits": 200,
-      "unitPrice": "$200",
-      "valid": "today only",
-      "fee": "$130.50",
-      "amount": "$1000",
-      "orderSource": "Transacting",
-      "status": "In progress"
-    },
-    {
-      "orderDate": "12-06-2015",
-      "investment": "ANZ",
-      "type": "BUY",
-      "units": 100,
-      "filledUnits": 200,
-      "unitPrice": "$200",
-      "valid": "today only",
-      "fee": "$130.50",
-      "amount": "$1000",
-      "orderSource": "Transacting",
-      "status": "In progress"
-    },
-    {
-      "orderDate": "12-06-2015",
-      "investment": "ANZ",
-      "type": "BUY",
-      "units": 100,
-      "filledUnits": 200,
-      "unitPrice": "$200",
-      "valid": "today only",
-      "fee": "$130.50",
-      "amount": "$1000",
-      "orderSource": "Transacting",
-      "status": "In progress"
-    },
-    {
-      "orderDate": "12-06-2015",
-      "investment": "ANZ",
-      "type": "BUY",
-      "units": 100,
-      "filledUnits": 200,
-      "unitPrice": "$200",
-      "valid": "today only",
-      "fee": "$130.50",
-      "amount": "$1000",
-      "orderSource": "Transacting",
-      "status": "In progress"
-    },
-    {
-      "orderDate": "12-06-2015",
-      "investment": "ANZ",
-      "type": "BUY",
-      "units": 100,
-      "filledUnits": 200,
-      "unitPrice": "$200",
-      "valid": "today only",
-      "fee": "$130.50",
-      "amount": "$1000",
-      "orderSource": "Transacting",
-      "status": "In progress"
+      "transactionDateTime": "02-09-2014 01:16 PM",
+      "amount": {
+        "currency": "AUD",
+        "value": 50922.47
+      },
+      "state": "ON_MARKET"
     }
-  ]
-}
-
+  ],
+  "orderTransactionSummary": {
+    "referenceId": {
+      "key": "2299310"
+    },
+    "orderTakerId": {
+      "key": "System"
+    },
+    "lastUpdatedDateTime": "02-09-2014 01:16 PM",
+    "amount": {
+      "currency": "AUD",
+      "value": 50922.47
+    },
+    "state": null
+  }
+}]
