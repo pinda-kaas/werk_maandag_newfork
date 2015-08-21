@@ -11,7 +11,7 @@ app.config(function ($stateProvider) {
     // Now set up the states
 
     $stateProvider
-        .state('orders', {
+        .state('tabs', {
             templateUrl: 'modules/common/orders/partials/tabs.html',
             controller: 'OrdersCtrl',
             resolve: {
@@ -21,25 +21,25 @@ app.config(function ($stateProvider) {
                 }
             }
         })
-        .state('settlements', {
-            templateUrl: 'modules/common/orders/partials/tabs.html',
-            controller: 'AwaitingSettlementsCtrl',
-            resolve: {
-                settlementData: function (wipService, configService) {
-                    console.log('resolve settlementData');
-                    return wipService.getData(configService.config('mock_settlements').url);
-                }
-            }
-        })
-        .state('completeOrders', {
-            templateUrl: 'modules/common/orders/partials/tabs.html',
-            controller: 'CompleteOrdersCtrl',
-            resolve: {
-                completeOrders: function (wipService, configService) {
-                    return wipService.getData(configService.config('mock_complete_orders').url);
-                }
-            }
-        })
+        //.state('settlements', {
+        //    templateUrl: 'modules/common/orders/partials/tabs.html',
+        //    controller: 'AwaitingSettlementsCtrl',
+        //    resolve: {
+        //        settlementData: function (wipService, configService) {
+        //            console.log('resolve settlementData');
+        //            return wipService.getData(configService.config('mock_settlements').url);
+        //        }
+        //    }
+        //})
+        //.state('completeOrders', {
+        //    templateUrl: 'modules/common/orders/partials/tabs.html',
+        //    controller: 'CompleteOrdersCtrl',
+        //    resolve: {
+        //        completeOrders: function (wipService, configService) {
+        //            return wipService.getData(configService.config('mock_complete_orders').url);
+        //        }
+        //    }
+        //})
       .state('orderDetail', {
         templateUrl: 'modules/common/orders/partials/detail.html',
         controller: 'OrderDetailCtrl',
@@ -54,6 +54,6 @@ app.config(function ($stateProvider) {
 
 app.run(function ($state) {
     console.log('run');
-    $state.go('orderDetail');
+    $state.go('tabs');
 });
 
