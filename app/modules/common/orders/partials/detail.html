@@ -1,90 +1,99 @@
-order detail page
 <a ui-sref="orders">go back to orders</a>
 
+<div class="row">
+  <div class="col-sm-4">
+    <label for="">Account</label>
+    <p>{{orderDetail.account.id}}</p>
+  </div>
+  <div class="col-sm-4">
+    <label for="">Accounttype</label>
+    <p>{{orderDetail.account.type}}</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-6">
+    <label for="">Accountname</label>
+    <p>{{orderDetail.account.name}}</p>
+    </div>
+  </div>
+</div>
+
+<div class="col-sm-6">
+  Order source
+  <select name="" id="">
+    <option value="">All</option>
+    <option value="">Transacting</option>
+    <option value="">Off platform</option>
+  </select>
+</div>
+
+<div class="col-sm-3">
+  Status
+  <select name="">
+    <option value="">Complete</option>
+    <option value="">In progress</option>
+    <option value="">Awaiting settlement</option>
+  </select>
+</div>
+
+<a href="#">Advanced search</a>
+
+REFRESH DIRECTIVE HERE!!!!! TODO
+
+<table-filter></table-filter>
+
+
 <div>
-  <div class="row">
-    Account {{orderDetail.account.id}}
-    Accounttype {{orderDetail.account.type}}
-    Accountname {{orderDetail.account.name}}
-  </div>
 
-  <div class="col-sm-3">
-    Order source
-    <select name="" id="">
-      <option value="">All</option>
-      <option value="">Transacting</option>
-      <option value="">Off platform</option>
-    </select>
-  </div>
+  <table st-table="detailRows" class="table table-striped">
+    <thead>
+    <tr>
+      <th st-ratio="5" st-sort="account.accountId.key">Account</th>
+      <th st-ratio="20" st-sort="account.accountName"></th>
+      <th st-ratio="10" st-sort="account.settlementDate">Settlement date</th>
+      <th st-ratio="5" st-sort="account.orderType">Type</th>
+      <th st-ratio="5" st-sort="account.asset.name">Investment</th>
+      <th st-ratio="5" st-sort="account.units">Units</th>
+      <th st-ratio="5" st-sort="account.price">Price</th>
+      <th st-ratio="5" st-sort="account.fee">Fee</th>
+      <th st-ratio="5" st-sort="account.settlementValue">Settlement value</th>
+      <th st-ratio="5" st-sort="account.account.adviser.key">Adviser</th>
+      <th st-ratio="20" st-sort="account.asset.name">Product</th>
+    </tr>
+    </thead>
+    <tbody>
 
-  <div class="col-sm-3">
-    Status
-    <select name="" >
-      <option value="">Complete</option>
-      <option value="">In progress</option>
-      <option value="">Awaiting settlement</option>
-    </select>
-  </div>
+    <tr ng-repeat="account in detailRows">
+      <td st-ratio="5">{{account.orderDate}}</td>
+      <td st-ratio="20"><a href="#" ng-model=show ng-class='{open:show}'>{{account.investment}}</a></td>
+      <td st-ratio="10">{{account.type}}</td>
+      <td st-ratio="5">{{account.units}}</td>
+      <td st-ratio="5">{{account.filledUnits}}</td>
+      <td st-ratio="5">{{account.units}}</td>
+      <td st-ratio="5">{{account.unitPrice}}</td>
+      <td st-ratio="5">{{account.valid}}</td>
+      <td st-ratio="5">{{account.amount | showCurrency:account.price.currency}}</td>
+      <td st-ratio="5">{{account.orderSource}}</td>
+      <td st-ratio="5">{{account.status}}</td>
+    </tr>
+    testing show: {{show}}
+    <tr ng-show=show>
+      this is the detail bt
+    </tr>
+    </tbody>
 
+    <tfoot>
+    <tr>
+      <td colspan="5" class="text-center">
+        <div st-items-by-page="10" st-pagination=""
+             st-template="modules/common/orders/partials/pagination.custom.html"></div>
+      </td>
 
-  <div>
+    </tr>
+    </tfoot>
 
-    <table st-table="detailRows" class="table table-striped">
-      <thead>
-      <tr>
-        <th st-ratio="5" st-sort="account.accountId.key">Account</th>
-        <th st-ratio="20" st-sort="account.accountName"></th>
-        <th st-ratio="10" st-sort="account.settlementDate">Settlement date</th>
-        <!--<th st-ratio="10"  st-sort="account.tradeDate">Trade date</th>-->
-        <th st-ratio="5" st-sort="account.orderType">Type</th>
-        <th st-ratio="5" st-sort="account.asset.name">Investment</th>
-        <th st-ratio="5" st-sort="account.units">Units</th>
-        <th st-ratio="5" st-sort="account.price">Price</th>
-        <th st-ratio="5" st-sort="account.fee">Fee</th>
-        <th st-ratio="5" st-sort="account.settlementValue">Settlement value</th>
-        <th st-ratio="5" st-sort="account.account.adviser.key">Adviser</th>
+  </table>
 
-        <th st-ratio="20" st-sort="account.asset.name">Product</th>
-
-
-      </tr>
-      </thead>
-      <tbody>
-
-
-      {{detailRows}}
-
-      <tr ng-repeat="account in detailRows">
-
-        <td st-ratio="5">{{account.account.accountId.key}}</td>
-        <td st-ratio="20">{{account.account.accountName}}</td>
-        <td st-ratio="10">{{account.settlementDate}}</td>
-        <!--<td  st-ratio="5" >{{account.tradeDate}}</td>-->
-        <td st-ratio="5">{{account.orderType}}</td>
-        <td st-ratio="20">ANZ</td>
-
-        <td st-ratio="5">{{account.units}}</td>
-        <td st-ratio="5">{{account.price.value | showCurrency:account.price.currency}}</td>
-        <td st-ratio="5">{{account.fee}}</td>
-        <td st-ratio="5">{{account.settlementValue.value | showCurrency:account.price.currency}}</td>
-        <td st-ratio="5">{{account.account.adviser.key}}</td>
-        <td st-ratio="20">TBA</td>
-
-
-      </tr>
-      </tbody>
-
-      <tfoot>
-      <tr>
-        <td colspan="5" class="text-center">
-          <div st-items-by-page="10" st-pagination=""
-               st-template="modules/common/orders/partials/pagination.custom.html"></div>
-        </td>
-
-      </tr>
-      </tfoot>
-
-    </table>
-
-  </div>
+</div>
 </div>
