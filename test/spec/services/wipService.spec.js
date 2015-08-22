@@ -17,7 +17,7 @@ describe('wipService', function () {
     httpBackend.verifyNoOutstandingRequest();
   });
 
-  it('should call getdata.', function (){
+  xit('should call getdata.', function (){
     var returnData = { test:'helloss'};
     httpBackend.expectGET('/api/data').respond(returnData);
     var returnedPromise = wipService.getData('/api/data');
