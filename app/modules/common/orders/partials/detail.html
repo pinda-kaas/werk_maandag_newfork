@@ -38,11 +38,7 @@
 <div>
 
 
-    <div collapse="collapsed">
-        <div class="well well-lg">Some content</div>
-    </div>
-
-    <table st-table="detailRows" class="table table-striped">
+    <table st-table="detailRows" class="table table-striped" ng-repeat="account in orderDetails">
         <thead>
         <tr>
             <th st-ratio="5" st-sort="account.accountId.key">Account</th>
@@ -61,48 +57,39 @@
         <tbody>
 
 
-        collapsed:{{collapsed}}
-
-        <button type="button" class="btn btn-default" ng-click="collapsed = !collapsed">Toggle collapse</button>
-
-
-        <tr ng-repeat="account in orderDetails">
-
-            <td st-ratio="10"><a href="#" ng-click="!collapsed">detail:{{account.assetId.key}}</a></td>
+        <tr ng-click="collapsed = !collapsed">
+            <!--<td st-ratio="10"><a href="#">detail:{{account.assetId.key}}</a></td>-->
             <td>account name</td>
             <td st-ratio="5">{{account.orderDate}}</td>
 
             <td st-ratio="10">{{account.orderType}}</td>
             <td st-ratio="30">{{account.units}}</td>
-
         </tr>
 
-
-
-
-
-        <tr ng-repeat="transaction in account.transactions" collapse="false">
-
-        <!--<tr ng-repeat="transaction in account.transactions" collapse="collapsed=!collapsed">-->
-            <td>
-                <table>
-                    <tr>
-                        <td>
-                            {{transaction.transactionDateTime}}
-                        </td>
-                        <td>
-                            {{transaction.amount.currency}}
-                        </td>
-                        <td>
-                            {{transaction.amount.value}}
-                        </td>
-                        <td>
-                            {{transaction.state}}
-                        </td>
-                    </tr>
-                </table>
-            </td>
+        <tr collapse="collapsed">
+            <td>hidden row</td>
         </tr>
+
+        <!--<tr ng-repeat="transaction in account.transactions" collapse="collapsed">-->
+        <!--<td>-->
+        <!--<table>-->
+        <!--<tr>-->
+        <!--<td>-->
+        <!--{{transaction.transactionDateTime}}-->
+        <!--</td>-->
+        <!--<td>-->
+        <!--{{transaction.amount.currency}}-->
+        <!--</td>-->
+        <!--<td>-->
+        <!--{{transaction.amount.value}}-->
+        <!--</td>-->
+        <!--<td>-->
+        <!--{{transaction.state}}-->
+        <!--</td>-->
+        <!--</tr>-->
+        <!--</table>-->
+        <!--</td>-->
+        <!--</tr>-->
 
         <!--<td st-ratio="5">{{account.filledUnits}}</td>-->
         <!--<td st-ratio="5">{{account.units}}</td>-->
@@ -112,10 +99,7 @@
         <!--<td st-ratio="5">{{account.orderSource}}</td>-->
         <!--<td st-ratio="5">{{account.status}}</td>-->
 
-        testing show: {{show}}
-        <tr ng-show=show>
-            this is the detail bt
-        </tr>
+
         </tbody>
 
         <tfoot>

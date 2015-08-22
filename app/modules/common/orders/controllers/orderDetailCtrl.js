@@ -3,7 +3,7 @@ app.controller('OrderDetailCtrl', function ($scope, $filter, $location, configSe
     debugger;
     $scope.orderDetails = orderDetails;
 
-    $scope.collapsed = false;
+    $scope.collapsed = true;
 
     //$scope.detailRows= orderDetail.rows;
     console.log('orderdetail ctrl', orderDetails);
