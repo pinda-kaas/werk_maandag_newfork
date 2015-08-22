@@ -36,60 +36,55 @@
 <table-filter></table-filter>
 
 <div>
-
-
     <table st-table="detailRows" class="table table-striped" ng-repeat="account in orderDetails">
         <thead>
         <tr>
-            <th st-ratio="5" st-sort="account.accountId.key">Account</th>
-            <th st-ratio="20" st-sort="account.accountName">Account</th>
-            <th st-ratio="10" st-sort="account.settlementDate">Settlement date</th>
+            <th st-ratio="10" st-sort="account.orderDate">Order date</th>
+            <th st-ratio="5" st-sort="account.investment">Investment</th>
             <th st-ratio="5" st-sort="account.orderType">Type</th>
-            <th st-ratio="5" st-sort="account.asset.name">Investment</th>
             <th st-ratio="20" st-sort="account.units">Units</th>
-            <th st-ratio="5" st-sort="account.price">Price</th>
+            <th st-ratio="20" st-sort="account.filledUnits">Filled units</th>
+            <th st-ratio="5" st-sort="account.price">Limit price</th>
+            <th st-ratio="5" st-sort="account.valid">Valid</th>
             <th st-ratio="5" st-sort="account.fee">Fee</th>
-            <th st-ratio="5">Amount</th>
-            <th st-ratio="5">Order source</th>
-            <th st-ratio="5">Status</th>
+            <th st-ratio="5" st-sort="account.amount">Amount</th>
+            <th st-ratio="5" st-sort="account.orderSource">Order source</th>
+            <th st-ratio="5" st-sort="account.status">Status</th>
         </tr>
         </thead>
         <tbody>
 
-
         <tr ng-click="collapsed = !collapsed">
-            <!--<td st-ratio="10"><a href="#">detail:{{account.assetId.key}}</a></td>-->
             <td>account name</td>
             <td st-ratio="5">{{account.orderDate}}</td>
-
             <td st-ratio="10">{{account.orderType}}</td>
             <td st-ratio="30">{{account.units}}</td>
         </tr>
 
         <tr collapse="collapsed">
-            <td>hidden row</td>
+            <td></td>
+            <td></td>
+
+            <td st-ratio="80">
+                <table ng-repeat="transaction in account.transactions">
+                    <tr>
+                        <td>
+                            {{transaction.transactionDateTime}}
+                        </td>
+                        <td>
+                            {{transaction.amount.currency}}
+                        </td>
+                        <td>
+                            {{transaction.amount.value}}
+                        </td>
+                        <td>
+                            {{transaction.state}}
+                        </td>
+                    </tr>
+                </table>
+            </td>
         </tr>
 
-        <!--<tr ng-repeat="transaction in account.transactions" collapse="collapsed">-->
-        <!--<td>-->
-        <!--<table>-->
-        <!--<tr>-->
-        <!--<td>-->
-        <!--{{transaction.transactionDateTime}}-->
-        <!--</td>-->
-        <!--<td>-->
-        <!--{{transaction.amount.currency}}-->
-        <!--</td>-->
-        <!--<td>-->
-        <!--{{transaction.amount.value}}-->
-        <!--</td>-->
-        <!--<td>-->
-        <!--{{transaction.state}}-->
-        <!--</td>-->
-        <!--</tr>-->
-        <!--</table>-->
-        <!--</td>-->
-        <!--</tr>-->
 
         <!--<td st-ratio="5">{{account.filledUnits}}</td>-->
         <!--<td st-ratio="5">{{account.units}}</td>-->
