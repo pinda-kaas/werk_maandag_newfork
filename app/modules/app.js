@@ -30,25 +30,7 @@ app.config(function ($stateProvider) {
 
             }
         })
-        //.state('settlements', {
-        //    templateUrl: 'modules/common/orders/partials/tabs.html',
-        //    controller: 'AwaitingSettlementsCtrl',
-        //    resolve: {
-        //        settlementData: function (wipService, configService) {
-        //            console.log('resolve settlementData');
-        //            return wipService.getData(configService.config('mock_settlements').url);
-        //        }
-        //    }
-        //})
-        //.state('completeOrders', {
-        //    templateUrl: 'modules/common/orders/partials/tabs.html',
-        //    controller: 'CompleteOrdersCtrl',
-        //    resolve: {
-        //        completeOrders: function (wipService, configService) {
-        //            return wipService.getData(configService.config('mock_complete_orders').url);
-        //        }
-        //    }
-        //})
+      
       .state('orderDetail', {
         templateUrl: 'modules/common/orders/partials/detail.html',
         controller: 'OrderDetailCtrl',

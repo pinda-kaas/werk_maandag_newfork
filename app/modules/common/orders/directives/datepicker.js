@@ -1,88 +1,88 @@
 app.directive('datePicker', function ($compile, $timeout) {
-  return {
-    replace: true,
-    templateUrl: 'modules/common/orders/partials/datepicker.html',
-    scope: {},
+    return {
+        replace: true,
+        restrict:'E',
+        templateUrl: 'modules/common/orders/partials/datepicker.html',
+        scope: {dt:'=par1'},
+        controller: function ($scope) {
+            console.log('datepicker controller');
 
-    link: function ($scope, $element, $attrs, $controller) {
+            // debugger;
 
-    },
-    controller: function ($scope) {
+            $scope.today = function () {
+                $scope.dt = new Date();
+            };
+            $scope.today();
 
-      debugger;
+            $scope.clear = function () {
+                $scope.dt = null;
+            };
 
-      $scope.today = function () {
-        $scope.dt = new Date();
-      };
-      $scope.today();
+            // Disable weekend selection
+            //$scope.disabled = function(date, mode) {
+            //  return ( mode === 'day' && ( date.getDay() === 0 || date.getDay() === 6 ) );
+            //};
 
-      $scope.clear = function () {
-        $scope.dt = null;
-      };
+            $scope.toggleMin = function () {
+                $scope.minDate = $scope.minDate ? null : new Date();
+            };
+            $scope.toggleMin();
 
-      // Disable weekend selection
-      //$scope.disabled = function(date, mode) {
-      //  return ( mode === 'day' && ( date.getDay() === 0 || date.getDay() === 6 ) );
-      //};
 
-      $scope.toggleMin = function () {
-        $scope.minDate = $scope.minDate ? null : new Date();
-      };
-      $scope.toggleMin();
+            $scope.open = function ($event) {
+                $event.preventDefault();
+                $event.stopPropagation();
 
-      $scope.open = function ($event) {
-        $scope.status.opened = true;
-      };
+                $scope.opened = true;
+            };
 
-      $scope.dateOptions = {
-        formatYear: 'yy',
-        startingDay: 1
-      };
+            //$scope.open = function ($event) {
+            //    $scope.status.opened = true;
+            //};
 
-      $scope.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate'];
-      $scope.format = $scope.formats[0];
+            $scope.dateOptions = {
+                formatYear: 'yy',
+                startingDay: 1
+            };
 
-      $scope.status = {
-        opened: false
-      };
-      $scope.today = function () {
-        $scope.dt = new Date();
-      };
-      $scope.today();
+            $scope.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate'];
+            $scope.format = $scope.formats[0];
 
-      $scope.showWeeks = true;
-      $scope.toggleWeeks = function () {
-        $scope.showWeeks = !$scope.showWeeks;
-      };
+            $scope.status = {
+                opened: false
+            };
 
-      $scope.clear = function () {
-        $scope.dt = null;
-      };
+            var tomorrow = new Date();
+            tomorrow.setDate(tomorrow.getDate() + 1);
+            var afterTomorrow = new Date();
+            afterTomorrow.setDate(tomorrow.getDate() + 2);
+            $scope.events =
+                [
+                    {
+                        date: tomorrow,
+                        status: 'full'
+                    },
+                    {
+                        date: afterTomorrow,
+                        status: 'partially'
+                    }
+                ];
 
-      // Disable weekend selection
-      $scope.disabled = function (date, mode) {
-        return ( mode === 'day' && ( date.getDay() === 0 || date.getDay() === 6 ) );
-      };
+            $scope.getDayClass = function (date, mode) {
+                if (mode === 'day') {
+                    var dayToCheck = new Date(date).setHours(0, 0, 0, 0);
 
-      $scope.toggleMin = function () {
-        $scope.minDate = ( $scope.minDate ) ? null : new Date();
-      };
-      $scope.toggleMin();
+                    for (var i = 0; i < $scope.events.length; i++) {
+                        var currentDay = new Date($scope.events[i].date).setHours(0, 0, 0, 0);
 
-      $scope.open = function ($event) {
-        $event.preventDefault();
-        $event.stopPropagation();
+                        if (dayToCheck === currentDay) {
+                            return $scope.events[i].status;
+                        }
+                    }
+                }
 
-        $scope.opened = true;
-      };
-
-      $scope.dateOptions = {
-        'year-format': "'yy'",
-        'starting-day': 1
-      };
-
-      $scope.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'shortDate'];
-      $scope.format = $scope.formats[0];
-    }
-  }
-});
+                return '';
+            };
+        }
+    };
+})

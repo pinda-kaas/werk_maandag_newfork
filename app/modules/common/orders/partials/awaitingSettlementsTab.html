@@ -22,7 +22,8 @@
             </tr>
             </thead>
             <tbody>
-            <tr ng-repeat="account in settlements | filter:accountName ">
+
+            <tr ng-repeat="account in settlements | filter:accountName | dateRange:dateFrom:dateTo ">
                 <td st-ratio="5">{{account.account.accountId.key}}</td>
                 <td st-ratio="20"><a ui-sref="orderDetail">{{account.account.accountName}}</a> </td>
                 <td st-ratio="5">{{account.tradeDate}}</td>
