@@ -3,7 +3,7 @@ underscore.factory('_', ['$window', function () {
     return $window._;
 }]);
 
-var app = angular.module('WIP', ['ui.router', 'underscore', 'ui.bootstrap', 'smart-table']);
+var app = angular.module('WIP', ['ui.router', 'underscore', 'ui.bootstrap', 'smart-table','ngAnimate']);
 
 console.log('this is the app starting up');
 
@@ -45,6 +45,6 @@ app.config(function ($stateProvider) {
 
 app.run(function ($state) {
     console.log('run');
-    $state.go('tabs');
+    $state.go('orderDetail');
 });
 

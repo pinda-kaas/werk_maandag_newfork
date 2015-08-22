@@ -25,7 +25,7 @@
             </tr>
             </thead>
             <tbody>
-            <tr ng-repeat="account in completeOrders | filter:accountName | filter:tradeType| filter:security">
+            <tr ng-repeat="account in completeOrders | filter:accountName | filter:tradeType| filter:security | dateRange:dateFrom:dateTo">
                 <td  st-ratio="5" >{{account.account.accountId.key}}</td>
                 <td  st-ratio="20" >{{account.account.accountName}}</td>
                 <td  st-ratio="10" >{{account.settlementDate}}</td>

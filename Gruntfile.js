@@ -31,7 +31,7 @@ module.exports = function (grunt) {
         tasks: ['wiredep']
       },
       js: {
-        files: ['app/{,*/}*.js'],
+        files: ['app/{,*/}*.js','app/**/*.json'],
         tasks: ['newer:jshint:all'],
         options: {
           livereload: '<%= connect.options.livereload %>'
