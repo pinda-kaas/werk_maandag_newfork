@@ -18,7 +18,16 @@ app.config(function ($stateProvider) {
                 orderData: function (wipService, configService) {
                     console.log('resolve orderdata');
                     return wipService.getData(configService.config('mock_orders').url);
-                }
+                },
+                settlementsData: function (wipService, configService) {
+                                console.log('resolve settlementData');
+                                return wipService.getData(configService.config('mock_settlements').url);
+                            }
+                ,
+                completeOrders: function (wipService, configService) {
+                                return wipService.getData(configService.config('mock_complete_orders').url);
+                            }
+
             }
         })
         //.state('settlements', {
