@@ -1,82 +1,50 @@
 <div class="row">
 
 
-  <div class="col-sm-2">
-    <label for="">Asset type</label>
-    <select class="form-control" name="" ng-model="assetType" ng-options="item.name for item in assetTypes">
-    </select>
-  </div>
-
-  <div class="col-sm-2">
-    <label for="">Security</label>
-    <input class="form-control" ng-model="security" type="text"/>
-  </div>
-
-  <div class="col-sm-2">
-    <label for="">Trade type</label>
-    <select class="form-control" ng-model="tradeType">
-      <option>SELL</option>
-      <option>BUY</option>
-      <option></option>
-
-    </select></div>
-
-
-  <div class="col-sm-3">
-    <label for="">Date from:</label>
-
-      testing directive dt
-      testing datefrim{{dt}}
-      <date-picker par1="dateTo"></date-picker>
-
-    <!--&lt;!&ndash;testing datefrom{{dateFrom}}&ndash;&gt;-->
-    <!--<div id="date1" class="input-append" date-picker=""  ng-model="dateFrom">-->
-      <!--<input-->
-        <!--class="form-control form-control-from"-->
-        <!--datepicker-popup="{{datepickerFormat}}"-->
-        <!--ng-model="fromDateInput"-->
-        <!--is-open="openedFrom"-->
-        <!--max="pikadayMaxDate"-->
-        <!--datepicker-options="dateFromOptions"-->
-        <!--ng-required="true"-->
-        <!--close-text="Close"-->
-        <!--show-weeks="false"-->
-        <!--show-button-bar="false" />-->
-
-
-          <!--<span class="add-on">-->
-            <!--<i data-time-icon="icon-time" data-date-icon="icon-calendar"></i>-->
-          <!--</span>-->
-    <!--</div>-->
-
-
-
-
-  </div>
-
-  <!--<label for="">Date to:</label>-->
-  <div class="col-sm-3">
-    <label for="">Date to:</label>
-<!--testing dateto{{dateTo}}-->
-    <div id="date" class="input-append" date-picker="" >
-      <input data-format="MM-dd-yyyy" type="text" id="input2" ng-model="dateTo" name="input1"></input>
-          <span class="add-on">
-            <i data-time-icon="icon-time" data-date-icon="icon-calendar"></i>
-          </span>
+    <div class="col-sm-2">
+        <label for="">Asset type</label>
+        <select class="form-control" name="" ng-model="assetType" ng-options="item.name for item in assetTypes">
+        </select>
     </div>
-  </div>
+
+    <div class="col-sm-2">
+        <label for="">Security</label>
+        <input class="form-control" ng-model="security" type="text"/>
+    </div>
+
+    <div class="col-sm-2">
+        <label for="">Trade type</label>
+        <select class="form-control" ng-model="tradeType">
+            <option>SELL</option>
+            <option>BUY</option>
+            <option></option>
+
+        </select></div>
+
+
+    {{dateFrom}}
+    <div class="col-sm-3">
+        <label for="">Date from:</label>
+        <date-picker par1="dateFrom"></date-picker>
+    </div>
+
+    {{dateTo}}
+    <div class="col-sm-3">
+        <label for="">Date to:</label>
+        <date-picker par1="dateTo"></date-picker>
+    </div>
 
 
 </div>
 <div class="row">
-  <div class="col-sm-2">
-    <label for="">Period</label>
-    <select class="form-control">
-      <option>Today</option>
-      <option>Last week</option>
-      <option>Last month</option>
-      <option>User defined</option>
-    </select>
-  </div>
+    <div class="col-sm-2">
+        <label for="">Period</label>
+        <select class="form-control">
+            <option>Today</option>
+            <option>Last week</option>
+            <option>Last month</option>
+            <option>User defined</option>
+        </select>
+    </div>
 
 </div>

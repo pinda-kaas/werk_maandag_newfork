@@ -3,12 +3,17 @@ app.filter('dateRange', function() {
     console.log('daterange filter kicksin');
     console.log(dateFrom);
     console.log(dateTo);
-    return _.filter(input, function(d) {
-      var testing= Date.parse(d.date) >= Date.parse(dateFrom) && Date.parse(d.date) <= Date.parse(dateTo)
-      //console.log('testing filter result:',testing);
-      console.log(testing);
-      return testing;
-    });
+      return _.filter(input, function(d) {
+         var testing= Date.parse(d.settlementDate) >= Date.parse(dateFrom) && Date.parse(d.settlementDate) <= Date.parse(dateTo)
+          //console.log('testing filter result:',testing);
+          //var testing= Date.parse(d.settlementDate) == Date.parse(dateFrom) ;///&& Date.parse(d.settlementDate) <= Date.parse(dateTo)
+
+
+          console.log(testing);
+
+          console.log(d.settlementDate);
+          return testing;
+      });
   }
 });
 
