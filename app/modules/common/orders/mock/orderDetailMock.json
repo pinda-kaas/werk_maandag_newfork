@@ -14,7 +14,41 @@
       "fee": "$130.50",
       "amount": "$1000",
       "orderSource": "Transacting",
-      "status": "In progress"
+      "status": "In progress",
+      "transactions": [
+        {
+          "transactionDateTime": "02-09-2014 12:36 PM",
+          "amount": {
+            "currency": "AUD",
+            "value": 50922.47
+          },
+          "state": "ON_MARKET"
+        },
+        {
+          "transactionDateTime": "02-09-2014 12:43 PM",
+          "amount": {
+            "currency": "AUD",
+            "value": 50922.47
+          },
+          "state": "ON_MARKET"
+        },
+        {
+          "transactionDateTime": "02-09-2014 11:00 AM",
+          "amount": {
+            "currency": "AUD",
+            "value": 50922.47
+          },
+          "state": "ON_MARKET"
+        },
+        {
+          "transactionDateTime": "02-09-2014 11:00 AM",
+          "amount": {
+            "currency": "AUD",
+            "value": 50922.47
+          },
+          "state": "ON_MARKET"
+        }
+      ]
     },
     {
       "orderDate": "12-06-2015",

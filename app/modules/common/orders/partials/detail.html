@@ -35,7 +35,7 @@
 <table-filter></table-filter>
 
 <div>
-    <table st-table="detailRows" class="table table-striped" >
+    <table st-table="detailRows" class="table table-striped"  ng-repeat="account in orderDetails.orders">
         <thead>
         <tr>
             <th st-ratio="10" st-sort="account.orderDate">Order date</th>
@@ -55,7 +55,15 @@
         </thead>
         <tbody>
 
-        <tr ng-click="collapsed = !collapsed" ng-repeat="account in orderDetails.orders">
+
+        {{collapsed}}testing
+
+
+        <div collapse="collapsed">
+            hoer
+        </div>
+
+        <tr>
             <td st-ratio="10">{{account.orderDate}}</td>
             <td st-ratio="5">{{account.investment}}</td>
             <td st-ratio="5">{{account.type}}</td>
@@ -67,13 +75,34 @@
             <td st-ratio="5">{{account.amount}}</td>
             <td st-ratio="5">{{account.orderSource}}</td>
             <td st-ratio="5">{{account.status}}</td>
-            <td st-ratio="5"><a href="#">Details</a></td>
+            <td st-ratio="5"><button ng-click="collapsed = !collapsed">kanker</button></td>
         </tr>
 
+        <tr collapse="collapsed">
+            <td>test collapse kanker</td>
+            <td></td>
+            <!--<td st-ratio="80">-->
+                <!--<table ng-repeat="transaction in account.transactions">-->
+                    <!--<tr>-->
+                        <!--<td>-->
+                            <!--{{transaction.transactionDateTime}}-->
+                        <!--</td>-->
+                        <!--<td>-->
+                            <!--{{transaction.amount.currency}}-->
+                        <!--</td>-->
+                        <!--<td>-->
+                            <!--{{transaction.amount.value}}-->
+                        <!--</td>-->
+                        <!--<td>-->
+                            <!--{{transaction.state}}-->
+                        <!--</td>-->
+                    <!--</tr>-->
+                <!--</table>-->
+            <!--</td>-->
+        </tr>
         <!--<tr collapse="collapsed">-->
         <!--<td></td>-->
         <!--<td></td>-->
-
         <!--<td st-ratio="80">-->
         <!--<table ng-repeat="transaction in account.transactions">-->
         <!--<tr>-->
@@ -101,10 +130,10 @@
         <!--<tfoot>-->
 
         <!--<tr>-->
-            <!--<td colspan="5" class="text-center">-->
-                <!--<div st-items-by-page="10" st-pagination=""-->
-                     <!--st-template="modules/common/orders/partials/pagination.custom.html"></div>-->
-            <!--</td>-->
+        <!--<td colspan="5" class="text-center">-->
+        <!--<div st-items-by-page="10" st-pagination=""-->
+        <!--st-template="modules/common/orders/partials/pagination.custom.html"></div>-->
+        <!--</td>-->
 
         <!--</tr>-->
         <!--</tfoot>-->
