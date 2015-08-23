@@ -53,7 +53,7 @@
 
         </tr>
         </thead>
-        <tbody ng-repeat="account in orderDetails.orders">
+        <tbody ng-repeat="account in orderDetails.orders | filter:accountName | dateRange:dateFrom:dateTo:orderDate ">
 
         <tr>
             <td st-ratio="10">{{account.orderDate}}</td>

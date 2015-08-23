@@ -26,13 +26,12 @@ module.exports = function (config) {
         files: [
 
             'bower_components/angular/angular.js',
+            'bower_components/angular-animate/angular-animate.js',
             'bower_components/angular-mocks/angular-mocks.js',
             'bower_components/angular-ui-router/release/angular-ui-router.js',
             'bower_components/angular-bootstrap/ui-bootstrap.js',
             'bower_components/angular-smart-table/dist/smart-table.min.js',
             'bower_components/underscore/underscore.js',
-
-
             'app/modules/**/*.js',
             'app/modules/app.js',
             //'../app/scripts_old/**/*.js',
