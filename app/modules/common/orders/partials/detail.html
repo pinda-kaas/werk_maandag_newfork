@@ -72,24 +72,78 @@
 
         <tr collapse="collapsed">
 
-            <td st-ratio="80">
+            <td></td>
+            <td></td>
+
+            <td st-ratio="90" colspan="11">
                 <table ng-repeat="transaction in account.transactions">
+                    <thead>
+
+                    <th></th>
+                    <th></th>
+                    <th st-ratio="10" st-sort="transaction.reference">Reference</th>
+
+
+                    <th st-ratio="10" st-sort="transaction.orderTaker">Order taker</th>
+
+                    <th st-ratio="10" st-sort="transaction.lastUpdated">Last updated</th>
+
+                    <th st-ratio="10" st-sort="transaction.filledUnits">Filled units</th>
+
+                    <th st-ratio="10" st-sort="transaction.price">Price</th>
+
+                    <th st-ratio="10" st-sort="transaction.amount">amount</th>
+                    <th st-ratio="10" st-sort="transaction.fundingPriority">Funding priority</th>
+
+
+                    <th st-ratio="10" st-sort="transaction.status">Status</th>
+
+                    </thead>
+                    <tbody>
                     <tr>
                         <td>
-                            {{transaction.transactionDateTime}}
+
                         </td>
-                        <td>
-                            {{transaction.amount.currency}}
+                        <td></td>
+                        <td st-ratio="10">
+                            {{transaction.reference}}
                         </td>
-                        <td>
-                            {{transaction.amount.value}}
+
+
+                        <td st-ratio="10">
+                            {{transaction.orderTaker}}
                         </td>
-                        <td>
-                            {{transaction.state}}
+
+
+                        <td st-ratio="10">
+                            {{transaction.lastUpdated}}
+                        </td>
+
+
+                        <td st-ratio="10">
+                            {{transaction.filledUnits}}
+                        </td>
+
+                        <td st-ratio="10">
+                            {{transaction.price}}
+                        </td>
+
+                        <td st-ratio="10">
+                            {{transaction.amount}}
+                        </td>
+
+
+                        <td st-ratio="10">
+                            {{transaction.fundingPriority}}
+                        </td>
+                        <td st-ratio="10">
+                            {{transaction.status}}
                         </td>
                     </tr>
+                    </tbody>
                 </table>
             </td>
+            <td></td>
         </tr>
 
 
