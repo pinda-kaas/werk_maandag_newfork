@@ -1,3 +1,4 @@
+
 <form class="form-horizontal">
     <a ui-sref="orders">go back to orders</a>
 
@@ -6,12 +7,12 @@
         <div class="col-sm-4">
             <label for="">Account</label>
 
-            <p>{{orderDetail.account.id}}</p>
+            <p>{{orderDetails.accountId}}</p>
         </div>
         <div class="col-sm-4">
             <label for="">Accounttype</label>
 
-            <p>{{orderDetail.account.type}}</p>
+            <p>{{orderDetails.accountType}}</p>
         </div>
     </div>
 
@@ -21,7 +22,7 @@
         <div class="col-sm-6">
             <label for="">Accountname</label>
 
-            <p>{{orderDetail.account.name}}</p>
+            <p>{{orderDetails.accountName}}</p>
         </div>
     </div>
 </form>
@@ -50,6 +51,8 @@
             <th st-ratio="5" st-sort="account.amount">Amount</th>
             <th st-ratio="5" st-sort="account.orderSource">Order source</th>
             <th st-ratio="5" st-sort="account.status">Status</th>
+            <th st-ratio="5" st-sort="account.detail"><a href="#">Details</a></th>
+
         </tr>
         </thead>
         <tbody>
