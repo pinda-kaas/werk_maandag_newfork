@@ -35,7 +35,7 @@
 <table-filter></table-filter>
 
 <div>
-    <table st-table="detailRows" class="table table-striped"  ng-repeat="account in orderDetails.orders">
+    <table st-table="detailRows" class="table table-striped"  >
         <thead>
         <tr>
             <th st-ratio="10" st-sort="account.orderDate">Order date</th>
@@ -53,15 +53,7 @@
 
         </tr>
         </thead>
-        <tbody>
-
-
-        {{collapsed}}testing
-
-
-        <div collapse="collapsed">
-            hoer
-        </div>
+        <tbody ng-repeat="account in orderDetails.orders">
 
         <tr>
             <td st-ratio="10">{{account.orderDate}}</td>
@@ -79,26 +71,25 @@
         </tr>
 
         <tr collapse="collapsed">
-            <td>test collapse kanker</td>
-            <td></td>
-            <!--<td st-ratio="80">-->
-                <!--<table ng-repeat="transaction in account.transactions">-->
-                    <!--<tr>-->
-                        <!--<td>-->
-                            <!--{{transaction.transactionDateTime}}-->
-                        <!--</td>-->
-                        <!--<td>-->
-                            <!--{{transaction.amount.currency}}-->
-                        <!--</td>-->
-                        <!--<td>-->
-                            <!--{{transaction.amount.value}}-->
-                        <!--</td>-->
-                        <!--<td>-->
-                            <!--{{transaction.state}}-->
-                        <!--</td>-->
-                    <!--</tr>-->
-                <!--</table>-->
-            <!--</td>-->
+
+            <td st-ratio="80">
+                <table ng-repeat="transaction in account.transactions">
+                    <tr>
+                        <td>
+                            {{transaction.transactionDateTime}}
+                        </td>
+                        <td>
+                            {{transaction.amount.currency}}
+                        </td>
+                        <td>
+                            {{transaction.amount.value}}
+                        </td>
+                        <td>
+                            {{transaction.state}}
+                        </td>
+                    </tr>
+                </table>
+            </td>
         </tr>
         <!--<tr collapse="collapsed">-->
         <!--<td></td>-->
