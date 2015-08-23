@@ -4,15 +4,15 @@ app.filter('dateRange', function () {
         console.log('df', dateFrom);
         console.log('dt', dateTo);
         return _.filter(input, function (d) {
-            var testing = Date.parse(d.prop('dateName')) >= Date.parse(dateFrom) && Date.parse(d.dateName) <= Date.parse(dateTo)
-            //console.log('testing filter result:',testing);
-            //var testing= Date.parse(d.settlementDate) == Date.parse(dateFrom) ;///&& Date.parse(d.settlementDate) <= Date.parse(dateTo)
+            var tst=dateName;
+            console.log(d[dateName]);
+            var result = Date.parse(d[dateName]) >= Date.parse(dateFrom) &&  Date.parse(d[dateName]) <= Date.parse(dateTo)
 
-            console.log('nput',input);
-            console.log(testing);
+            console.log('input',input);
+            console.log(result);
 
-            console.log(d.prop('dateName'));
-            return testing;
+            //console.log(d.prop('dateName'));
+            return result;
         });
     }
 });
