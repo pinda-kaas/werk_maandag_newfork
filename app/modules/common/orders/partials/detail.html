@@ -1,31 +1,29 @@
+<a ui-sref="orders">go back to orders</a>
 
-<form class="form-horizontal">
-    <a ui-sref="orders">go back to orders</a>
+<hr/>
+<div class="row">
+    <div class="col-sm-4">
+        <label for="">Account</label>
 
-    <hr/>
-    <div class="row form-group">
-        <div class="col-sm-4">
-            <label for="">Account</label>
-
-            <p>{{orderDetails.accountId}}</p>
-        </div>
-        <div class="col-sm-4">
-            <label for="">Accounttype</label>
-
-            <p>{{orderDetails.accountType}}</p>
-        </div>
+        <p>{{orderDetails.accountId}}</p>
     </div>
+    <div class="col-sm-4">
+        <label for="">Accounttype</label>
 
-    <hr/>
-
-    <div class="row">
-        <div class="col-sm-6">
-            <label for="">Accountname</label>
-
-            <p>{{orderDetails.accountName}}</p>
-        </div>
+        <p>{{orderDetails.accountType}}</p>
     </div>
-</form>
+</div>
+
+<hr/>
+
+<div class="row">
+    <div class="col-sm-6">
+        <label for="">Accountname</label>
+
+        <p>{{orderDetails.accountName}}</p>
+    </div>
+</div>
+
 <hr/>
 
 <div class="row">
@@ -37,15 +35,15 @@
 <table-filter></table-filter>
 
 <div>
-    <table st-table="detailRows" class="table table-striped" ng-repeat="account in orderDetails">
+    <table st-table="detailRows" class="table table-striped" >
         <thead>
         <tr>
             <th st-ratio="10" st-sort="account.orderDate">Order date</th>
             <th st-ratio="5" st-sort="account.investment">Investment</th>
-            <th st-ratio="5" st-sort="account.orderType">Type</th>
+            <th st-ratio="5" st-sort="account.type">Type</th>
             <th st-ratio="20" st-sort="account.units">Units</th>
             <th st-ratio="20" st-sort="account.filledUnits">Filled units</th>
-            <th st-ratio="5" st-sort="account.price">Limit price</th>
+            <th st-ratio="5" st-sort="account.limitPrice">Limit price</th>
             <th st-ratio="5" st-sort="account.valid">Valid</th>
             <th st-ratio="5" st-sort="account.fee">Fee</th>
             <th st-ratio="5" st-sort="account.amount">Amount</th>
@@ -57,58 +55,59 @@
         </thead>
         <tbody>
 
-        <tr ng-click="collapsed = !collapsed">
-            <td>account name</td>
-            <td st-ratio="5">{{account.orderDate}}</td>
-            <td st-ratio="10">{{account.orderType}}</td>
-            <td st-ratio="30">{{account.units}}</td>
+        <tr ng-click="collapsed = !collapsed" ng-repeat="account in orderDetails.orders">
+            <td st-ratio="10">{{account.orderDate}}</td>
+            <td st-ratio="5">{{account.investment}}</td>
+            <td st-ratio="5">{{account.type}}</td>
+            <td st-ratio="20">{{account.units}}</td>
+            <td st-ratio="20">{{account.filledUnits}}</td>
+            <td st-ratio="5">{{account.limitPrice}}</td>
+            <td st-ratio="5">{{account.valid}}</td>
+            <td st-ratio="5">{{account.fee}}</td>
+            <td st-ratio="5">{{account.amount}}</td>
+            <td st-ratio="5">{{account.orderSource}}</td>
+            <td st-ratio="5">{{account.status}}</td>
+            <td st-ratio="5"><a href="#">Details</a></td>
         </tr>
 
-        <tr collapse="collapsed">
-            <td></td>
-            <td></td>
+        <!--<tr collapse="collapsed">-->
+        <!--<td></td>-->
+        <!--<td></td>-->
 
-            <td st-ratio="80">
-                <table ng-repeat="transaction in account.transactions">
-                    <tr>
-                        <td>
-                            {{transaction.transactionDateTime}}
-                        </td>
-                        <td>
-                            {{transaction.amount.currency}}
-                        </td>
-                        <td>
-                            {{transaction.amount.value}}
-                        </td>
-                        <td>
-                            {{transaction.state}}
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-
-
-        <!--<td st-ratio="5">{{account.filledUnits}}</td>-->
-        <!--<td st-ratio="5">{{account.units}}</td>-->
-        <!--<td st-ratio="5">{{account.unitPrice}}</td>-->
-        <!--<td st-ratio="5">{{account.valid}}</td>-->
-        <!--<td st-ratio="5">{{account.amount | showCurrency:account.price.currency}}</td>-->
-        <!--<td st-ratio="5">{{account.orderSource}}</td>-->
-        <!--<td st-ratio="5">{{account.status}}</td>-->
+        <!--<td st-ratio="80">-->
+        <!--<table ng-repeat="transaction in account.transactions">-->
+        <!--<tr>-->
+        <!--<td>-->
+        <!--{{transaction.transactionDateTime}}-->
+        <!--</td>-->
+        <!--<td>-->
+        <!--{{transaction.amount.currency}}-->
+        <!--</td>-->
+        <!--<td>-->
+        <!--{{transaction.amount.value}}-->
+        <!--</td>-->
+        <!--<td>-->
+        <!--{{transaction.state}}-->
+        <!--</td>-->
+        <!--</tr>-->
+        <!--</table>-->
+        <!--</td>-->
+        <!--</tr>-->
 
 
         </tbody>
 
-        <tfoot>
-        <tr>
-            <td colspan="5" class="text-center">
-                <div st-items-by-page="10" st-pagination=""
-                     st-template="modules/common/orders/partials/pagination.custom.html"></div>
-            </td>
 
-        </tr>
-        </tfoot>
+        <!--<tfoot>-->
+
+        <!--<tr>-->
+            <!--<td colspan="5" class="text-center">-->
+                <!--<div st-items-by-page="10" st-pagination=""-->
+                     <!--st-template="modules/common/orders/partials/pagination.custom.html"></div>-->
+            <!--</td>-->
+
+        <!--</tr>-->
+        <!--</tfoot>-->
 
     </table>
 
