@@ -59,8 +59,8 @@
             <td st-ratio="10">{{account.orderDate}}</td>
             <td st-ratio="5">{{account.investment}}</td>
             <td st-ratio="5">{{account.type}}</td>
-            <td st-ratio="20">{{account.units}}</td>
-            <td st-ratio="20">{{account.filledUnits}}</td>
+            <td st-ratio="10">{{account.units}}</td>
+            <td st-ratio="10">{{account.filledUnits}}</td>
             <td st-ratio="5">{{account.limitPrice}}</td>
             <td st-ratio="5">{{account.valid}}</td>
             <td st-ratio="5">{{account.fee}}</td>
@@ -75,28 +75,28 @@
             <td></td>
             <td></td>
 
-            <td st-ratio="90" colspan="11">
+            <td st-ratio="100" colspan="10">
                 <table ng-repeat="transaction in account.transactions">
                     <thead>
 
                     <th></th>
                     <th></th>
-                    <th st-ratio="10" st-sort="transaction.reference">Reference</th>
+                    <th st-ratio="12" st-sort="transaction.reference">Reference</th>
 
 
-                    <th st-ratio="10" st-sort="transaction.orderTaker">Order taker</th>
+                    <th st-ratio="15" st-sort="transaction.orderTaker">Order taker</th>
 
-                    <th st-ratio="10" st-sort="transaction.lastUpdated">Last updated</th>
+                    <th st-ratio="20" st-sort="transaction.lastUpdated">Updated</th>
 
                     <th st-ratio="10" st-sort="transaction.filledUnits">Filled units</th>
 
                     <th st-ratio="10" st-sort="transaction.price">Price</th>
 
                     <th st-ratio="10" st-sort="transaction.amount">amount</th>
-                    <th st-ratio="10" st-sort="transaction.fundingPriority">Funding priority</th>
+                    <th st-ratio="15" st-sort="transaction.fundingPriority">Funding priority</th>
 
 
-                    <th st-ratio="10" st-sort="transaction.status">Status</th>
+                    <th st-ratio="15" st-sort="transaction.status">Status</th>
 
                     </thead>
                     <tbody>
