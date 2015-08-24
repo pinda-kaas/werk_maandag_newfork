@@ -19,26 +19,12 @@
   <!-- endbuild -->
   <!-- build:css(.tmp) styles/main.css -->
 
-  <!-- Wrap ng original styles -->
-  <link rel="stylesheet" type="text/css" href="styles/wrap-ng/reset.css">
-  <link rel="stylesheet" type="text/css" href="styles/wrap-ng/page.css">
-  <link rel="stylesheet" type="text/css" href="styles/wrap-ng/style.css">
-  <link rel="stylesheet" type="text/css" href="styles/wrap-ng/core.css">
-  <link rel="stylesheet" type="text/css" href="styles/wrap-ng/icons-pictos.css">
-  <link rel="stylesheet" type="text/css" href="styles/wrap-ng/project.css">
-  <!-- End Wrap ng original styles -->
-
   <!-- build:css({.tmp,app}) styles/main.css -->
-
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
-
-    <!--<link rel="stylesheet" href="styles/main.css"/>-->
-
-    <!-- endbuild -->
+  <link rel="stylesheet" href="styles/main.css"/>
+  <!-- endbuild -->
 
   <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css"/>
-
-
 
 
   <!-- endbuild -->
@@ -50,13 +36,15 @@
   your browser</a> to improve your experience.</p>
 <![endif]-->
 
-<div class="container" >
+<div class="container">
   <div class="header">
 
     <h3 class="text-muted"> Work in progress</h3>
   </div>
 
-  <div ui-view=""></div>
+  <div class="wrap">
+    <div ui-view=""></div>
+  </div>
 
   <div class="footer">
   </div>
