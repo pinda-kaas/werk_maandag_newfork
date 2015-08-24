@@ -1,19 +1,34 @@
 app.filter('dateRange', function () {
-    return function (input, dateFrom, dateTo,dateName) {
+    return function (input, dateFrom, dateTo, dateName) {
         //console.log('daterange filter kicksin');
         //console.log('df', dateFrom);
         //console.log('dt', dateTo);
+        var result = false;
         return _.filter(input, function (d) {
-            var tst=dateName;
-            //console.log(d[dateName]);
-            var result = Date.parse(d[dateName]) >= Date.parse(dateFrom) &&  Date.parse(d[dateName]) <= Date.parse(dateTo)
+            var tst = dateName;
 
-            //console.log('input',input);
-            //console.log(result);
+            if (d[dateName]) {
+                console.log('true dateName', d[dateName]);
+                var res = Date.parse(d[dateName]) >= Date.parse(dateFrom) && Date.parse(d[dateName]) <= Date.parse(dateTo)
 
-            ////console.log(d.prop('dateName'));
-            return result;
+                //console.log('input',input);
+                //console.log(result);
+
+                ////console.log(d.prop('dateName'));
+                console.log('res',res);
+                if (res==undefined) {
+                    res = false;
+                }
+                return res;
+            }
+            else {
+                console.log('false daterange');
+                return null;
+            }
+
         });
+        //console.log('result',result);
+        //return result;
     }
 });
 

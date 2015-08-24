@@ -412,7 +412,7 @@ module.exports = function (grunt) {
     grunt.task.run([
       'clean:server',
       'wiredep',
-      //'test',
+      'test',
       'concurrent:server',
       'autoprefixer',
       'connect:livereload',
@@ -432,8 +432,8 @@ module.exports = function (grunt) {
     'concurrent:test',
     'autoprefixer',
     'connect:test',
-   // 'karma',
-    'protractor:run'
+    'karma'
+    //'protractor:run'
   ]);
 
   grunt.registerTask('build', [
