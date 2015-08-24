@@ -1,15 +1,12 @@
 app.directive('tableFilter', function ($filter) {
   return {
     restrict: 'E',
+    scope:{security:"=security"},
     templateUrl: 'modules/common/orders/partials/tableFilter.html',
     controller: function ($scope) {
 
-      //todo remove this begin date stuff
+      console.log('security',$scope.security);
 
-
-      //end date stuff
-
-      //todo remove hardcoded
       $scope.assetTypes = [
         {name: 'SMA'},
         {name: 'Super'},
