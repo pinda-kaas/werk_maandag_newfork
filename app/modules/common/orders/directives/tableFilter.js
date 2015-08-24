@@ -4,8 +4,7 @@ app.directive('tableFilter', function ($filter) {
     scope:{security:"=security"},
     templateUrl: 'modules/common/orders/partials/tableFilter.html',
     controller: function ($scope) {
-
-      console.log('security',$scope.security);
+      //console.log('security',$scope.security);
 
       $scope.assetTypes = [
         {name: 'SMA'},
