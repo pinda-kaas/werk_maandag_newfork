@@ -14,7 +14,7 @@ describe('Filter: daterange', function () {
     }));
 
     it('should be in the range',function(){
-        //expect($filter('dateRange')('08/10/2015','08/01/2015','08/30/2015')).toBeTruthy;
+        expect($filter('dateRange')('08/10/2015','08/01/2015','08/30/2015','blaat')).toBeTruthy;
     });
 
 });

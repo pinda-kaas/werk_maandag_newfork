@@ -6,7 +6,7 @@ app.filter('dateRange', function () {
         console.log('datename', dateName);
         return _.filter(input, function (d) {
             var result = Date.parse(d[dateName]) >= Date.parse(dateFrom) &&  Date.parse(d[dateName]) <= Date.parse(dateTo)
-            ///console.log('input',input);
+            console.log('input',input);
             console.log(result);
             return result;
         });
