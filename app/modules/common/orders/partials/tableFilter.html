@@ -1,6 +1,4 @@
 <div class="row">
-
-
     <div class="col-sm-2">
         <label for="">Asset type</label>
         <select class="form-control" name="" ng-model="assetType" ng-options="item.name for item in assetTypes">
@@ -18,23 +16,20 @@
             <option>SELL</option>
             <option>BUY</option>
             <option></option>
-
         </select></div>
 
-    df{{dateFrom}}
     <div class="col-sm-3">
         <label for="">Date from:</label>
         <date-picker par1="dateFrom"></date-picker>
     </div>
 
-    dt{{dateTo}}
     <div class="col-sm-3">
         <label for="">Date to:</label>
         <date-picker par1="dateTo"></date-picker>
     </div>
 
-
 </div>
+
 <div class="row">
     <div class="col-sm-2">
         <label for="">Period</label>
@@ -45,5 +40,4 @@
             <option>User defined</option>
         </select>
     </div>
-
 </div>
