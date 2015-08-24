@@ -3,11 +3,29 @@
 <div class="main">
 
   <div class="row search">
-    <div class="col-lg-12">
+    <div class="col-lg-8">
       Account Search:
       <input type="text" ng-model="accountName" id="field4" placeholder="Search by account name or number"/>
       <i class="fa fa-search"></i>
     </div>
+
+    <div class="col-lg-4 ">
+
+      <div class="btn-group" dropdown is-open="status.isopen">
+        <button id="single-button" type="button" class="btn btn-primary" dropdown-toggle ng-disabled="disabled">
+          Advisers<span class="caret"></span>
+        </button>
+
+        <ul class="dropdown-menu" role="menu" aria-labelledby="single-button">
+          <li role="menuitem"><a href="#">Mark</a></li>
+          <li role="menuitem"><a href="#">Ed</a></li>
+          <li role="menuitem"><a href="#">Fred</a></li>
+
+        </ul>
+      </div>
+
+    </div>
+
   </div>
 
   <reset-filter></reset-filter>
