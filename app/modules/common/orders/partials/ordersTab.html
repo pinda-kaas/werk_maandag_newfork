@@ -13,7 +13,7 @@
       </tr>
       </thead>
       <tbody>
-      <tr ng-repeat="account in accounts | filter:accountName">
+      <tr ng-repeat="account in accounts | filter:accountName | filter:adviser">
         <td><a href="#"> {{account.account.accountId.key}}</a></td>
         <td>{{account.account.accountName}}</td>
         <td>{{account.account.productName}}</td>

@@ -15,10 +15,10 @@
         <button id="single-button" type="button" class="btn btn-primary" dropdown-toggle ng-disabled="disabled">
           Advisers<span class="caret"></span>
         </button>
-        <ul class="dropdown-menu" role="menu" aria-labelledby="single-button">
-          <li role="menuitem"><a href="#">Mark</a></li>
-          <li role="menuitem"><a href="#">Ed</a></li>
-          <li role="menuitem"><a href="#">Fred</a></li>
+        <ul class="dropdown-menu" role="menu" ng-model="adviser" aria-labelledby="single-button">
+          <li role="menuitem"><a href="#" ng-click="selectAdviser('Mark')">Mark</a></li>
+          <li role="menuitem"><a href="#" ng-click="selectAdviser('Ed')">Ed</a></li>
+          <li role="menuitem"><a href="#" ng-click="selectAdviser('Fred')">Fred</a></li>
         </ul>
       </div>
     </div>
