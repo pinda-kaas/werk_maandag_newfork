@@ -1,7 +1,5 @@
 <div>
-
     {{settlements.length}} results match your search selection.
-
     <div>
 
         <table st-table="settlement" class="table table-striped">
@@ -23,14 +21,12 @@
             </thead>
             <tbody>
 
-
             <tr ng-repeat="account in settlements | filter:accountName | dateRange:dateFrom:dateTo:'settlementDate' ">
                 <td st-ratio="5">{{account.account.accountId.key}}</td>
                 <td st-ratio="20"><a ui-sref="orderDetail">{{account.account.accountName}}</a> </td>
                 <td st-ratio="5">{{account.tradeDate}}</td>
                 <td st-ratio="5">{{account.orderType}}</td>
                 <td st-ratio="20">{{account.asset.name}}</td>
-
                 <td st-ratio="5">{{account.units}}</td>
                 <td st-ratio="5">{{account.price.value | showCurrency:account.price.currency}}</td>
                 <td st-ratio="5">{{account.fee}}</td>
