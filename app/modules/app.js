@@ -30,7 +30,7 @@ app.config(function ($stateProvider) {
 
             }
         })
-      
+
       .state('orderDetail', {
         templateUrl: 'modules/common/orders/partials/detail.html',
         controller: 'OrderDetailCtrl',
@@ -45,6 +45,6 @@ app.config(function ($stateProvider) {
 
 app.run(function ($state) {
     console.log('run');
-    $state.go('orderDetail');
+    $state.go('tabs');
 });
 
