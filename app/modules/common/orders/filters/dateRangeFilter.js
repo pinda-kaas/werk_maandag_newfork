@@ -15,14 +15,14 @@ app.filter('dateRange', function () {
         //console.log(result);
 
         ////console.log(d.prop('dateName'));
-        console.log('res',res);
+        //console.log('res',res);
         if (res==undefined) {
           res = false;
         }
         return res;
       }
       else {
-        console.log('false daterange');
+        //console.log('false daterange');
         return null;
       }
 
