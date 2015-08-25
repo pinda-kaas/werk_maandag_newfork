@@ -120,7 +120,6 @@
 
 .input[type="password"],input[type="text"] {
   background-color:#fff;
-
   height: 34px;
   _height: 18px;
   height/*\**/:18px\9;
@@ -132,5 +131,5 @@
 
 .tableFilter
 {
-  margin-top: 30px;
+  margin-top: 10px;
 }

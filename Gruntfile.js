@@ -56,7 +56,7 @@ module.exports = function (grunt) {
           'app/**/*.html',
           'app/**/*.js',
           '.tmp/styles/{,*/}*.css',
-          'app/styles/{,*/}*.scss',
+          'app/styles/{,*/}*.css',
           'app/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
         ]
       }
@@ -430,7 +430,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('test', [
     'clean:server',
-    'concurrent:test',
+    //'concurrent:test',
     'autoprefixer',
     'connect:test',
     'karma'
@@ -441,7 +441,7 @@ module.exports = function (grunt) {
     'clean:dist',
     'wiredep',
     //'useminPrepare',
-    'concurrent:dist',
+    //'concurrent:dist',
     'autoprefixer',
     'concat',
     'ngAnnotate',
