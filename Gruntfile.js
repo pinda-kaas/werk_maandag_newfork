@@ -42,7 +42,7 @@ module.exports = function (grunt) {
         tasks: ['newer:jshint:test', 'karma']
       },
       compass: {
-        files: ['app/styles/{,*/}*.{css,sass}'],
+        files: ['app/styles/{,*/}*.{scss,sass}'],
         tasks: ['compass:server', 'autoprefixer']
       },
       gruntfile: {
@@ -319,9 +319,9 @@ module.exports = function (grunt) {
       dist: {
         files: [{
           expand: true,
-          cwd: '.tmp/concat/scripts_old',
+          cwd: '.tmp/concat/scripts',
           src: ['*.js', '!oldieshim.js'],
-          dest: '.tmp/concat/scripts_old'
+          dest: '.tmp/concat/scripts'
         }]
       }
     },
@@ -442,11 +442,11 @@ module.exports = function (grunt) {
     //'useminPrepare',
     'concurrent:dist',
     'autoprefixer',
-    //'concat',
+    'concat',
     'ngAnnotate',
     'copy:dist',
     'cdnify',
-    //'cssmin',
+    'cssmin',
     'uglify',
     'filerev',
     'usemin',
