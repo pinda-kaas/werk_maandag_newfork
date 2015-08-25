@@ -4,14 +4,14 @@
   "accountType": "Investment Account",
   "orders": [
     {
-      "orderDate": "08-23-2015",
+      "orderDate": "08-25-2015",
       "investment": "ANZ",
       "type": "BUY",
       "units": 100,
       "filledUnits": 200,
       "limitPrice": "$200",
       "valid": "today only",
-      "fee": "$130.50",
+      "fee": "$1300.50",
       "amount": "$1000",
       "orderSource": "Transacting",
       "status": "In progress",
