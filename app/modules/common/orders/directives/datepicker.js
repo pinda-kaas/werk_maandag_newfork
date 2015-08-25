@@ -46,7 +46,7 @@ app.directive('datePicker', function ($compile, $timeout) {
             };
 
             $scope.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate'];
-            $scope.format = $scope.formats[0];
+            $scope.format = $scope.formats[2];
 
             $scope.status = {
                 opened: false
