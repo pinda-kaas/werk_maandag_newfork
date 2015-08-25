@@ -45,6 +45,7 @@ app.config(function ($stateProvider) {
 
 app.run(function ($state) {
     console.log('run');
-    $state.go('tabs');
+    //$state.go('tabs');
+    $state.go('orderDetail');
 });
 
