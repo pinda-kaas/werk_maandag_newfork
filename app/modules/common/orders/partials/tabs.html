@@ -16,6 +16,7 @@
             Advisers<span class="caret"></span>
           </button>
 
+          adviser: {{adviser}}
           <ul class="dropdown-menu" role="menu" ng-model="adviser" aria-labelledby="single-button">
             <li role="menuitem"><a href="#" ng-click="selectAdviser('Mark')">Mark</a></li>
             <li role="menuitem"><a href="#" ng-click="selectAdviser('Ed')">Ed</a></li>
@@ -38,7 +39,7 @@
         <div>
           <tabset id="tab">
 
-            <tab heading="Orders">
+            <tab heading="Orders" active="true">
               <orders-tab></orders-tab>
             </tab>
 
@@ -47,7 +48,7 @@
               <awaiting-settlements-tab></awaiting-settlements-tab>
             </tab>
 
-            <tab heading="Complete" active="true">
+            <tab heading="Complete" >
               <table-filter></table-filter>
               <complete-orders-tab></complete-orders-tab>
             </tab>

@@ -5,8 +5,7 @@
         <table st-table="settlement" class="table table-striped">
             <thead>
             <tr>
-                <th st-ratio="5" st-sort="account.accountId.key">Account</th>
-                <th st-ratio="25" st-sort="account.accountName"></th>
+                <th st-ratio="25" st-sort="account.accountName">Account</th>
                 <th st-ratio="10" st-sort="account.tradeDate">Trade date</th>
                 <th st-ratio="5" st-sort="account.orderType">Type</th>
                 <th st-ratio="5" st-sort="account.asset.name">Investment</th>
@@ -22,7 +21,6 @@
             <tbody>
 
             <tr ng-repeat="account in settlements | filter:accountName | dateRange:dateFrom:dateTo:'settlementDate' ">
-                <td st-ratio="5">{{account.account.accountId.key}}</td>
                 <td st-ratio="20"><a ui-sref="orderDetail">{{account.account.accountName}}</a> </td>
                 <td st-ratio="5">{{account.tradeDate}}</td>
                 <td st-ratio="5">{{account.orderType}}</td>
