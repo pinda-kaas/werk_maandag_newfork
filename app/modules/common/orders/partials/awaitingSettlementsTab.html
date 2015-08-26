@@ -8,29 +8,32 @@
                 <th st-ratio="25" st-sort="account.accountName">Account</th>
                 <th st-ratio="10" st-sort="account.tradeDate">Trade date</th>
                 <th st-ratio="5" st-sort="account.orderType">Type</th>
-                <th st-ratio="5" st-sort="account.asset.name">Investment</th>
+                <th st-ratio="30" st-sort="account.asset.name">Investment</th>
                 <th st-ratio="5" st-sort="account.units">Units</th>
                 <th st-ratio="5" st-sort="account.price">Price</th>
                 <th st-ratio="5" st-sort="account.fee">Fee</th>
-                <th st-ratio="5" st-sort="account.settlementValue">Settlement value</th>
+                <th st-ratio="5" st-sort="account.settlementValue">Value</th>
                 <th st-ratio="5" st-sort="account.account.adviser.key">Adviser</th>
                 <th st-ratio="10" st-sort="account.settlementDate">Settlement date</th>
-
+              <th></th>
             </tr>
             </thead>
             <tbody>
 
             <tr ng-repeat="account in settlements | filter:accountName | dateRange:dateFrom:dateTo:'settlementDate' ">
-                <td st-ratio="20"><a ui-sref="orderDetail">{{account.account.accountName}}</a> </td>
+                <td st-ratio="25"><a ui-sref="orderDetail">{{account.account.accountName}}</a> </td>
                 <td st-ratio="5">{{account.tradeDate}}</td>
                 <td st-ratio="5">{{account.orderType}}</td>
-                <td st-ratio="20">{{account.asset.name}}</td>
+                <td st-ratio="30">{{account.asset.name}}</td>
                 <td st-ratio="5">{{account.units}}</td>
                 <td st-ratio="5">{{account.price.value | showCurrency:account.price.currency}}</td>
                 <td st-ratio="5">{{account.fee}}</td>
                 <td st-ratio="5">{{account.settlementValue.value | showCurrency:account.price.currency}}</td>
                 <td st-ratio="5">{{account.account.adviser.key}}</td>
                 <td st-ratio="20">{{account.settlementDate}}</td>
+              <td>
+                <i class="fa fa-file-pdf-o"></i>
+              </td>
             </tr>
             </tbody>
 
