@@ -22,6 +22,7 @@
     "tradeDate": "29-06-2009",
     "orderType": "REDEMPTION",
     "units": 24162,
+    "fee": "$100,-",
     "price": {
       "currency": "AUD",
       "value": 0.4162
@@ -55,6 +56,7 @@
     "tradeDate": "22-01-2010",
     "orderType": "REDEMPTION",
     "units": 4662,
+    "fee": "$100,-",
     "price": {
       "currency": "AUD",
       "value": 0.9968
@@ -88,6 +90,7 @@
     "tradeDate": "20-04-2010",
     "orderType": "REDEMPTION",
     "units": 1562,
+    "fee": "$100,-",
     "price": {
       "currency": "AUD",
       "value": 1.0115
@@ -121,6 +124,7 @@
     "tradeDate": "17-06-2010",
     "orderType": "REDEMPTION",
     "units": 4133,
+    "fee": "$100,-",
     "price": {
       "currency": "AUD",
       "value": 1.031
@@ -154,6 +158,7 @@
     "tradeDate": "22-02-2011",
     "orderType": "REDEMPTION",
     "units": 3640,
+    "fee": "$100,-",
     "price": {
       "currency": "AUD",
       "value": 1.0703
@@ -187,6 +192,7 @@
     "tradeDate": "14-02-2012",
     "orderType": "REDEMPTION",
     "units": 3487,
+    "fee": "$100,-",
     "price": {
       "currency": "AUD",
       "value": 1.0949
@@ -220,6 +226,7 @@
     "tradeDate": "29-06-2009",
     "orderType": "REDEMPTION",
     "units": 21388,
+    "fee": "$100,-",
     "price": {
       "currency": "AUD",
       "value": 0.4162
@@ -253,6 +260,7 @@
     "tradeDate": "22-01-2010",
     "orderType": "REDEMPTION",
     "units": 2345,
+    "fee": "$100,-",
     "price": {
       "currency": "AUD",
       "value": 0.9966
@@ -286,6 +294,7 @@
     "tradeDate": "20-04-2010",
     "orderType": "REDEMPTION",
     "units": 786,
+    "fee": "$100,-",
     "price": {
       "currency": "AUD",
       "value": 1.0115
@@ -319,6 +328,7 @@
     "tradeDate": "17-06-2010",
     "orderType": "REDEMPTION",
     "units": 2079,
+    "fee": "$100,-",
     "price": {
       "currency": "AUD",
       "value": 1.0308
@@ -352,6 +362,7 @@
     "tradeDate": "22-02-2011",
     "orderType": "REDEMPTION",
     "units": 1831,
+    "fee": "$100,-",
     "price": {
       "currency": "AUD",
       "value": 1.0705
@@ -385,6 +396,7 @@
     "tradeDate": "14-02-2012",
     "orderType": "REDEMPTION",
     "units": 1754,
+    "fee": "$100,-",
     "price": {
       "currency": "AUD",
       "value": 1.0946
@@ -418,6 +430,7 @@
     "tradeDate": "29-06-2009",
     "orderType": "REDEMPTION",
     "units": 15805,
+    "fee": "$100,-",
     "price": {
       "currency": "AUD",
       "value": 0.4162
@@ -451,6 +464,7 @@
     "tradeDate": "22-01-2010",
     "orderType": "REDEMPTION",
     "units": 1972,
+    "fee": "$100,-",
     "price": {
       "currency": "AUD",
       "value": 0.9965
@@ -484,6 +498,7 @@
     "tradeDate": "20-04-2010",
     "orderType": "REDEMPTION",
     "units": 661,
+    "fee": "$100,-",
     "price": {
       "currency": "AUD",
       "value": 1.0106
@@ -517,6 +532,7 @@
     "tradeDate": "17-06-2010",
     "orderType": "REDEMPTION",
     "units": 1748,
+    "fee": "$100,-",
     "price": {
       "currency": "AUD",
       "value": 1.0309
@@ -550,6 +566,7 @@
     "tradeDate": "22-02-2011",
     "orderType": "REDEMPTION",
     "units": 1539,
+    "fee": "$100,-",
     "price": {
       "currency": "AUD",
       "value": 1.0708
@@ -583,6 +600,7 @@
     "tradeDate": "14-02-2012",
     "orderType": "REDEMPTION",
     "units": 1475,
+    "fee": "$100,-",
     "price": {
       "currency": "AUD",
       "value": 1.0942
@@ -616,6 +634,7 @@
     "tradeDate": "29-06-2009",
     "orderType": "REDEMPTION",
     "units": 7560,
+    "fee": "$100,-",
     "price": {
       "currency": "AUD",
       "value": 0.4163
@@ -649,6 +668,7 @@
     "tradeDate": "20-04-2010",
     "orderType": "REDEMPTION",
     "units": 284,
+    "fee": "$100,-",
     "price": {
       "currency": "AUD",
       "value": 1.0106
@@ -682,6 +702,7 @@
     "tradeDate": "17-06-2010",
     "orderType": "REDEMPTION",
     "units": 752,
+    "fee": "$100,-",
     "price": {
       "currency": "AUD",
       "value": 1.0306
@@ -715,6 +736,7 @@
     "tradeDate": "22-02-2011",
     "orderType": "REDEMPTION",
     "units": 662,
+    "fee": "$100,-",
     "price": {
       "currency": "AUD",
       "value": 1.071
@@ -748,6 +770,7 @@
     "tradeDate": "14-02-2012",
     "orderType": "REDEMPTION",
     "units": 634,
+    "fee": "$100,-",
     "price": {
       "currency": "AUD",
       "value": 1.0946
@@ -781,6 +804,7 @@
     "tradeDate": "29-06-2009",
     "orderType": "REDEMPTION",
     "units": 93871,
+    "fee": "$100,-",
     "price": {
       "currency": "AUD",
       "value": 0.4162
@@ -814,6 +838,7 @@
     "tradeDate": "22-01-2010",
     "orderType": "REDEMPTION",
     "units": 1734,
+    "fee": "$100,-",
     "price": {
       "currency": "AUD",
       "value": 0.9965
@@ -847,6 +872,7 @@
     "tradeDate": "20-04-2010",
     "orderType": "REDEMPTION",
     "units": 581,
+    "fee": "$100,-",
     "price": {
       "currency": "AUD",
       "value": 1.012
@@ -880,6 +906,7 @@
     "tradeDate": "17-06-2010",
     "orderType": "REDEMPTION",
     "units": 1537,
+    "fee": "$100,-",
     "price": {
       "currency": "AUD",
       "value": 1.0306
@@ -913,6 +940,7 @@
     "tradeDate": "22-02-2011",
     "orderType": "REDEMPTION",
     "units": 1354,
+    "fee": "$100,-",
     "price": {
       "currency": "AUD",
       "value": 1.0702
@@ -946,6 +974,7 @@
     "tradeDate": "14-02-2012",
     "orderType": "REDEMPTION",
     "units": 1297,
+    "fee": "$100,-",
     "price": {
       "currency": "AUD",
       "value": 1.0948
@@ -979,6 +1008,7 @@
     "tradeDate": "29-06-2009",
     "orderType": "REDEMPTION",
     "units": 39354,
+    "fee": "$100,-",
     "price": {
       "currency": "AUD",
       "value": 0.4162
@@ -1012,6 +1042,7 @@
     "tradeDate": "29-06-2009",
     "orderType": "REDEMPTION",
     "units": 2249,
+    "fee": "$100,-",
     "price": {
       "currency": "AUD",
       "value": 0.4162
@@ -1045,6 +1076,7 @@
     "tradeDate": "22-01-2010",
     "orderType": "REDEMPTION",
     "units": 1270,
+    "fee": "$100,-",
     "price": {
       "currency": "AUD",
       "value": 0.9961
@@ -1078,6 +1110,7 @@
     "tradeDate": "20-04-2010",
     "orderType": "REDEMPTION",
     "units": 425,
+    "fee": "$100,-",
     "price": {
       "currency": "AUD",
       "value": 1.0118
@@ -1111,6 +1144,7 @@
     "tradeDate": "17-06-2010",
     "orderType": "REDEMPTION",
     "units": 1126,
+    "fee": "$100,-",
     "price": {
       "currency": "AUD",
       "value": 1.0302
@@ -1144,6 +1178,7 @@
     "tradeDate": "22-02-2011",
     "orderType": "REDEMPTION",
     "units": 991,
+    "fee": "$100,-",
     "price": {
       "currency": "AUD",
       "value": 1.0706
@@ -1177,6 +1212,7 @@
     "tradeDate": "14-02-2012",
     "orderType": "REDEMPTION",
     "units": 950,
+    "fee": "$100,-",
     "price": {
       "currency": "AUD",
       "value": 1.0947
@@ -1210,6 +1246,7 @@
     "tradeDate": "29-06-2009",
     "orderType": "REDEMPTION",
     "units": 12192,
+    "fee": "$100,-",
     "price": {
       "currency": "AUD",
       "value": 0.4163
@@ -1243,6 +1280,7 @@
     "tradeDate": "22-01-2010",
     "orderType": "REDEMPTION",
     "units": 5680,
+    "fee": "$100,-",
     "price": {
       "currency": "AUD",
       "value": 0.9967
@@ -1276,6 +1314,7 @@
     "tradeDate": "20-04-2010",
     "orderType": "REDEMPTION",
     "units": 1903,
+    "fee": "$100,-",
     "price": {
       "currency": "AUD",
       "value": 1.0116
@@ -1309,6 +1348,7 @@
     "tradeDate": "17-06-2010",
     "orderType": "REDEMPTION",
     "units": 5035,
+    "fee": "$100,-",
     "price": {
       "currency": "AUD",
       "value": 1.031
@@ -1342,6 +1382,7 @@
     "tradeDate": "22-02-2011",
     "orderType": "REDEMPTION",
     "units": 4435,
+    "fee": "$100,-",
     "price": {
       "currency": "AUD",
       "value": 1.0703
@@ -1375,6 +1416,7 @@
     "tradeDate": "14-02-2012",
     "orderType": "REDEMPTION",
     "units": 4248,
+    "fee": "$100,-",
     "price": {
       "currency": "AUD",
       "value": 1.0949
@@ -1408,6 +1450,7 @@
     "tradeDate": "09-04-2013",
     "orderType": "REDEMPTION",
     "units": 22920,
+    "fee": "$100,-",
     "price": {
       "currency": "AUD",
       "value": 0.0216
@@ -1441,6 +1484,7 @@
     "tradeDate": "29-06-2009",
     "orderType": "REDEMPTION",
     "units": 37936,
+    "fee": "$100,-",
     "price": {
       "currency": "AUD",
       "value": 0.4162
@@ -1474,6 +1518,7 @@
     "tradeDate": "20-04-2010",
     "orderType": "REDEMPTION",
     "units": 2549,
+    "fee": "$100,-",
     "price": {
       "currency": "AUD",
       "value": 1.0118
@@ -1507,6 +1552,7 @@
     "tradeDate": "17-06-2010",
     "orderType": "REDEMPTION",
     "units": 6745,
+    "fee": "$100,-",
     "price": {
       "currency": "AUD",
       "value": 1.0308
@@ -1540,6 +1586,7 @@
     "tradeDate": "22-02-2011",
     "orderType": "REDEMPTION",
     "units": 5940,
+    "fee": "$100,-",
     "price": {
       "currency": "AUD",
       "value": 1.0705
@@ -1573,6 +1620,7 @@
     "tradeDate": "14-02-2012",
     "orderType": "REDEMPTION",
     "units": 5691,
+    "fee": "$100,-",
     "price": {
       "currency": "AUD",
       "value": 1.0947
@@ -1606,6 +1654,7 @@
     "tradeDate": "09-04-2013",
     "orderType": "REDEMPTION",
     "units": 34908,
+    "fee": "$100,-",
     "price": {
       "currency": "AUD",
       "value": 0.0216
@@ -1639,6 +1688,7 @@
     "tradeDate": "29-06-2009",
     "orderType": "REDEMPTION",
     "units": 6473,
+    "fee": "$100,-",
     "price": {
       "currency": "AUD",
       "value": 0.4162
@@ -1672,6 +1722,7 @@
     "tradeDate": "30-06-2015",
     "orderType": "REDEMPTION",
     "units": 10061,
+    "fee": "$100,-",
     "price": {
       "currency": "AUD",
       "value": 0.9348
@@ -1705,6 +1756,7 @@
     "tradeDate": "26-06-2015",
     "orderType": "BUY",
     "units": 80,
+    "fee": "$100,-",
     "price": {
       "currency": "AUD",
       "value": 6.63
@@ -1738,6 +1790,7 @@
     "tradeDate": "26-06-2015",
     "orderType": "BUY",
     "units": 80,
+    "fee": "$100,-",
     "price": {
       "currency": "AUD",
       "value": 6.63
@@ -1771,6 +1824,7 @@
     "tradeDate": "26-06-2015",
     "orderType": "BUY",
     "units": 80,
+    "fee": "$100,-",
     "price": {
       "currency": "AUD",
       "value": 6.63
@@ -1804,6 +1858,7 @@
     "tradeDate": "26-06-2015",
     "orderType": "BUY",
     "units": 80,
+    "fee": "$100,-",
     "price": {
       "currency": "AUD",
       "value": 6.63
@@ -1837,6 +1892,7 @@
     "tradeDate": "26-06-2015",
     "orderType": "BUY",
     "units": 80,
+    "fee": "$100,-",
     "price": {
       "currency": "AUD",
       "value": 6.63
@@ -1870,6 +1926,7 @@
     "tradeDate": "26-06-2015",
     "orderType": "BUY",
     "units": 80,
+    "fee": "$100,-",
     "price": {
       "currency": "AUD",
       "value": 6.63
