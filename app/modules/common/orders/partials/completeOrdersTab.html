@@ -1,61 +1,61 @@
 <div>
 
-    {{completeOrders.length}} results match your search selection.
+  {{completeOrders.length}} results match your search selection.
 
-    <div>
+  <div>
 
-        <table st-table="completeOrders" class="table table-striped">
-            <thead>
-            <tr>
-                <th st-ratio="5" st-sort="account.accountId.key">Account</th>
-                <th  st-ratio="20" st-sort="account.accountName"></th>
-                <th  st-ratio="10"  st-sort="account.settlementDate">Settlement date</th>
-                <!--<th st-ratio="10"  st-sort="account.tradeDate">Trade date</th>-->
-                <th  st-ratio="5"  st-sort="account.orderType">Type</th>
-                <th  st-ratio="5"  st-sort="account.asset.name">Investment</th>
-                <th  st-ratio="5"  st-sort="account.units">Units</th>
-                <th  st-ratio="5"  st-sort="account.price">Price</th>
-                <th  st-ratio="5"  st-sort="account.fee">Fee</th>
-                <th  st-ratio="5"  st-sort="account.settlementValue">Settlement value</th>
-                <th  st-ratio="5"  st-sort="account.account.adviser.key">Adviser</th>
+    <table st-table="completeOrders" class="table table-striped">
+      <thead>
+      <tr>
+        <th st-ratio="5" st-sort="account.accountId.key">Account</th>
+        <th st-ratio="20" st-sort="account.accountName"></th>
+        <th st-ratio="10" st-sort="account.settlementDate">Settlement date</th>
+        <!--<th st-ratio="10"  st-sort="account.tradeDate">Trade date</th>-->
+        <th st-ratio="5" st-sort="account.orderType">Type</th>
+        <th st-ratio="5" st-sort="account.asset.name">Investment</th>
+        <th st-ratio="5" st-sort="account.units">Units</th>
+        <th st-ratio="5" st-sort="account.price">Price</th>
+        <th st-ratio="5" st-sort="account.fee">Fee</th>
+        <th st-ratio="5" st-sort="account.settlementValue">Settlement value</th>
+        <th st-ratio="5" st-sort="account.account.adviser.key">Adviser</th>
 
-                <th  st-ratio="20"  st-sort="account.asset.name">Product</th>
-
-
-            </tr>
-            </thead>
-            <tbody>
-            <tr ng-repeat="account in completeOrders | filter:accountName | filter:tradeType| filter:security | dateRange:dateFrom:dateTo:'settlementDate'">
-                <td  st-ratio="5" >{{account.account.accountId.key}}</td>
-                <td  st-ratio="20" >{{account.account.accountName}}</td>
-                <td  st-ratio="10" >{{account.settlementDate}}</td>
-                <!--<td  st-ratio="5" >{{account.tradeDate}}</td>-->
-                <td  st-ratio="5" >{{account.orderType}}</td>
-                <td  st-ratio="20" >ANZ</td>
-
-                <td  st-ratio="5" >{{account.units}}</td>
-                <td  st-ratio="5" >{{account.price.value | showCurrency:account.price.currency}}</td>
-                <td  st-ratio="5" >{{account.fee}}</td>
-                <td  st-ratio="5" >{{account.settlementValue.value | showCurrency:account.price.currency}}</td>
-                <td  st-ratio="5" >{{account.account.adviser.key}}</td>
-                <td  st-ratio="20">TBA</td>
+        <th st-ratio="20" st-sort="account.asset.name">Product</th>
 
 
+      </tr>
+      </thead>
+      <tbody>
+      <tr
+        ng-repeat="account in completeOrders | filter:accountName | filter:tradeType| filter:security | dateRange:dateFrom:dateTo:'settlementDate'">
+        <td st-ratio="5">{{account.account.accountId.key}}</td>
+        <td st-ratio="20">{{account.account.accountName}}</td>
+        <td st-ratio="10">{{account.settlementDate}}</td>
+        <!--<td  st-ratio="5" >{{account.tradeDate}}</td>-->
+        <td st-ratio="5">{{account.orderType}}</td>
+        <td st-ratio="20">ANZ</td>
 
-            </tr>
-            </tbody>
+        <td st-ratio="5">{{account.units}}</td>
+        <td st-ratio="5">{{account.price.value | showCurrency:account.price.currency}}</td>
+        <td st-ratio="5">{{account.fee}}</td>
+        <td st-ratio="5">{{account.settlementValue.value | showCurrency:account.price.currency}}</td>
+        <td st-ratio="5">{{account.account.adviser.key}}</td>
+        <td st-ratio="20">TBA</td>
 
-            <tfoot>
 
-            <tr>
-                <td class="text-center" colspan="10">
-                    <div st-items-by-page="10" st-pagination=""
-                         st-template="modules/common/orders/partials/pagination.custom.html"></div>
-                </td>
-            </tr>
-            </tfoot>
+      </tr>
+      </tbody>
 
-        </table>
+      <tfoot>
 
-    </div>
+      <tr>
+        <td class="text-center" colspan="11">
+          <div st-items-by-page="10" st-pagination="10"
+               st-template="modules/common/orders/partials/pagination.custom.html"></div>
+        </td>
+      </tr>
+      </tfoot>
+
+    </table>
+
+  </div>
 </div>
