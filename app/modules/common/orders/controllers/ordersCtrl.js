@@ -8,6 +8,8 @@ app.controller('OrdersCtrl', function ($scope, $filter, $location, configService
 
   $scope.completeOrders = completeOrders;
 
+  console.log($scope.accounts);
+
   $scope.selectAdviser = function (adviser) {
     $scope.adviser= adviser;
   }
