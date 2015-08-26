@@ -85,4 +85,4 @@ app.directive('datePicker', function ($compile, $timeout) {
             };
         }
     };
-})
+});

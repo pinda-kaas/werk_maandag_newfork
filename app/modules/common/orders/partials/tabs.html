@@ -39,16 +39,16 @@
         <div>
           <tabset id="tab">
 
-            <tab heading="Orders" >
+            <tab heading="Orders" active="ordersTabActive" >
               <orders-tab></orders-tab>
             </tab>
 
-            <tab heading="Awaiting settlement" active="true">
+            <tab heading="Awaiting settlement" active="settlementsTabActive">
               <table-filter security="testing"></table-filter>
               <awaiting-settlements-tab></awaiting-settlements-tab>
             </tab>
 
-            <tab heading="Complete" >
+            <tab heading="Complete" active="completedTabActive" >
               <table-filter></table-filter>
               <complete-orders-tab></complete-orders-tab>
             </tab>
@@ -60,5 +60,3 @@
   </div>
 </div>
 
-<!--todo remove this-->
-<a ui-sref="orderDetail">details</a>

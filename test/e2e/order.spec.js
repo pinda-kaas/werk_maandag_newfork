@@ -32,20 +32,5 @@ describe('WIP e2e testing', function () {
             expect(accountsList.count()).toEqual(10);
         });
 
-        //it('should return same amount results', function () {
-        //    element(by.css('body > div > div > div.orders.ng-scope > div > div > div > div > div > div > div > div > div > div > ul > li:nth-child(6) > div > button.btn.btn-default.active')).click();
-        //    accountsList = element.all(by.repeater('account in accounts'));
-        //    expect(accountsList.count()).toEqual(10);
-        //});
-
-
-
-
-
-
-
-
-
-
     });
 });

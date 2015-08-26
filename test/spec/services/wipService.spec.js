@@ -19,8 +19,8 @@ describe('wipService', function () {
 
   xit('should call getdata.', function (){
     var returnData = { test:'helloss'};
-    httpBackend.expectGET('/api/data').respond(returnData);
-    var returnedPromise = wipService.getData('/api/data');
+    httpBackend.expectGET('/modules/common/orders/mock/settlementsTabMockData.json').respond(returnData);
+    var returnedPromise = wipService.getData('mock_settlements');
     var result;
     returnedPromise.then(function(response) {
       result = response;

@@ -9,7 +9,7 @@ app.filter('dateRange', function () {
 
       if (d[dateName]) {
         //console.log('dateName', d[dateName]);
-        var res = Date.parse(d[dateName]) >= Date.parse(dateFrom) && Date.parse(d[dateName]) <= Date.parse(dateTo)
+        var res = Date.parse(d[dateName]) >= Date.parse(dateFrom) && Date.parse(d[dateName]) <= Date.parse(dateTo);
 
         //console.log('input',input);
         //console.log(result);

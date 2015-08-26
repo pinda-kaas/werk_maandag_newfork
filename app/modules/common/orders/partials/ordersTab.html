@@ -11,11 +11,11 @@
         <th st-ratio="30" st-sort="account.accountName"></th>
         <th st-ratio="10" st-sort="account.adviser">Adviser</th>
         <th st-ratio="20" st-sort="account.productName">Product</th>
-        <th st-ratio="30" st-sort="account.minOpenOrderState" st-sort-default="default">Status</th>
+        <th st-ratio="30" st-sort="minOpenOrderState">Status</th>
       </tr>
       </thead>
       <tbody>
-      <tr ng-repeat="account in accounts | filter:accountName | filter:adviser">
+      <tr ng-repeat="account in accounts | filter:accountName ">
         <td st-ratio="10" ><a ui-sref="orderDetail"> {{account.account.accountId.key}}</a></td>
         <td st-ratio="10" >{{account.account.accountName}}</td>
         <td st-ratio="10" >{{account.account.adviser}}</td>
